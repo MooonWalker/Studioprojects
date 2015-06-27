@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/tmp/gcm-master/GCM_android_files1/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/DATA/Dropbox/Studioprojects/GCM_android_files1/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="padding_large">16dp</dimen>
     <dimen name="padding_medium">8dp</dimen>
     <dimen name="padding_small">8dp</dimen>
-    <!-- From: file:/C:/tmp/gcm-master/GCM_android_files1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/DATA/Dropbox/Studioprojects/GCM_android_files1/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="already_registered">Device is already registered on server.</string>
     <string name="app_name">GCM Android Example</string>
@@ -28,7 +28,7 @@
     <string name="server_unregister_error">Could not unregister device on Demo Server (%1$s).</string>
     <string name="server_unregistered">Demo Server: successfully removed device!</string>
     <string name="title_activity_main">Android Push Notifications</string>
-    <!-- From: file:/C:/tmp/gcm-master/GCM_android_files1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/DATA/Dropbox/Studioprojects/GCM_android_files1/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Light"/>
 </resources>
