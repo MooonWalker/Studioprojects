@@ -1,14 +1,15 @@
-package ati.servicesteszts;
-import com.google.android.gms.gcm.GoogleCloudMessaging;
+package ati.servicetest2;
+
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 
-public class GcmMessageHandler extends IntentService {
-
+public class GcmMessageHandler extends IntentService
+{
     String mes;
     private Handler handler;
     public GcmMessageHandler() {
@@ -32,7 +33,7 @@ public class GcmMessageHandler extends IntentService {
 
         mes = extras.getString("title");
         showToast();
-        Log.i("GCM", "Received : (" +messageType+")  "+extras.getString("title"));
+        Log.i("GCM", "Received : (" + messageType + ")  " + extras.getString("title"));
 
         GcmBroadcastReceiver.completeWakefulIntent(intent);
 
@@ -41,7 +42,7 @@ public class GcmMessageHandler extends IntentService {
     public void showToast(){
         handler.post(new Runnable() {
             public void run() {
-                Toast.makeText(getApplicationContext(),mes , Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), mes, Toast.LENGTH_LONG).show();
             }
         });
 

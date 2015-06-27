@@ -71,7 +71,7 @@
 	 //Sending Push Notification
    function send_push_notification($registatoin_ids, $message) {
          
- 
+		print"kaka";
         // Set POST variables
         $url = 'https://android.googleapis.com/gcm/send';
  

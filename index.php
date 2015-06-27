@@ -20,7 +20,7 @@
             });
             function sendPushNotification(id){
                 var data = $('form#'+id).serialize();
-                $('form#'+id).unbind('submit');                
+                $('form#'+id).unbind('submit');   
                 $.ajax({
                     url: "send_push_notification_message.php",
                     type: 'GET',
