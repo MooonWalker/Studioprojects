@@ -185,25 +185,25 @@ public class Controller extends Application
             int status = conn.getResponseCode();
             
             // If response is not success
-            if (status != 200) {
-            	
+            if (status != 200)
+            {
               throw new IOException("Post failed with error code " + status);
             }
-        } finally {
-            if (conn != null) {
+        }
+        finally
+        {
+            if (conn != null)
+            {
                 conn.disconnect();
             }
         }
       }
     
-    
-    
-	// Checking for all possible internet providers
-    public boolean isConnectingToInternet(){
-    	
+    // Checking for all possible internet providers
+    public boolean isConnectingToInternet()
+    {
         ConnectivityManager connectivity = 
-        	                 (ConnectivityManager) getSystemService(
-        	                  Context.CONNECTIVITY_SERVICE);
+        	                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
           if (connectivity != null)
           {
               NetworkInfo[] info = connectivity.getAllNetworkInfo();

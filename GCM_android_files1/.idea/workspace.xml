@@ -10,12 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3af5c9cc-0f5f-4103-b9c2-e21c3a2df60a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/Config.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/Config.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi-v11/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi-v9/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi-v11/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi-v9/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi-v11/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi-v9/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xxhdpi/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xxhdpi-v11/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xxhdpi-v9/fail.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi-v11/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi-v9/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi-v11/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi-v9/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi-v11/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi-v9/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xxhdpi/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xxhdpi-v11/success.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xxhdpi-v9/success.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/GCMIntentService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/GCMIntentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/GcmMessageHandler.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/GcmMessageHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/MainActivity.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/Controller.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GCM_android_files1.iws" />
@@ -44,11 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.88">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.75">
+              <caret line="45" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,18 +79,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GCMIntentService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/GCMIntentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1390,8 +1403,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/GCMIntentService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java" />
       </list>
     </option>
   </component>
@@ -1427,8 +1440,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
@@ -1729,6 +1742,68 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/GCMIntentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1766,10 +1841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/GCMIntentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.88">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state vertical-scroll-proportion="-1.4">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1777,15 +1852,17 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
-          <folding />
+          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/GCMIntentService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.75">
+          <caret line="45" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -20,10 +20,22 @@ public class MainActivity extends Activity
     EditText etRegId;
     GoogleCloudMessaging gcm;
     String regid;
+    public static Activity activity = null;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        activity=this;
+        // Check if Internet present
+        if (!Controller.isConnectingToInternet(this))
+        {
+            // Internet Connection is not present
+            Controller.showAlertDialog(this,
+                    "Internet Connection Error",
+                    "Please connect to Internet connection", false);
+            // stop executing code by return
+            return;
+        }
         setContentView(R.layout.activity_main);
 
         btnDereg=(Button)findViewById(R.id.btnDereg);
