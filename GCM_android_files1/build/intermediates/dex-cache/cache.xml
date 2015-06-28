@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\tmp\gcm-master\GCM_android_files1\app\libs\android-support-v4.jar"
+        jar="C:\DATA\Dropbox\Studioprojects\GCM_android_files1\app\libs\android-support-v4.jar"
         jumboMode="false"
         revision="23.0.0 rc2"
         sha1="48c94ae70fa65718b382098237806a5909bb096e">
-        <dex dex="C:\tmp\gcm-master\GCM_android_files1\app\build\intermediates\pre-dexed\debug\android-support-v4-6ffbc01957ae7219f9ba3b44e366d191f4cfe624.jar" />
+        <dex dex="C:\DATA\Dropbox\Studioprojects\GCM_android_files1\app\build\intermediates\pre-dexed\debug\android-support-v4-b52d462a189265f1f1f9a82d95f55cde2c27c3a5.jar" />
     </item>
     <item
-        jar="C:\tmp\gcm-master\GCM_android_files1\app\libs\gcm.jar"
+        jar="C:\DATA\Dropbox\Studioprojects\GCM_android_files1\app\libs\gcm.jar"
         jumboMode="false"
         revision="23.0.0 rc2"
         sha1="a6d7bce795a14c7f86111756c4ceb44b79de14aa">
-        <dex dex="C:\tmp\gcm-master\GCM_android_files1\app\build\intermediates\pre-dexed\debug\gcm-8fd7b7313bd17621e58da82ae47d7f7cfc222276.jar" />
+        <dex dex="C:\DATA\Dropbox\Studioprojects\GCM_android_files1\app\build\intermediates\pre-dexed\debug\gcm-9a1bce25e3173b807e029050940e614e95401537.jar" />
     </item>
 
 </items>
