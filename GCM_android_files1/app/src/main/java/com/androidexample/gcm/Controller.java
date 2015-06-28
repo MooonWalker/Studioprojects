@@ -23,16 +23,16 @@ import android.net.NetworkInfo;
 import android.os.PowerManager;
 import android.util.Log;
 
-public class Controller extends Application{
+public class Controller extends Application
+{
 	
 	private  final int MAX_ATTEMPTS = 5;
     private  final int BACKOFF_MILLI_SECONDS = 2000;
     private  final Random random = new Random();
-	
-    
+
 	 // Register this account with the server.
-    void register(final Context context, String name, String email, final String regId) {
-    	 
+    void register(final Context context, String name, String email, final String regId)
+    {
         Log.i(Config.TAG, "registering device (regId = " + regId + ")");
         
         String serverUrl = Config.YOUR_SERVER_URL;
@@ -66,19 +66,21 @@ public class Controller extends Application{
                 displayMessageOnScreen(context, message);
                 
                 return;
-            } catch (IOException e) {
-            	
+            }
+            catch (IOException e)
+            {
                 // Here we are simplifying and retrying on any error; in a real
                 // application, it should retry only on unrecoverable errors
                 // (like HTTP error code 503).
             	
                 Log.e(Config.TAG, "Failed to register on attempt " + i + ":" + e);
                 
-                if (i == MAX_ATTEMPTS) {
+                if (i == MAX_ATTEMPTS)
+                {
                     break;
                 }
-                try {
-                	
+                try
+                {
                     Log.d(Config.TAG, "Sleeping for " + backoff + " ms before retry");
                     Thread.sleep(backoff);
                     
@@ -110,7 +112,8 @@ public class Controller extends Application{
         Map<String, String> params = new HashMap<String, String>();
         params.put("regId", regId);
         
-        try {
+        try
+        {
             post(serverUrl, params);
             GCMRegistrar.setRegisteredOnServer(context, false);
             String message = context.getString(R.string.server_unregistered);
@@ -131,11 +134,11 @@ public class Controller extends Application{
 
     // Issue a POST request to the server.
     private static void post(String endpoint, Map<String, String> params)
-            throws IOException {   	
-        
+            throws IOException
+    {
         URL url;
-        try {
-        	
+        try
+        {
             url = new URL(endpoint);
             
         } catch (MalformedURLException e) {
@@ -255,11 +258,10 @@ public class Controller extends Application{
     
     private PowerManager.WakeLock wakeLock;
     
-    public  void acquireWakeLock(Context context) {
+    public  void acquireWakeLock(Context context)
+    {
         if (wakeLock != null) wakeLock.release();
-
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-        
         wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK |
                 PowerManager.ACQUIRE_CAUSES_WAKEUP |
                 PowerManager.ON_AFTER_RELEASE, "WakeLock");
@@ -267,8 +269,8 @@ public class Controller extends Application{
         wakeLock.acquire();
     }
 
-    public  void releaseWakeLock() {
+    public  void releaseWakeLock()
+    {
         if (wakeLock != null) wakeLock.release(); wakeLock = null;
     }
-   
 }

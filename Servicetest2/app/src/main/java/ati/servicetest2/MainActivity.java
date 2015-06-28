@@ -42,13 +42,43 @@ public class MainActivity extends Activity
         {
             public void onClick(View v)
             {
-
+                doDereg();
             }
         });
     }
+
     public void doDereg()
     {
+        new AsyncTask<Void, Void, String>()
+        {
+            @Override
+            protected String doInBackground(Void... params)
+            {
+                String msg = "";
+                try
+                {
+                    if (gcm == null)
+                    {
+                        gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
+                    }
+                    gcm.unregister();
+                    msg = "Device deregistered.";
+                    Log.i("GCM: ", msg);
 
+                } catch (IOException ex)
+                {
+                    msg = "Error :" + ex.getMessage();
+                }
+
+                return msg;
+            }
+
+            @Override
+            protected void onPostExecute(String msg)
+            {
+                etRegId.setText(msg + "\n");
+            }
+        }.execute(null, null, null);
     }
 
     public void getRegId()
@@ -74,7 +104,6 @@ public class MainActivity extends Activity
                 }
                 return msg;
             }
-
             @Override
             protected void onPostExecute(String msg)
             {

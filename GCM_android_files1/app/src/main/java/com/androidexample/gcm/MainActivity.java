@@ -33,7 +33,6 @@ public class MainActivity extends Activity
 		//Get Global Controller Class object (see application tag in AndroidManifest.xml)
 		aController = (Controller) getApplicationContext();
 		
-		
 		// Check if Internet present
 		if (!aController.isConnectingToInternet())
 		{
@@ -79,9 +78,9 @@ public class MainActivity extends Activity
 			{
 				// Skips registration.				
 				Toast.makeText(getApplicationContext(), "Already registered with GCM Server", Toast.LENGTH_LONG).show();
-			
-			} else {
-				
+			}
+			else
+			{
 				// Try to register again, but not in the UI thread.
 				// It's also necessary to cancel the thread onDestroy(),
 				// hence the use of AsyncTask instead of a raw thread.
@@ -98,14 +97,11 @@ public class MainActivity extends Activity
 						
 						return null;
 					}
-
 					@Override
 					protected void onPostExecute(Void result) {
 						mRegisterTask = null;
 					}
-
 				};
-				
 				// execute AsyncTask
 				mRegisterTask.execute(null, null, null);
 			}
@@ -147,7 +143,7 @@ public class MainActivity extends Activity
 			GCMRegistrar.onDestroy(this);
 			
 		} catch (Exception e) {
-			Log.e("UnRegister Receiver Error", "> " + e.getMessage());
+			Log.e("UnRegister Receiver Err", "> " + e.getMessage());
 		}
 		super.onDestroy();
 	}

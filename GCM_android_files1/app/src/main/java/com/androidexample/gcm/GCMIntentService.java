@@ -8,24 +8,23 @@ import android.content.Intent;
 import android.util.Log;
 import com.google.android.gcm.GCMBaseIntentService;
 
-public class GCMIntentService extends GCMBaseIntentService {
+public class GCMIntentService extends GCMBaseIntentService
+{
+    private static final String TAG = "GCMIntentService";
+    private Controller aController = null;
 
-	private static final String TAG = "GCMIntentService";
-	
-	private Controller aController = null;
-
-    public GCMIntentService() {
+    public GCMIntentService()
+    {
     	// Call extended class Constructor GCMBaseIntentService
         super(Config.GOOGLE_SENDER_ID);
     }
-
     /**
      * Method called on device registered
      **/
     @Override
-    protected void onRegistered(Context context, String registrationId) {
-    	
-    	//Get Global Controller Class object (see application tag in AndroidManifest.xml)
+    protected void onRegistered(Context context, String registrationId)
+    {
+        //Get Global Controller Class object (see application tag in AndroidManifest.xml)
     	if(aController == null)
            aController = (Controller) getApplicationContext();
     	
@@ -39,7 +38,8 @@ public class GCMIntentService extends GCMBaseIntentService {
      * Method called on device unregistred
      * */
     @Override
-    protected void onUnregistered(Context context, String registrationId) {
+    protected void onUnregistered(Context context, String registrationId)
+    {
     	if(aController == null)
             aController = (Controller) getApplicationContext();
         Log.i(TAG, "Device unregistered");

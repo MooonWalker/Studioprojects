@@ -17,13 +17,15 @@ public class GcmMessageHandler extends IntentService
     }
 
     @Override
-    public void onCreate() {
+    public void onCreate()
+    {
         // TODO Auto-generated method stub
         super.onCreate();
         handler = new Handler();
     }
     @Override
-    protected void onHandleIntent(Intent intent) {
+    protected void onHandleIntent(Intent intent)
+    {
         Bundle extras = intent.getExtras();
 
         GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
@@ -31,7 +33,7 @@ public class GcmMessageHandler extends IntentService
         // in your BroadcastReceiver.
         String messageType = gcm.getMessageType(intent);
 
-        mes = extras.getString("message");
+        mes = extras.getString(Config.EXTRA_MESSAGE);
         showToast();
         Log.i("GCM", "Received : (" + messageType + ")  " + extras.getString("title"));
 
@@ -39,9 +41,12 @@ public class GcmMessageHandler extends IntentService
 
     }
 
-    public void showToast(){
-        handler.post(new Runnable() {
-            public void run() {
+    public void showToast()
+    {
+        handler.post(new Runnable()
+        {
+            public void run()
+            {
                 Toast.makeText(getApplicationContext(), mes, Toast.LENGTH_LONG).show();
             }
         });
