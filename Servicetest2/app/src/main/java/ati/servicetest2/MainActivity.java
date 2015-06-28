@@ -14,9 +14,9 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import java.io.IOException;
 
-public class MainActivity extends Activity implements View.OnClickListener
+public class MainActivity extends Activity
 {
-    Button btnRegId;
+    Button btnRegId, btnDereg;
     EditText etRegId;
     GoogleCloudMessaging gcm;
     String regid;
@@ -26,11 +26,29 @@ public class MainActivity extends Activity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        btnDereg=(Button)findViewById(R.id.btnDereg);
         btnRegId = (Button) findViewById(R.id.btnGetRegId);
         etRegId = (EditText) findViewById(R.id.etRegId);
 
-        btnRegId.setOnClickListener(this);
+        btnRegId.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                getRegId();
+            }
+        });
+
+        btnDereg.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+
+            }
+        });
+    }
+    public void doDereg()
+    {
+
     }
 
     public void getRegId()
@@ -47,7 +65,7 @@ public class MainActivity extends Activity implements View.OnClickListener
                         gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
                     }
                     regid = gcm.register(Config.GOOGLE_SENDER_ID);
-                    msg = "Device registered, registration ID=" + regid;
+                    msg = "Device registered, registration ID= " + regid;
                     Log.i("GCM", msg);
 
                 } catch (IOException ex)
@@ -64,9 +82,6 @@ public class MainActivity extends Activity implements View.OnClickListener
             }
         }.execute(null, null, null);
     }
-    @Override
-    public void onClick(View v)
-    {
-        getRegId();
-    }
+
+
 }
