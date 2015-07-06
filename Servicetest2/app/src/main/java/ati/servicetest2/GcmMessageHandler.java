@@ -19,7 +19,6 @@ public class GcmMessageHandler extends IntentService
     @Override
     public void onCreate()
     {
-        // TODO Auto-generated method stub
         super.onCreate();
         handler = new Handler();
     }

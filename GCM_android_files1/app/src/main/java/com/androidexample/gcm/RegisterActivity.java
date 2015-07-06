@@ -38,7 +38,8 @@ public class RegisterActivity extends Activity {
 
 		// Check if GCM configuration is set
 		if (Config.YOUR_SERVER_URL == null || Config.GOOGLE_SENDER_ID == null || Config.YOUR_SERVER_URL.length() == 0
-				|| Config.GOOGLE_SENDER_ID.length() == 0) {
+				|| Config.GOOGLE_SENDER_ID.length() == 0)
+		{
 			
 			// GCM sernder id / server url is missing
 			aController.showAlertDialog(RegisterActivity.this, "Configuration Error!",

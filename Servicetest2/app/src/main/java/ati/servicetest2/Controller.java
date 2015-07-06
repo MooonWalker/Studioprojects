@@ -1,7 +1,6 @@
 package ati.servicetest2;
 
 import android.app.AlertDialog;
-import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,10 +9,16 @@ import android.net.NetworkInfo;
 import android.os.PowerManager;
 import android.util.Log;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
+import java.net.Proxy;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -24,12 +29,12 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 public class Controller
 {
 
-    private  final int MAX_ATTEMPTS = 5;
-    private  final int BACKOFF_MILLI_SECONDS = 2000;
-    private  final Random random = new Random();
+    private static final int MAX_ATTEMPTS = 5;
+    private static final int BACKOFF_MILLI_SECONDS = 2000;
+    private static final Random random = new Random();
 
     // Register this account with the server.
-    void register(final Context context, String name, String email, final String regId)
+   public static void register(String name, String email, final String regId)
     {
         Log.i(Config.TAG, "registering device (regId = " + regId + ")");
 
@@ -45,14 +50,14 @@ public class Controller
         // Once GCM returns a registration id, we need to register on our server
         // As the server might be down, we will retry it a couple
         // times.
-        for (int i = 1; i <= MAX_ATTEMPTS; i++) {
-
+        for (int i = 1; i <= MAX_ATTEMPTS; i++)
+        {
             Log.d(Config.TAG, "Attempt #" + i + " to register");
-
-            try {
+            try
+            {
                 //Send Broadcast to Show message on screen
-                displayMessageOnScreen(context, context.getString(
-                        R.string.server_registering, i, MAX_ATTEMPTS));
+                //displayMessageOnScreen(MainActivity.activity, MainActivity.activity.getString(
+                //        R.string.server_registering, i, MAX_ATTEMPTS));
 
                 // Post registration values to web server
                 post(serverUrl, params);
@@ -60,8 +65,8 @@ public class Controller
                 //GCMRegistrar.setRegisteredOnServer(context, true);
 
                 //Send Broadcast to Show message on screen
-                String message = context.getString(R.string.server_registered);
-                displayMessageOnScreen(context, message);
+                //String message = MainActivity.activity.getString(R.string.server_registered);
+                //displayMessageOnScreen(MainActivity.activity, message);
 
                 return;
             }
@@ -70,9 +75,7 @@ public class Controller
                 // Here we are simplifying and retrying on any error; in a real
                 // application, it should retry only on unrecoverable errors
                 // (like HTTP error code 503).
-
                 Log.e(Config.TAG, "Failed to register on attempt " + i + ":" + e);
-
                 if (i == MAX_ATTEMPTS)
                 {
                     break;
@@ -88,17 +91,15 @@ public class Controller
                     Thread.currentThread().interrupt();
                     return;
                 }
-
                 // increase backoff exponentially
                 backoff *= 2;
             }
         }
-
-        String message = context.getString(R.string.server_register_error,
+        String message = MainActivity.activity.getString(R.string.server_register_error,
                 MAX_ATTEMPTS);
 
         //Send Broadcast to Show message on screen
-        displayMessageOnScreen(context, message);
+        //displayMessageOnScreen(MainActivity.activity, message);
     }
 
     // Unregister this account/device pair within the server.
@@ -132,64 +133,88 @@ public class Controller
     }
 
     // Issue a POST request to the server.
-    private static void post(String endpoint, Map<String, String> params)
+    private static void post(String serverUrl, Map<String, String> params)
             throws IOException
     {
         URL url;
         try
         {
-            url = new URL(endpoint);
-
-        } catch (MalformedURLException e) {
-            throw new IllegalArgumentException("invalid url: " + endpoint);
+            url = new URL(serverUrl);
+        }
+        catch (MalformedURLException e)
+        {
+            throw new IllegalArgumentException("invalid url: " + serverUrl);
         }
 
         StringBuilder bodyBuilder = new StringBuilder();
+
         Iterator<Map.Entry<String, String>> iterator = params.entrySet().iterator();
 
         // constructs the POST body using the parameters
-        while (iterator.hasNext()) {
+        while (iterator.hasNext())
+        {
             Map.Entry<String, String> param = iterator.next();
             bodyBuilder.append(param.getKey()).append('=')
                     .append(param.getValue());
-            if (iterator.hasNext()) {
+            if (iterator.hasNext())
+            {
                 bodyBuilder.append('&');
             }
         }
-
         String body = bodyBuilder.toString();
 
         Log.v(Config.TAG, "Posting '" + body + "' to " + url);
 
         byte[] bytes = body.getBytes();
 
+        //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("proxy", 8080));
         HttpURLConnection conn = null;
-        try {
-
+        try
+        {
             Log.e("URL", "> " + url);
 
+            //conn = (HttpURLConnection) url.openConnection(proxy);
             conn = (HttpURLConnection) url.openConnection();
+
             conn.setDoOutput(true);
+            conn.setDoInput(true);
             conn.setUseCaches(false);
             conn.setFixedLengthStreamingMode(bytes.length);
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Content-Type",
                     "application/x-www-form-urlencoded;charset=UTF-8");
             // post the request
+
             OutputStream out = conn.getOutputStream();
             out.write(bytes);
             out.close();
 
+            InputStream iS= conn.getInputStream();
+            BufferedReader reader=new BufferedReader(new InputStreamReader(iS));
+            String line;
+            StringBuilder response = new StringBuilder();
+
+            // TODO "Kaka" jön vissza a function.php-ből
+            while ((line = reader.readLine()) != null)
+            {
+                response.append(line);
+            }
             // handle the response
+            reader.close();
+
             int status = conn.getResponseCode();
 
-            // If response is not success
-            if (status != 200) {
 
+            // If response is not success
+            if (status != 200)
+            {
                 throw new IOException("Post failed with error code " + status);
             }
-        } finally {
-            if (conn != null) {
+        }
+        finally
+        {
+            if (conn != null)
+            {
                 conn.disconnect();
             }
         }
@@ -214,7 +239,7 @@ public class Controller
     }
 
     // Notifies UI to display a message.
-    void displayMessageOnScreen(Context context, String message)
+    static void displayMessageOnScreen(Context context, String message)
     {
         Intent intent = new Intent(Config.DISPLAY_MESSAGE_ACTION);
         intent.putExtra(Config.EXTRA_MESSAGE, message);

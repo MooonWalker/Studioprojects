@@ -1,6 +1,27 @@
 <?php
- //Storing new user and returns user details
-    
+//Deleting a user
+	function delUser($gcm_regid)
+	{
+		$result = mysql_query("DELETE FROM 'gcm_users' WHERE gcm_regid = $gcm_regid") or die(mysql_error());		
+		if ($result) 
+		{             
+            // get user details 
+            if (mysql_num_rows($result) > 0) 
+			{ 
+                return mysql_num_rows($result);
+            } 
+			else 
+			{
+                return false;
+            }
+             
+        } 
+		else 
+		{
+            return false;
+        }
+	}
+ //Storing new user and returns user details    
    function storeUser($name, $email, $gcm_regid) {
         
         // insert user into database
@@ -18,10 +39,7 @@
              
             // get user details
             $id = mysql_insert_id(); // last inserted id
-            $result = mysql_query(
-                               "SELECT * 
-                                     FROM gcm_users 
-                                     WHERE id = $id") or die(mysql_error());
+            $result = mysql_query("SELECT * FROM gcm_users WHERE id = $id") or die(mysql_error());
             // return user details 
             if (mysql_num_rows($result) > 0) { 
                 return mysql_fetch_array($result);
