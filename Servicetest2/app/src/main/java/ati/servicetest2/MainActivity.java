@@ -1,12 +1,9 @@
 package ati.servicetest2;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +15,8 @@ public class MainActivity extends Activity
     Button btnRegId, btnDereg;
     EditText etRegId;
     GoogleCloudMessaging gcm;
-    String regid;
+    String regid="";
+    int regres=0;
     public static Activity activity = null;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -58,7 +56,7 @@ public class MainActivity extends Activity
         {
             public void onClick(View v)
             {
-                getRegId();
+                doReg();
             }
         });
 
@@ -105,27 +103,7 @@ public class MainActivity extends Activity
         }.execute(null, null, null);
     }
 
-//    private void sendstat()
-//    {
-//
-//        db=new DatabaseHandler(this);
-//        PHPCom sendphp =new PHPCom(this);
-//        String uuid;
-//        List<SessionH> sessions= new ArrayList<SessionH>();
-//        List<BrewingH> brewings= new ArrayList<BrewingH>();
-//
-//        sessions=db.getSessionsToSend();
-//        brewings =db.getBrewingsToSend();
-//        uuid=db.getUUID();
-//        db.close();
-//
-//        if(sessions.size()>0 && brewings.size()>0)
-//        {
-//            sendWasCorrect=sendphp.execute(sessions, brewings, uuid);
-//        }
-//    }
-
-    public void getRegId()
+    public void doReg()
     {
         new AsyncTask<Void, Void, String>()
         {
@@ -133,15 +111,54 @@ public class MainActivity extends Activity
             protected String doInBackground(Void...params)
             {
                 String msg = "";
-                try {
-                    if (gcm == null)
+                long backoff = Controller.BACKOFF_MILLI_SECONDS + Controller.random.nextInt(1000);
+                for (int i = 1; i <= Controller.MAX_ATTEMPTS; i++)
+                {
+                    Log.d(Config.TAG, "Attempt #" + i + " to register");
+                    try
                     {
-                        gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
+                        if (gcm == null)
+                        {
+                            gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
+                        }
+                        regid = gcm.register(Config.GOOGLE_SENDER_ID);
+                        break;
                     }
-                    regid = gcm.register(Config.GOOGLE_SENDER_ID);
-                    Controller.register("Ati", "moonsurveyor@gmail.com", regid);
+                    catch (IOException e)
+                    {
+                        Log.e(Config.TAG, "Failed to register on attempt " + i + ":" + e);
+                        if (i == Controller.MAX_ATTEMPTS)
+                        {
+                            break;
+                        }
+                        try
+                        {
+                            Log.d(Config.TAG, "Sleeping for " + backoff + " ms before retry");
+                            Thread.sleep(backoff);
+                        }
+                        catch (InterruptedException e1)
+                        {
+                            // Activity finished before we complete - exit.
+                            Log.d(Config.TAG, "Thread interrupted: abort remaining retries!");
+                            Thread.currentThread().interrupt();
+                            break;
+                        }
+                    }
+                }// end for
+
+                try
+                {
+                    if (regid!="")
+                    {
+                        regres = Controller.register("Ati", "moonsurveyor@gmail.com", regid);
+                    }
+                    else
+                    {
+                        throw new IOException();
+                    }
                     msg = "Device registered, registration ID= " + regid;
-                    Log.i("GCM", msg);
+                    Log.i(Config.TAG, msg);
+                    Log.i(Config.TAG, String.valueOf(regres));
 
                 }
                 catch (IOException ex)
@@ -156,6 +173,7 @@ public class MainActivity extends Activity
                 etRegId.setText(msg + "\n");
             }
         }.execute(null, null, null);    //new Asynctask
+
     }
 
 }

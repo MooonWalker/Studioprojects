@@ -1,0 +1,10 @@
+Php response codes:
+
+		$response["successfromreg"] = 1;
+		$response["message"] = "User successfully added.";
+
+		$response["successfromreg"] = 2;
+		$response["message"] = "User could not be inserted into db.";
+
+		$response["successfromreg"] = 3;
+        $response["message"] = "User details not arrived at server.";

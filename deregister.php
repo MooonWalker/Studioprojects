@@ -2,13 +2,11 @@
 require_once('loader.php');
  
 // return json response 
-$json = array();
+$response = array();
  
 $nameUser  = $_POST["name"];
-$nameEmail = $_POST["email"];
- 
-// GCM Registration ID got from device
-$gcmRegID  = $_POST["regId"]; 
+$nameEmail = $_POST["email"]; 
+$gcmRegID  = $_POST["regId"]; // GCM Registration ID got from device
  
 /**
  * Registering a user device in database
@@ -18,10 +16,10 @@ if (isset($nameUser)
      && isset($nameEmail) 
      && isset($gcmRegID)) 
 {     
-    // Store user details in db
+    // Delete the user from db
     $res = delUser($gcmRegID);
     
-    echo $result;
+    echo $res;
 } 
 else 
 {

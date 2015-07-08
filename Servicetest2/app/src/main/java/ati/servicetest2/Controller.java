@@ -26,80 +26,46 @@ import java.util.Map;
 import java.util.Random;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Controller
 {
 
-    private static final int MAX_ATTEMPTS = 5;
-    private static final int BACKOFF_MILLI_SECONDS = 2000;
-    private static final Random random = new Random();
+    public static final int MAX_ATTEMPTS = 5;
+    public static final int BACKOFF_MILLI_SECONDS = 2000;
+    public static final Random random = new Random();
 
     // Register this account with the server.
-   public static void register(String name, String email, final String regId)
+   public static int register(String name, String email, final String regId)
     {
         Log.i(Config.TAG, "registering device (regId = " + regId + ")");
-
         String serverUrl = Config.YOUR_SERVER_URL;
-
+        int jsonres=0;
         Map<String, String> params = new HashMap<String, String>();
         params.put("regId", regId);
         params.put("name", name);
         params.put("email", email);
 
-        long backoff = BACKOFF_MILLI_SECONDS + random.nextInt(1000);
-
-        // Once GCM returns a registration id, we need to register on our server
-        // As the server might be down, we will retry it a couple
-        // times.
-        for (int i = 1; i <= MAX_ATTEMPTS; i++)
+        try
         {
-            Log.d(Config.TAG, "Attempt #" + i + " to register");
-            try
-            {
-                //Send Broadcast to Show message on screen
-                //displayMessageOnScreen(MainActivity.activity, MainActivity.activity.getString(
-                //        R.string.server_registering, i, MAX_ATTEMPTS));
-
                 // Post registration values to web server
-                post(serverUrl, params);
-
-                //GCMRegistrar.setRegisteredOnServer(context, true);
-
-                //Send Broadcast to Show message on screen
-                //String message = MainActivity.activity.getString(R.string.server_registered);
-                //displayMessageOnScreen(MainActivity.activity, message);
-
-                return;
-            }
-            catch (IOException e)
-            {
-                // Here we are simplifying and retrying on any error; in a real
-                // application, it should retry only on unrecoverable errors
-                // (like HTTP error code 503).
-                Log.e(Config.TAG, "Failed to register on attempt " + i + ":" + e);
-                if (i == MAX_ATTEMPTS)
-                {
-                    break;
-                }
-                try
-                {
-                    Log.d(Config.TAG, "Sleeping for " + backoff + " ms before retry");
-                    Thread.sleep(backoff);
-
-                } catch (InterruptedException e1) {
-                    // Activity finished before we complete - exit.
-                    Log.d(Config.TAG, "Thread interrupted: abort remaining retries!");
-                    Thread.currentThread().interrupt();
-                    return;
-                }
-                // increase backoff exponentially
-                backoff *= 2;
-            }
+                jsonres=post(serverUrl, params).getInt("successfromreg");
+                return jsonres;
         }
-        String message = MainActivity.activity.getString(R.string.server_register_error,
-                MAX_ATTEMPTS);
-
-        //Send Broadcast to Show message on screen
-        //displayMessageOnScreen(MainActivity.activity, message);
+        catch (JSONException je)
+        {
+               Log.e(Config.TAG, "Jsonerror :" + je);
+            return 0;
+        }
+        catch (IOException e)
+        {
+                // Here we are simplifying and retrying on any error; in a real
+                // application, it should retry only on recoverable errors
+                // (like HTTP error code 503).
+                Log.e(Config.TAG, "Failed to register: " + e);
+            return 0;
+        }
     }
 
     // Unregister this account/device pair within the server.
@@ -133,10 +99,13 @@ public class Controller
     }
 
     // Issue a POST request to the server.
-    private static void post(String serverUrl, Map<String, String> params)
+    private static JSONObject post(String serverUrl, Map<String, String> params)
             throws IOException
     {
+        JSONObject jObj=new JSONObject();
         URL url;
+        StringBuilder bodyBuilder = new StringBuilder();
+        Iterator<Map.Entry<String, String>> iterator = params.entrySet().iterator();
         try
         {
             url = new URL(serverUrl);
@@ -145,10 +114,6 @@ public class Controller
         {
             throw new IllegalArgumentException("invalid url: " + serverUrl);
         }
-
-        StringBuilder bodyBuilder = new StringBuilder();
-
-        Iterator<Map.Entry<String, String>> iterator = params.entrySet().iterator();
 
         // constructs the POST body using the parameters
         while (iterator.hasNext())
@@ -163,8 +128,7 @@ public class Controller
         }
         String body = bodyBuilder.toString();
 
-        Log.v(Config.TAG, "Posting '" + body + "' to " + url);
-
+        Log.v(Config.TAG, "GCMPosting '" + body + "' to " + url);
         byte[] bytes = body.getBytes();
 
         //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("proxy", 8080));
@@ -172,10 +136,8 @@ public class Controller
         try
         {
             Log.e("URL", "> " + url);
-
             //conn = (HttpURLConnection) url.openConnection(proxy);
-            conn = (HttpURLConnection) url.openConnection();
-
+            conn = (HttpURLConnection)url.openConnection();
             conn.setDoOutput(true);
             conn.setDoInput(true);
             conn.setUseCaches(false);
@@ -184,7 +146,6 @@ public class Controller
             conn.setRequestProperty("Content-Type",
                     "application/x-www-form-urlencoded;charset=UTF-8");
             // post the request
-
             OutputStream out = conn.getOutputStream();
             out.write(bytes);
             out.close();
@@ -194,7 +155,6 @@ public class Controller
             String line;
             StringBuilder response = new StringBuilder();
 
-            // TODO "Kaka" jön vissza a function.php-ből
             while ((line = reader.readLine()) != null)
             {
                 response.append(line);
@@ -202,8 +162,19 @@ public class Controller
             // handle the response
             reader.close();
 
-            int status = conn.getResponseCode();
+            try
+            {
+                //get response from server as JSON object
+                jObj= JSONParser.parse(response.toString());
+                //JSONObject jObj = new JSONObject(response.toString());
+                return jObj;
+            }
+            catch (JSONException e)
+            {
+                Log.e("JSON Parser", "Error parsing data " + e.toString());
+            }
 
+            int status = conn.getResponseCode();
 
             // If response is not success
             if (status != 200)
@@ -218,6 +189,7 @@ public class Controller
                 conn.disconnect();
             }
         }
+        return jObj;
     }
 
     // Checking for all possible internet providers

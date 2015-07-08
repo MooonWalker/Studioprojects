@@ -12,7 +12,7 @@ public class Config
         /**
          * Tag used on log messages.
          */
-        static final String TAG = "GCM Android";
+        static final String TAG = "GCM Ati";
 
         static final String DISPLAY_MESSAGE_ACTION =
                 "ati.servicesteszts.DISPLAY_MESSAGE";

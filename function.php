@@ -1,61 +1,67 @@
 <?php
 //Deleting a user
-	function delUser($gcm_regid)
-	{
-		$result = mysql_query("DELETE FROM 'gcm_users' WHERE gcm_regid = $gcm_regid") or die(mysql_error());		
-		if ($result) 
-		{             
-            // get user details 
-            if (mysql_num_rows($result) > 0) 
-			{ 
-                return mysql_num_rows($result);
-            } 
-			else 
-			{
-                return false;
-            }
-             
-        } 
+function delUser($gcm_regid)
+{
+	$result = mysql_query("DELETE FROM 'gcm_users' WHERE gcm_regid = $gcm_regid") or die(mysql_error());		
+	if ($result) 
+	{             
+		// get user details 
+		if (mysql_num_rows($result) > 0) 
+		{ 
+			return mysql_num_rows($result);
+		} 
 		else 
 		{
-            return false;
-        }
+			return false;
+		}
+		 
+	} 
+	else 
+	{
+		return false;
 	}
+}
  //Storing new user and returns user details    
-   function storeUser($name, $email, $gcm_regid) {
-        
-        // insert user into database
-        $result = mysql_query(
-                      "INSERT INTO gcm_users
-                            (name, email, gcm_regid, created_at) 
-                            VALUES
-                            ('$name', 
-                             '$email', 
-                             '$gcm_regid', 
-                             NOW())");
-         
-        // check for successful store
-        if ($result) {
-             
-            // get user details
-            $id = mysql_insert_id(); // last inserted id
-            $result = mysql_query("SELECT * FROM gcm_users WHERE id = $id") or die(mysql_error());
-            // return user details 
-            if (mysql_num_rows($result) > 0) { 
-                return mysql_fetch_array($result);
-            } else {
-                return false;
-            }
-             
-        } else {
-            return false;
-        }
-    }
+function storeUser($name, $email, $gcm_regid) 
+{	
+	// insert user into database
+	$result = mysql_query(
+				  "INSERT INTO gcm_users
+						(name, email, gcm_regid, created_at) 
+						VALUES
+						('$name', 
+						 '$email', 
+						 '$gcm_regid', 
+						 NOW())");
+	 
+	// check for successful store
+	if ($result) 
+	{		 
+		// get user details
+		$id = mysql_insert_id(); // last inserted id
+		$result = mysql_query("SELECT * FROM gcm_users WHERE id = $id") or die(mysql_error());
+		// return user details 
+		if (mysql_num_rows($result) > 0) 
+		{ 
+			//return mysql_fetch_array($result);
+			return true;
+		}
+		else 
+		{
+			return false;
+		}		 
+	}
+	else 
+	{
+		return false;
+	}
+}
  
   /**
      * Get user by email
      */
-   function getUserByEmail($email) {
+   function getUserByEmail($email) 
+   {
         $result = mysql_query("SELECT * 
                                     FROM gcm_users 
                                     WHERE email = '$email'
@@ -64,14 +70,16 @@
     }
  
     // Getting all registered users
-  function getAllUsers() {
+  function getAllUsers() 
+  {
         $result = mysql_query("select * 
                                     FROM gcm_users");
         return $result;
-    }
+  }
  
     // Validate user
-  function isUserExisted($email) {
+  function isUserExisted($email) 
+  {
         $result    = mysql_query("SELECT email 
                                        from gcm_users 
                                        WHERE email = '$email'");
@@ -87,9 +95,9 @@
     }
 	
 	 //Sending Push Notification
-   function send_push_notification($registatoin_ids, $message) {
+   function send_push_notification($registatoin_ids, $message) 
+   {
          
-		print"kaka";
         // Set POST variables
         $url = 'https://android.googleapis.com/gcm/send';
  
@@ -120,13 +128,14 @@
  
         // Execute post
         $result = curl_exec($ch);
-        if ($result === FALSE) {
+        if ($result === FALSE) 
+		{
             die('Curl failed: ' . curl_error($ch));
         }
  
         // Close connection
         curl_close($ch);
-        echo $result;
+        //echo $result;
     }
 	
 ?>
