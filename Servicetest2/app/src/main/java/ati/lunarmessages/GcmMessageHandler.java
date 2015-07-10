@@ -57,8 +57,6 @@ public class GcmMessageHandler extends IntentService
                 .setContentTitle(getText(R.string.app_name))
                 .setWhen(System.currentTimeMillis())
                 .setContentIntent(pendingIntent)
-                .addAction(android.R.drawable.ic_menu_close_clear_cancel,
-                        getString(R.string.action_exit), pendingCloseIntent)
                 .setOngoing(true);
     }
 
