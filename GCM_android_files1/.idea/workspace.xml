@@ -5,31 +5,39 @@
       <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="3af5c9cc-0f5f-4103-b9c2-e21c3a2df60a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/Controller$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/Controller$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/Controller.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/GCMIntentService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/GCMIntentService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/RegisterActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/RegisterActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/RegisterActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/androidexample/gcm/RegisterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/Controller.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/MainActivity.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/servicetest2/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/RegisterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/RegisterActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-nodpi/example_picture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi/ic_action_stat_reply.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi/ic_action_stat_reply.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi/ic_action_stat_reply.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-hdpi/ic_action_stat_share.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-mdpi/ic_action_stat_share.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/drawable-xhdpi/ic_action_stat_share.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/JSONParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/Toaster.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/Updatereceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/xml/prefs.xml" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\Lunarmessages.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\main\java\ati\servicetest2\JSONParser.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\androidTest\java\ati\servicetest2\ApplicationTest.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/androidTest/java/ati/lunarmessages/ApplicationTest.java" />
+      <change type="MOVED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\main\java\ati\servicetest2\Config.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/Config.java" />
+      <change type="MOVED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\main\java\ati\servicetest2\Controller.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/Controller.java" />
+      <change type="MOVED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\main\java\ati\servicetest2\GcmBroadcastReceiver.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/GcmBroadcastReceiver.java" />
+      <change type="MOVED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\main\java\ati\servicetest2\GcmMessageHandler.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/GcmMessageHandler.java" />
+      <change type="MOVED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\main\java\ati\servicetest2\MainActivity.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/MainActivity.java" />
+      <change type="MOVED" beforePath="C:\DATA\Dropbox\Studioprojects\Servicetest2\app\src\main\java\ati\servicetest2\PHPCom.java" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/java/ati/lunarmessages/PHPCom.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/build.gradle" afterPath="$PROJECT_DIR$/../Servicetest2/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../atiBasicSyncAdapter/.idea/libraries/cardview_v7_21_0_2.xml" afterPath="$PROJECT_DIR$/../atiBasicSyncAdapter/.idea/libraries/cardview_v7_21_0_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../deregister.php" afterPath="$PROJECT_DIR$/../deregister.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/assets/doku.txt" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/assets/doku.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../function.php" afterPath="$PROJECT_DIR$/../function.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../Servicetest2/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../atiBasicSyncAdapter/.idea/libraries/support_v4_21_0_2.xml" afterPath="$PROJECT_DIR$/../atiBasicSyncAdapter/.idea/libraries/support_v4_21_0_2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../atiBasicSyncAdapter/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../atiBasicSyncAdapter/.idea/workspace.xml" />
     </list>
     <ignored path="GCM_android_files1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,34 +65,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/RegisterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78365386">
-              <caret line="49" column="9" selection-start-line="38" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
-              <folding>
-                <element signature="e#1687#2509#0" expanded="true" />
-                <element signature="e#2508#2509#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1444,8 +1439,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1524,8 +1520,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1741,7 +1736,6 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967743" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1750,8 +1744,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32765958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32907802" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1763,6 +1757,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967743" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32907802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1784,6 +1779,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1902,52 +1921,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Android/android-sdk/platforms/android-8/android.jar!/android/app/Activity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35180724">
           <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
-          <folding>
-            <element signature="e#2294#2295#0" expanded="true" />
-            <element signature="e#2345#2346#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1955,7 +1961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1963,7 +1968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1971,7 +1975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1983,22 +1986,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
+        <state vertical-scroll-proportion="-0.15">
+          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78365386">
-          <caret line="49" column="9" selection-start-line="38" selection-start-column="8" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="e#1687#2509#0" expanded="true" />
-            <element signature="e#2508#2509#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/androidexample/gcm/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

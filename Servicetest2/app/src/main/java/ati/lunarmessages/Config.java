@@ -1,4 +1,4 @@
-package ati.servicetest2;
+package ati.lunarmessages;
 
 public class Config
 {
@@ -13,6 +13,7 @@ public class Config
          * Tag used on log messages.
          */
         static final String TAG = "GCM Ati";
+        static final int TOAST_LENGTH = 2;
 
         static final String DISPLAY_MESSAGE_ACTION =
                 "ati.servicesteszts.DISPLAY_MESSAGE";

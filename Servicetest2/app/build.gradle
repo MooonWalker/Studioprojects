@@ -1,11 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'Ati'
+            keyPassword 'Flight58'
+        }
+    }
     compileSdkVersion 22
     buildToolsVersion "23.0.0 rc2"
-
     defaultConfig {
-        applicationId "ati.servicetest2"
+        applicationId "ati.lunarmessages"
         minSdkVersion 10
         targetSdkVersion 22
         versionCode 1
@@ -23,4 +28,5 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.google.android.gms:play-services:7.5.0'
+    compile 'com.android.support:support-v4:22.2.0'
 }

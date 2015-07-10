@@ -1,28 +1,45 @@
-package ati.servicetest2;
+package ati.lunarmessages;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.SharedPreferences;
+
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import java.io.IOException;
 
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
 {
+    public static final String PREFS_NAME = "Moon_push_settings";
+    static Context ctx;
     Button btnRegId, btnDereg;
     EditText etRegId;
     GoogleCloudMessaging gcm;
     String regid="";
+    String strRegid=""; //regid from sharedpreferences
     int regres=0;
     public static Activity activity = null;
+    private boolean isRegistered=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         activity=this;
+        ctx=this;
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        //PreferenceManager.setDefaultValues(this, R.xml.prefs, true);
+        //prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        isRegistered=settings.getBoolean("isregistered",false);
+        strRegid=settings.getString("lRegId", "");
+
         // Check if Internet present
         if (!Controller.isConnectingToInternet(this))
         {
@@ -50,29 +67,45 @@ public class MainActivity extends Activity
 
         btnDereg=(Button)findViewById(R.id.btnDereg);
         btnRegId = (Button) findViewById(R.id.btnGetRegId);
+        btnRegId.setEnabled(false);
         etRegId = (EditText) findViewById(R.id.etRegId);
 
+        if(!isRegistered)
+        {
+            btnRegId.setEnabled(true);
+            btnDereg.setEnabled(false);
+        }
         btnRegId.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
             {
                 doReg();
+                btnRegId.setEnabled(false);
+                btnDereg.setEnabled(true);
             }
         });
-
         btnDereg.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
             {
                 doDereg();
+                btnDereg.setEnabled(false);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     public void doDereg()
     {
         new AsyncTask<Void, Void, String>()
         {
+            int delres=0;
             @Override
             protected String doInBackground(Void... params)
             {
@@ -84,12 +117,35 @@ public class MainActivity extends Activity
                         gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
                     }
                     gcm.unregister();
-                    msg = "Device deregistered.";
-                    Log.i("GCM: ", msg);
-
-                } catch (IOException ex)
+                    delres = Controller.deregister("Ati", "moonsurveyor@gmail.com", strRegid);
+                    if(delres==10)
+                    {
+                        isRegistered = false;
+                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences.Editor editor = settings.edit();
+                        editor.putString("lRegId", "");
+                        editor.apply();
+                        msg = "Device deregistered.";
+                        Log.i(Config.TAG, msg);
+                    }
+                    if(delres!=10)throw new IOException(); //del 10 = SUCCESS
+                }
+                catch (IOException ex)
                 {
-                    msg = "Error :" + ex.getMessage();
+                    switch (delres)
+                    {
+                        case 20:
+                            msg="User could not be deleted from db.\n " +
+                                    "Please contact admin!";
+                            break;
+                        case 30:
+                            msg="RegID not arrived to webserver.";
+                            break;
+
+                        default:
+                            msg = "Error :" + ex.getMessage();
+                            msg+="Fatal error! \n Contact the developer!";
+                    }
                 }
 
                 return msg;
@@ -99,6 +155,7 @@ public class MainActivity extends Activity
             protected void onPostExecute(String msg)
             {
                 etRegId.setText(msg + "\n");
+                btnRegId.setEnabled(true);
             }
         }.execute(null, null, null);
     }
@@ -150,10 +207,19 @@ public class MainActivity extends Activity
                 {
                     if (regid!="")
                     {
+                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences.Editor editor = settings.edit();
+                        editor.putString("lRegId", regid);
+                        editor.commit();
+
                         regres = Controller.register("Ati", "moonsurveyor@gmail.com", regid);
+                        if(regres==1)isRegistered=true;
+                        if(regres!=1)throw new IOException(); //regres 1 = SUCCESS
+
                     }
                     else
                     {
+                        regres=15; //No regid came back!!
                         throw new IOException();
                     }
                     msg = "Device registered, registration ID= " + regid;
@@ -163,7 +229,25 @@ public class MainActivity extends Activity
                 }
                 catch (IOException ex)
                 {
-                    msg = "Error :" + ex.getMessage();
+                    switch (regres)
+                    {
+                        case 2:
+                            msg="User already registered \n on the webserver!\n " +
+                                    "Please contact admin!";
+                            break;
+                        case 3:
+                            msg="User details not arrived at webserver.";
+                            break;
+                        case 15:
+                            msg="Error by registering on Google!\n" +
+                                    "No regid received from Google.";
+                            break;
+
+                        default:
+                            msg = "Error :" + ex.getMessage();
+                            msg+="Fatal error! \n Contact the developer!";
+                    }
+                    Log.i(Config.TAG, msg);
                 }
                 return msg;
             }
@@ -174,6 +258,17 @@ public class MainActivity extends Activity
             }
         }.execute(null, null, null);    //new Asynctask
 
+    }
+
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("isregistered", isRegistered);
+        // Commit the edits!
+        editor.commit();
     }
 
 }

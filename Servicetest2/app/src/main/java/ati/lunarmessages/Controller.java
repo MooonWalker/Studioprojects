@@ -1,4 +1,4 @@
-package ati.servicetest2;
+package ati.lunarmessages;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -9,22 +9,18 @@ import android.net.NetworkInfo;
 import android.os.PowerManager;
 import android.util.Log;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
-import java.net.Proxy;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Random;
-import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,6 +31,38 @@ public class Controller
     public static final int MAX_ATTEMPTS = 5;
     public static final int BACKOFF_MILLI_SECONDS = 2000;
     public static final Random random = new Random();
+
+    //Unregister the given regid
+    public static int deregister(String name, String email, String strRegid)
+    {
+        Log.i(Config.TAG, "registering device (regId = " + strRegid + ")");
+        String serverUrl = Config.DEREGISTER_URL;
+        int jsonres;
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("regId", strRegid);
+        params.put("name", name);
+        params.put("email", email);
+
+        try
+        {
+            // Post registration values to web server
+            jsonres=post(serverUrl, params).getInt("successfromdel");
+            return jsonres;
+        }
+        catch (JSONException je)
+        {
+            Log.e(Config.TAG, "Jsonerror :" + je);
+            return 0;
+        }
+        catch (IOException e)
+        {
+            // Here we are simplifying and retrying on any error; in a real
+            // application, it should retry only on recoverable errors
+            // (like HTTP error code 503).
+            Log.e(Config.TAG, "Failed to deregister: " + e);
+            return 0;
+        }
+    }
 
     // Register this account with the server.
    public static int register(String name, String email, final String regId)
@@ -65,36 +93,6 @@ public class Controller
                 // (like HTTP error code 503).
                 Log.e(Config.TAG, "Failed to register: " + e);
             return 0;
-        }
-    }
-
-    // Unregister this account/device pair within the server.
-    void unregister(final Context context, final String regId)
-    {
-        Log.i(Config.TAG, "unregistering device (regId = " + regId + ")");
-
-        String serverUrl = Config.YOUR_SERVER_URL + "/unregister";
-        Map<String, String> params = new HashMap<String, String>();
-        params.put("regId", regId);
-
-        try
-        {
-            post(serverUrl, params);
-            //GCMRegistrar.setRegisteredOnServer(context, false);
-            String message = context.getString(R.string.server_unregistered);
-            displayMessageOnScreen(context, message);
-        }
-        catch (IOException e)
-        {
-            // At this point the device is unregistered from GCM, but still
-            // registered in the our server.
-            // We could try to unregister again, but it is not necessary:
-            // if the server tries to send a message to the device, it will get
-            // a "NotRegistered" error message and should unregister the device.
-
-            String message = context.getString(R.string.server_unregister_error,
-                    e.getMessage());
-            displayMessageOnScreen(context, message);
         }
     }
 

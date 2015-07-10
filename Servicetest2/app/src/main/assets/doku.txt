@@ -8,3 +8,13 @@ Php response codes:
 
 		$response["successfromreg"] = 3;
         $response["message"] = "User details not arrived at server.";
+
+------------------------------------------------------------------------
+		$response["successfromdel"] = 10;
+		$response["message"] = "User successfully deleted.";
+
+		$response["successfromdel"] = 20;
+		$response["message"] = "User could not be deleted from db.";
+
+		$response["successfromdel"] = 30;
+		$response["message"] = "RegID not arrived to webserver.";

@@ -1,19 +1,22 @@
-package ati.servicetest2;
+package ati.lunarmessages;
 
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.Toast;
+
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
-public class GcmMessageHandler extends IntentService
+/**
+ * Created by i021059 on 2015.07.09..
+ */
+public class Toaster extends IntentService
 {
     String mes;
     private Handler handler;
-    public GcmMessageHandler() {
-        super("GcmMessageHandler");
+    public Toaster() {
+        super("Toaster");
     }
 
     @Override
@@ -22,22 +25,15 @@ public class GcmMessageHandler extends IntentService
         super.onCreate();
         handler = new Handler();
     }
+
     @Override
     protected void onHandleIntent(Intent intent)
     {
         Bundle extras = intent.getExtras();
-
-        GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
-        // The getMessageType() intent parameter must be the intent you received
-        // in your BroadcastReceiver.
-        String messageType = gcm.getMessageType(intent);
-
-        mes = extras.getString(Config.EXTRA_MESSAGE);
+        mes = "Updated";
         showToast();
-        Log.i("GCM", "Received : (" + messageType + ")  " + extras.getString("title"));
 
-        GcmBroadcastReceiver.completeWakefulIntent(intent);
-
+        Updatereceiver.completeWakefulIntent(intent);
     }
 
     public void showToast()
