@@ -24,4 +24,6 @@
     <string name="action_share">Share</string>
     <string name="action_reply">Reply</string>
     <string name="service_connected">Service connected</string>
+    <string name="action_exit">Action exit</string>
+    <string name="message_arrived">Üzenet érkezett</string>
 </resources>

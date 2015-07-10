@@ -2,6 +2,7 @@ package ati.lunarmessages;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -92,6 +93,29 @@ public class MainActivity extends AppCompatActivity
                 btnDereg.setEnabled(false);
             }
         });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent)
+    {
+        super.onNewIntent(intent);
+        String action = intent.getAction();
+        if (action == null)
+        {
+            return;
+        }
+        switch (action)
+        {
+            case GcmMessageHandler.CLOSE_ACTION:
+                exit();
+                break;
+        }
+    }
+
+    private void exit()
+    {
+        stopService(new Intent(this, GcmMessageHandler.class));
+        finish();
     }
 
     @Override
