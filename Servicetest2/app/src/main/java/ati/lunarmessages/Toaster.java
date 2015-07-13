@@ -8,9 +8,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
-/**
- * Created by i021059 on 2015.07.09..
- */
 public class Toaster extends IntentService
 {
     String mes;

@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity
         }
         switch (action)
         {
-            case GcmMessageHandler.CLOSE_ACTION:
+            case GcmMessageHandler.TOUCH_ACTION:
                 exit();
                 break;
         }

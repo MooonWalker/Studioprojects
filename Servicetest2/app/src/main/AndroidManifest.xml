@@ -24,7 +24,7 @@
 
         <!-- Register Activity -->
         <activity
-            android:name="ati.lunarmessages.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
         </activity>
 
         <receiver
-            android:name="ati.lunarmessages.GcmBroadcastReceiver"
+            android:name=".GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -42,25 +42,32 @@
                 <category android:name="ati.lunarmessages" />
             </intent-filter>
         </receiver>
-
-        <receiver
-            android:name="ati.lunarmessages.Updatereceiver" >
+        <receiver android:name=".Updatereceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REPLACED" />
-                <data android:path="ati.lunarmessages"
-                      android:scheme="package" />
+                <data   android:path="ati.lunarmessages"
+                        android:scheme="package" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name="ati.lunarmessages.GcmMessageHandler"
+            android:name=".GcmMessageHandler"
             android:enabled="true"
             android:icon="@drawable/ic_service" />
 
         <service
-            android:name="ati.lunarmessages.Toaster"
+            android:name=".Toaster"
             android:enabled="true"
             android:icon="@drawable/ic_service" />
+
+        <service android:name=".RegRefresher"
+                 android:enabled="true"
+                 android:icon="@drawable/ic_service"/>
+
+        <activity
+            android:name=".MessageViewer"
+            android:label="@string/title_activity_message_viewer" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

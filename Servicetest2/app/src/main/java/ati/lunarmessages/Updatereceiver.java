@@ -14,12 +14,19 @@ public class Updatereceiver extends WakefulBroadcastReceiver
     @Override
     public void onReceive(final Context context, Intent intent)
     {
-        // Explicitly specify that GcmMessageHandler will handle the intent.
-        ComponentName comp = new ComponentName(context.getPackageName(),
-                Toaster.class.getName());
+        if(intent!=null && intent.getAction().equals(Intent.ACTION_PACKAGE_REPLACED))
+        {
+            if(intent.getData().getSchemeSpecificPart().equals(context.getPackageName()))
+            {
+                // Explicitly specify that Toaster will handle the intent.
+                ComponentName comp = new ComponentName(context.getPackageName(),
+                        Toaster.class.getName());
 
-        // Start the service, keeping the device awake while it is launching.
-        startWakefulService(context, (intent.setComponent(comp)));
-        //setResultCode(MainActivity.RESULT_OK);
+                // Start the service, keeping the device awake while it is launching.
+                startWakefulService(context, (intent.setComponent(comp)));
+                //setResultCode(MainActivity.RESULT_OK);
+            }
+        }
+
     }
 }

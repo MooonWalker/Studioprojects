@@ -62,7 +62,7 @@
         <table  width="910" cellpadding="1" cellspacing="1" style="padding-left:10px;">
          <tr>
            <td align="left">
-              <h1>No of Devices Registered: <?php echo $NumOfUsers; ?></h1>
+              <h1>Regisztrált felhasználók száma: <?php echo $NumOfUsers; ?></h1>
               <hr/>
            </td>
           </tr> 
@@ -74,7 +74,8 @@
                 <tr>
                    
        <?php
-        if ($NumOfUsers > 0) {
+        if ($NumOfUsers > 0) 
+		{
             $i=1;
             while ($rowUsers = mysql_fetch_array($resultUsers)) {
                 if($i%3==0)
@@ -103,7 +104,7 @@
             <?php }
         } else { ?> 
               <td>
-                User not exist.
+                A felhasználó nem létezik.
                </td>
         <?php } ?>
                      
@@ -111,8 +112,6 @@
                 </table>
             </td>
           </tr>  
-        </table>
-         
-         
+        </table> 
     </body>
 </html>
