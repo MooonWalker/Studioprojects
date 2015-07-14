@@ -96,7 +96,7 @@ public class GcmMessageHandler extends IntentService
             showNotification(excrept);
         }
         showToast(mes);
-        Log.i(Config.TAG, "Received : (" + messageType + ")  " + extras.getString("title"));
+        Log.i(Config.TAG, "Received : (" + messageType + ")  " + extras.getString(Config.EXTRA_MESSAGE));
         GcmBroadcastReceiver.completeWakefulIntent(intent);
     }
 

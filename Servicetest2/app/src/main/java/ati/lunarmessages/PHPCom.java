@@ -70,46 +70,6 @@ public class PHPCom
         // protected String doInBackground(List<SessionH>... sessions)
         protected String doInBackground(List... stufftosend)
         {
-//            String uuid = null;
-//            Map<String, String> params = new HashMap<String, String>();
-//
-//                JSONObject json = jsonParser.makeHttpRequest(
-//                        url_create_session, "POST", (List)params);
-//                if (json == null)
-//                {
-//                    cancel(true);
-//                }
-//                Log.d("Create Response", json.toString());
-//
-//                try
-//                {
-//                    int success = json.getInt(TAG_SUCCESS);
-//                    if (success == 1)
-//                    {
-//                        //s_success.add(sessions.get(i));
-//                    }
-//                    else
-//                    {
-//                        sendwascorrect = "false";
-//
-//                    }
-//                }
-//                catch (JSONException e)
-//                {
-//                    sendwascorrect = "false";
-//                    e.printStackTrace();
-//
-//                }
-//
-//
-//            if(isCancelled())return sendwascorrect="false";
-//
-//
-//           // if (s_success.size() > 0)
-//            //{
-//
-//            //}
-//
            return sendwascorrect;
         }
 

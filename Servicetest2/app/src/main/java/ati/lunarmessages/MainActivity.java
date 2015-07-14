@@ -18,7 +18,6 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity
 {
-    public static final String PREFS_NAME = "Moon_push_settings";
     static Context ctx;
     Button btnDereg;
     EditText etRegId;
@@ -35,11 +34,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         activity=this;
         ctx=this;
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
         //PreferenceManager.setDefaultValues(this, R.xml.prefs, true);
         //prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        isRegistered=settings.getBoolean("isregistered",false);
-        strRegid=settings.getString("lRegId", "");
+        isRegistered=settings.getBoolean(MyPreference.ISREGISTERED,false);
+        strRegid=settings.getString(MyPreference.REGID, "");
 
         // Check if Internet present
         if (!Controller.isConnectingToInternet(this))
@@ -141,9 +140,9 @@ public class MainActivity extends AppCompatActivity
                     if(delres==10)
                     {
                         isRegistered = false;
-                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
                         SharedPreferences.Editor editor = settings.edit();
-                        editor.putString("lRegId", "");
+                        editor.putString(MyPreference.REGID, "");
                         editor.apply();
                         msg = "Device deregistered.";
                         Log.i(Config.TAG, msg);
@@ -227,9 +226,9 @@ public class MainActivity extends AppCompatActivity
                 {
                     if (regid!="")
                     {
-                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
                         SharedPreferences.Editor editor = settings.edit();
-                        editor.putString("lRegId", regid);
+                        editor.putString(MyPreference.REGID, regid);
                         editor.commit();
 
                         regres = Controller.register("Ati", "moonsurveyor@gmail.com", regid);
@@ -285,9 +284,9 @@ public class MainActivity extends AppCompatActivity
     protected void onStop()
     {
         super.onStop();
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean("isregistered", isRegistered);
+        editor.putBoolean(MyPreference.ISREGISTERED, isRegistered);
         // Commit the edits!
         editor.commit();
     }
