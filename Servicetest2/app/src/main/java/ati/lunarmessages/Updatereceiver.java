@@ -18,10 +18,9 @@ public class Updatereceiver extends WakefulBroadcastReceiver
         {
             if(intent.getData().getSchemeSpecificPart().equals(context.getPackageName()))
             {
-                // Explicitly specify that Toaster will handle the intent.
+                // Explicitly specify that RegRefresher will handle the intent.
                 ComponentName comp = new ComponentName(context.getPackageName(),
-                        Toaster.class.getName());
-
+                        RegRefresher.class.getName());
                 // Start the service, keeping the device awake while it is launching.
                 startWakefulService(context, (intent.setComponent(comp)));
                 //setResultCode(MainActivity.RESULT_OK);

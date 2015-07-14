@@ -27,7 +27,7 @@ public class Toaster extends IntentService
     protected void onHandleIntent(Intent intent)
     {
         Bundle extras = intent.getExtras();
-        mes = "Updated";
+        mes = "Rebooted";
         showToast();
 
         Updatereceiver.completeWakefulIntent(intent);

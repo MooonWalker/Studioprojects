@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.SharedPreferences;
-
+import android.widget.Toast;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import java.io.IOException;
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity
 {
     public static final String PREFS_NAME = "Moon_push_settings";
     static Context ctx;
-    Button btnRegId, btnDereg;
+    Button btnDereg;
     EditText etRegId;
     GoogleCloudMessaging gcm;
     String regid="";
@@ -67,24 +67,20 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         btnDereg=(Button)findViewById(R.id.btnDereg);
-        btnRegId = (Button) findViewById(R.id.btnGetRegId);
-        btnRegId.setEnabled(false);
         etRegId = (EditText) findViewById(R.id.etRegId);
 
-        if(!isRegistered)
+        if(!isRegistered) //nem regisztrált
         {
-            btnRegId.setEnabled(true);
+            doReg(); //force register
+            Toast.makeText(this,"Device registered", Toast.LENGTH_LONG).show();
             btnDereg.setEnabled(false);
         }
-        btnRegId.setOnClickListener(new View.OnClickListener()
+        else //már regisztrált
         {
-            public void onClick(View v)
-            {
-                doReg();
-                btnRegId.setEnabled(false);
-                btnDereg.setEnabled(true);
-            }
-        });
+            Toast.makeText(this,"Already registered", Toast.LENGTH_LONG).show();
+
+        }
+
         btnDereg.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
@@ -179,7 +175,7 @@ public class MainActivity extends AppCompatActivity
             protected void onPostExecute(String msg)
             {
                 etRegId.setText(msg + "\n");
-                btnRegId.setEnabled(true);
+                Toast.makeText(MainActivity.this,"A készülék leiratkozott",Toast.LENGTH_LONG).show();
             }
         }.execute(null, null, null);
     }
@@ -279,6 +275,7 @@ public class MainActivity extends AppCompatActivity
             protected void onPostExecute(String msg)
             {
                 etRegId.setText(msg + "\n");
+                Toast.makeText(MainActivity.this,"A feliratkozás sikerült.",Toast.LENGTH_LONG).show();
             }
         }.execute(null, null, null);    //new Asynctask
 

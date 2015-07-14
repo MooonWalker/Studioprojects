@@ -9,12 +9,12 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-
+    <uses-permission android:name="ati.lunarmessages.permission.C2D_MESSAGE" />
     <permission
         android:name="ati.lunarmessages.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="ati.lunarmessages.permission.C2D_MESSAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -45,8 +45,19 @@
         <receiver android:name=".Updatereceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REPLACED" />
-                <data   android:path="ati.lunarmessages"
-                        android:scheme="package" />
+
+                <data
+                    android:path="ati.lunarmessages"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="ati.lunarmessages.Bootreceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="ANDROID.INTENT.ACTION.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
@@ -54,15 +65,14 @@
             android:name=".GcmMessageHandler"
             android:enabled="true"
             android:icon="@drawable/ic_service" />
-
         <service
             android:name=".Toaster"
             android:enabled="true"
             android:icon="@drawable/ic_service" />
-
-        <service android:name=".RegRefresher"
-                 android:enabled="true"
-                 android:icon="@drawable/ic_service"/>
+        <service
+            android:name=".RegRefresher"
+            android:enabled="true"
+            android:icon="@drawable/ic_service" />
 
         <activity
             android:name=".MessageViewer"
@@ -72,6 +82,8 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+
     </application>
 
 </manifest>

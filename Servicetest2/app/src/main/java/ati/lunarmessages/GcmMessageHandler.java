@@ -56,7 +56,7 @@ public class GcmMessageHandler extends IntentService
         Resources res= this.getResources();
         myNotificationBuilder
                 .setSmallIcon(R.drawable.ic_zetor_small)
-                .setLargeIcon(BitmapFactory.decodeResource(res,R.drawable.zetor128))
+                .setLargeIcon(BitmapFactory.decodeResource(res,R.drawable.app_icon_64))
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setContentTitle(getText(R.string.app_name))
