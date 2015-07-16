@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity
         {
             doReg(); //force register
             Toast.makeText(this,"Device registered", Toast.LENGTH_LONG).show();
-            btnDereg.setEnabled(false);
+            btnDereg.setEnabled(true);
         }
         else //már regisztrált
         {

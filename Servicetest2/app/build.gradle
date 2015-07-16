@@ -5,6 +5,8 @@ android {
         config {
             keyAlias 'Ati'
             keyPassword 'Flight58'
+            storeFile file('C:/DATA/Dropbox/Studioprojects/Atikeys.jks')
+            storePassword 'Flight58'
         }
     }
     compileSdkVersion 22
@@ -15,12 +17,15 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 
