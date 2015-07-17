@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,11 +35,10 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         activity=this;
         ctx=this;
-        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
         //PreferenceManager.setDefaultValues(this, R.xml.prefs, true);
         //prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        isRegistered=settings.getBoolean(MyPreference.ISREGISTERED,false);
-        strRegid=settings.getString(MyPreference.REGID, "");
+        isRegistered=MyPreference.getISREGISTERED(this);
+        strRegid=MyPreference.getREGID(this);
 
         // Check if Internet present
         if (!Controller.isConnectingToInternet(this))
@@ -120,6 +120,18 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        int itemID=item.getItemId();
+        //noinspection SimplifiableIfStatement
+        if (itemID == R.id.action_settings)
+        {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public void doDereg()
     {
         new AsyncTask<Void, Void, String>()
@@ -140,10 +152,8 @@ public class MainActivity extends AppCompatActivity
                     if(delres==10)
                     {
                         isRegistered = false;
-                        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
-                        SharedPreferences.Editor editor = settings.edit();
-                        editor.putString(MyPreference.REGID, "");
-                        editor.apply();
+                        MyPreference.setREGID(MainActivity.ctx,"");
+                        MyPreference.setNEEDREREG(MainActivity.ctx,false);
                         msg = "Device deregistered.";
                         Log.i(Config.TAG, msg);
                     }
@@ -166,7 +176,6 @@ public class MainActivity extends AppCompatActivity
                             msg+="Fatal error! \n Contact the developer!";
                     }
                 }
-
                 return msg;
             }
 
@@ -226,15 +235,19 @@ public class MainActivity extends AppCompatActivity
                 {
                     if (regid!="")
                     {
-                        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
-                        SharedPreferences.Editor editor = settings.edit();
-                        editor.putString(MyPreference.REGID, regid);
-                        editor.commit();
-
+                        //Send regid to webserver...
                         regres = Controller.register("Ati", "moonsurveyor@gmail.com", regid);
-                        if(regres==1)isRegistered=true;
-                        if(regres!=1)throw new IOException(); //regres 1 = SUCCESS
-
+                        if(regres==1)
+                        {
+                            isRegistered = true;
+                            MyPreference.setREGID(MainActivity.ctx, regid);
+                            MyPreference.setNEEDREREG(MainActivity.ctx,false);
+                        }
+                        if(regres!=1)
+                        {
+                            MyPreference.setNEEDREREG(MainActivity.ctx,true);
+                            throw new IOException(); //regres 1 = SUCCESS
+                        }
                     }
                     else
                     {
@@ -260,11 +273,13 @@ public class MainActivity extends AppCompatActivity
                         case 15:
                             msg="Error by registering on Google!\n" +
                                     "No regid received from Google.";
+                            MyPreference.setNEEDREREG(MainActivity.ctx,true);
                             break;
 
                         default:
                             msg = "Error :" + ex.getMessage();
                             msg+="Fatal error! \n Contact the developer!";
+                            MyPreference.setNEEDREREG(MainActivity.ctx,true);
                     }
                     Log.i(Config.TAG, msg);
                 }
@@ -284,11 +299,7 @@ public class MainActivity extends AppCompatActivity
     protected void onStop()
     {
         super.onStop();
-        SharedPreferences settings = getSharedPreferences(MyPreference.PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putBoolean(MyPreference.ISREGISTERED, isRegistered);
-        // Commit the edits!
-        editor.commit();
+        MyPreference.setISREGISTERED(this,isRegistered);
     }
 
 }
