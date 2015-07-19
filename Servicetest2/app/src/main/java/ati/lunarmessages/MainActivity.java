@@ -3,21 +3,31 @@ package ati.lunarmessages;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.Tab;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.content.SharedPreferences;
 import android.widget.Toast;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import java.io.IOException;
+import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends ActionBarActivity
 {
     static Context ctx;
     Button btnDereg;
@@ -28,15 +38,21 @@ public class MainActivity extends AppCompatActivity
     int regres=0;
     public static Activity activity = null;
     private boolean isRegistered=false;
+    private ViewPager viewPager;
+
+
+    private String[] tabs = { "tab 1", "tab 2"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tabbedtest);
+        setUpTabs(savedInstanceState);
+
         activity=this;
         ctx=this;
-        //PreferenceManager.setDefaultValues(this, R.xml.prefs, true);
-        //prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         isRegistered=MyPreference.getISREGISTERED(this);
         strRegid=MyPreference.getREGID(this);
 
@@ -63,16 +79,14 @@ public class MainActivity extends AppCompatActivity
             // stop executing code by return
             return;
         }
-        setContentView(R.layout.activity_main);
 
-        btnDereg=(Button)findViewById(R.id.btnDereg);
-        etRegId = (EditText) findViewById(R.id.etRegId);
+
 
         if(!isRegistered) //nem regisztrált
         {
             doReg(); //force register
             Toast.makeText(this,"Device registered", Toast.LENGTH_LONG).show();
-            btnDereg.setEnabled(true);
+            //btnDereg.setEnabled(true);
         }
         else //már regisztrált
         {
@@ -80,14 +94,22 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        btnDereg.setOnClickListener(new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                doDereg();
-                btnDereg.setEnabled(false);
-            }
-        });
+        //btnDereg.setOnClickListener(new View.OnClickListener()
+        //{
+          //  public void onClick(View v)
+          //  {
+            //    doDereg();
+             //   //btnDereg.setEnabled(false);
+            //}
+       // });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState)
+    {
+        super.onSaveInstanceState(outState);
+        //            save the selected tab's index so it's re-selected on orientation change
+        outState.putInt("tabIndex", getSupportActionBar().getSelectedNavigationIndex());
     }
 
     @Override
@@ -125,6 +147,14 @@ public class MainActivity extends AppCompatActivity
     {
         int itemID=item.getItemId();
         //noinspection SimplifiableIfStatement
+        switch (itemID)
+        {
+            case R.id.action_unsubscribe:
+                doDereg();
+                //btnDereg.setEnabled(false);
+                break;
+        }
+
         if (itemID == R.id.action_settings)
         {
             return true;
@@ -182,7 +212,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             protected void onPostExecute(String msg)
             {
-                etRegId.setText(msg + "\n");
+               // etRegId.setText(msg + "\n");
                 Toast.makeText(MainActivity.this,"A készülék leiratkozott",Toast.LENGTH_LONG).show();
             }
         }.execute(null, null, null);
@@ -288,7 +318,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             protected void onPostExecute(String msg)
             {
-                etRegId.setText(msg + "\n");
+                //etRegId.setText(msg + "\n");
                 Toast.makeText(MainActivity.this,"A feliratkozás sikerült.",Toast.LENGTH_LONG).show();
             }
         }.execute(null, null, null);    //new Asynctask
@@ -299,7 +329,49 @@ public class MainActivity extends AppCompatActivity
     protected void onStop()
     {
         super.onStop();
-        MyPreference.setISREGISTERED(this,isRegistered);
+        MyPreference.setISREGISTERED(this, isRegistered);
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig)
+    {
+        super.onConfigurationChanged(newConfig);
+
+    }
+
+
+    private void setUpTabs(Bundle savedInstanceState)
+    {
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setNavigationMode(actionBar.NAVIGATION_MODE_TABS);
+        actionBar.setDisplayShowTitleEnabled(false);
+
+        Tab tab_one = actionBar.newTab();
+        Tab tab_two = actionBar.newTab();
+
+        FragmentMsgs fragmentMsgs = new FragmentMsgs();
+        tab_one.setText("One")
+                .setContentDescription("The first tab")
+                .setTabListener(
+                        new MyTabListener<FragmentMsgs>(
+                                fragmentMsgs));
+
+        FragmentRSS fragmentRSS = new FragmentRSS();
+        tab_two.setText("Two")
+                .setContentDescription("The second tab")
+                .setTabListener(
+                        new MyTabListener<FragmentRSS>(
+                                fragmentRSS));
+
+
+        actionBar.addTab(tab_one);
+        actionBar.addTab(tab_two);
+
+        if (savedInstanceState != null)
+        {
+            Log.i("TAG", "setting selected tab from saved bundle");
+//            get the saved selected tab's index and set that tab as selected
+            actionBar.setSelectedNavigationItem(savedInstanceState.getInt("tabIndex", 0));
+        }
+    }
 }
