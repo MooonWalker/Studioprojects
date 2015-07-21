@@ -18,7 +18,6 @@ public class GcmMessageHandler extends IntentService
 {
     private static final int NOTIFICATION = 1;
     String mes, excrept;
-    private Handler handler;
     private NotificationManager myNotificationManager=null;
     private final NotificationCompat.Builder myNotificationBuilder=new NotificationCompat.Builder(this);
     public static final String CLOSE_ACTION = "close";
@@ -34,32 +33,22 @@ public class GcmMessageHandler extends IntentService
     public void onCreate()
     {
         super.onCreate();
-        handler = new Handler();
-        setupNotifications();
-        //showNotification();
+        //setupNotifications(" ");
     }
 
-    private void setupNotifications()
+    private void setupNotifications(String fullMsg)
     {
         if (myNotificationManager == null)
         {
             myNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
         intentM = new Intent(this,MainActivity.class);
-        //int uniqueInt = (int) (System.currentTimeMillis() & 0xfffffff);
-        intentM.putExtra("handover","teszt");
+        intentM.putExtra("handover", fullMsg);
         intentM.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intentM.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intentM.setAction(TOUCH_ACTION);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intentM, PendingIntent.FLAG_UPDATE_CURRENT);
 
-//                PendingIntent.FLAG_UPDATE_CURRENT | Intent.FLAG_ACTIVITY_CLEAR_TOP |
-//                                Intent.FLAG_ACTIVITY_SINGLE_TOP,0);
-
-//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
-//                new Intent(this, MainActivity.class)
-//                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP)
-//                        .setAction(TOUCH_ACTION), 0);
         Resources res= this.getResources();
         myNotificationBuilder
                 .setSmallIcon(R.drawable.ic_zetor_small)
@@ -72,11 +61,11 @@ public class GcmMessageHandler extends IntentService
                 .setOngoing(true);
     }
 
-    private void showNotification(String msg)
+    private void showNotification(String excr)
     {
         myNotificationBuilder
                 .setTicker(getText(R.string.message_arrived))
-                .setContentText(msg);
+                .setContentText(excr);
 
         if (myNotificationManager != null)
         {
@@ -93,6 +82,7 @@ public class GcmMessageHandler extends IntentService
         String messageType = gcm.getMessageType(intent);
         mes = extras.getString(Config.EXTRA_MESSAGE);
         excrept=mes;
+        setupNotifications(mes);
         if (myNotificationManager != null)
         {
             myNotificationManager.cancel(NOTIFICATION);
@@ -102,20 +92,7 @@ public class GcmMessageHandler extends IntentService
             }
             showNotification(excrept);
         }
-        showToast(mes);
         Log.i(Config.TAG, "Received : (" + messageType + ")  " + extras.getString(Config.EXTRA_MESSAGE));
         GcmBroadcastReceiver.completeWakefulIntent(intent);
-    }
-
-    public void showToast(final String text)
-    {
-        handler.post(new Runnable()
-        {
-            public void run()
-            {
-                Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG).show();
-            }
-        });
-
     }
 }
