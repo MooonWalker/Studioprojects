@@ -3,15 +3,14 @@ package ati.lunarmessages;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by i021059 on 2015.07.14..
- */
 public class MyPreference
 {
     static final String PREFS_NAME = "Moon_push_settings";
     static final String REGID = "lRegId";
     static final String ISREGISTERED = "isregistered";
     static final String NEEDSREREG = "needsReReg";
+    static final String fMESSAGE = "fMessage";
+
 
     public static Boolean getISREGISTERED(Context ctx)
     {
@@ -28,7 +27,13 @@ public class MyPreference
     public static String getREGID(Context ctx)
     {
         SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
-        return settings.getString(REGID, "");
+        return settings.getString(REGID, " ");
+    }
+
+    public static String getfMESSAGE(Context ctx)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        return settings.getString(fMESSAGE, " ");
     }
 
     public static void setREGID(Context ctx, String regid)
@@ -36,6 +41,14 @@ public class MyPreference
         SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(MyPreference.REGID, regid);
+        editor.apply();
+    }
+
+    public static void setfMESSAGE(Context ctx, String fMESSAGE)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(MyPreference.fMESSAGE, fMESSAGE);
         editor.apply();
     }
 

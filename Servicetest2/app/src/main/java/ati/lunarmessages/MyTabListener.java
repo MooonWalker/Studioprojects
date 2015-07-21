@@ -7,7 +7,6 @@ import android.support.v7.app.ActionBar;
 public class MyTabListener<T extends Fragment> implements ActionBar.TabListener
 {
     private Fragment fragment;
-    private static final String TAG ="junk";
     public MyTabListener(Fragment fragment)
     {
         this.fragment=fragment;
@@ -17,7 +16,6 @@ public class MyTabListener<T extends Fragment> implements ActionBar.TabListener
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft)
     {
         ft.replace(R.id.container, fragment, null);
-
     }
 
     @Override
@@ -25,6 +23,7 @@ public class MyTabListener<T extends Fragment> implements ActionBar.TabListener
     {
         if (fragment != null)
         {
+
             ft.remove(fragment);
         }
 

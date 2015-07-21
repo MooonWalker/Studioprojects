@@ -23,9 +23,10 @@ public class GcmMessageHandler extends IntentService
     private final NotificationCompat.Builder myNotificationBuilder=new NotificationCompat.Builder(this);
     public static final String CLOSE_ACTION = "close";
     public static final String TOUCH_ACTION = "touch";
+    Intent intentM;
 
-
-    public GcmMessageHandler() {
+    public GcmMessageHandler()
+    {
         super("GcmMessageHandler");
     }
 
@@ -44,15 +45,21 @@ public class GcmMessageHandler extends IntentService
         {
             myNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         }
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, MainActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                        .setAction(TOUCH_ACTION), 0);
-        PendingIntent pendingCloseIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, MainActivity.class)
-                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                        .setAction(CLOSE_ACTION), 0);
+        intentM = new Intent(this,MainActivity.class);
+        //int uniqueInt = (int) (System.currentTimeMillis() & 0xfffffff);
+        intentM.putExtra("handover","teszt");
+        intentM.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intentM.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intentM.setAction(TOUCH_ACTION);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intentM, PendingIntent.FLAG_UPDATE_CURRENT);
 
+//                PendingIntent.FLAG_UPDATE_CURRENT | Intent.FLAG_ACTIVITY_CLEAR_TOP |
+//                                Intent.FLAG_ACTIVITY_SINGLE_TOP,0);
+
+//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
+//                new Intent(this, MainActivity.class)
+//                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP)
+//                        .setAction(TOUCH_ACTION), 0);
         Resources res= this.getResources();
         myNotificationBuilder
                 .setSmallIcon(R.drawable.ic_zetor_small)
@@ -89,9 +96,9 @@ public class GcmMessageHandler extends IntentService
         if (myNotificationManager != null)
         {
             myNotificationManager.cancel(NOTIFICATION);
-            if(mes.length()>10)
+            if(mes.length()>15)
             {
-                excrept=mes.substring(0, 10) + "..."; //show only excrept
+                excrept=mes.substring(0, 15) + "..."; //show only excrept
             }
             showNotification(excrept);
         }
