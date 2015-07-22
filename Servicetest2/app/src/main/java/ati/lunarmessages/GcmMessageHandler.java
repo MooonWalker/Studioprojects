@@ -66,7 +66,7 @@ public class GcmMessageHandler extends IntentService
                 .setWhen(System.currentTimeMillis())
                 .setContentIntent(pendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .addAction(R.drawable.ic_zetor_small, "more", piCalEvent) // API 16 TODO change that icon
+                .addAction(R.drawable.ic_event, "Emlékeztetõ", piCalEvent) // API 16 TODO change that icon
                 .setOngoing(true);
     }
 
