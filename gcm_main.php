@@ -13,8 +13,8 @@ function sPushNotification($registration_ids, $message) {
 
     $headers = array(
         'Authorization:key=' . GOOGLE_API_KEY,
-        'Content-Type: application/json'
-    );
+        'Content-Type: application/json');
+		
     echo json_encode($fields);
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -94,6 +94,8 @@ if(!empty($_GET['shareRegId'])) {
 ?>
 
 <html>
+<meta type="utf-8">
+<meta charset="utf-8" /> 
     <head>
         <title>Whatever Title</title>
     </head>

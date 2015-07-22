@@ -2,7 +2,8 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        config {
+        config
+                {
             keyAlias 'Ati'
             keyPassword 'Flight58'
             storeFile file('C:/DATA/Dropbox/Studioprojects/Atikeys.jks')
@@ -13,7 +14,7 @@ android {
     buildToolsVersion "23.0.0 rc2"
     defaultConfig {
         applicationId "ati.lunarmessages"
-        minSdkVersion 10
+        minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"

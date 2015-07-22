@@ -1,17 +1,15 @@
 package ati.lunarmessages;
 
 import android.app.IntentService;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.widget.Toast;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 public class GcmMessageHandler extends IntentService
@@ -23,6 +21,7 @@ public class GcmMessageHandler extends IntentService
     public static final String CLOSE_ACTION = "close";
     public static final String TOUCH_ACTION = "touch";
     Intent intentM;
+    Intent iCal;
 
     public GcmMessageHandler()
     {
@@ -47,17 +46,27 @@ public class GcmMessageHandler extends IntentService
         intentM.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intentM.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intentM.setAction(TOUCH_ACTION);
+
+        iCal =new Intent(this,MessageViewer.class);
+        iCal.putExtra("handover", fullMsg);
+        iCal.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        iCal.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        iCal.setAction(TOUCH_ACTION);
+
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intentM, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent piCalEvent = PendingIntent.getActivity(this, 0, iCal, PendingIntent.FLAG_UPDATE_CURRENT);
 
         Resources res= this.getResources();
         myNotificationBuilder
                 .setSmallIcon(R.drawable.ic_zetor_small)
-                .setLargeIcon(BitmapFactory.decodeResource(res,R.drawable.app_icon_64))
+                .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.app_icon_64))
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setContentTitle(getText(R.string.app_name))
                 .setWhen(System.currentTimeMillis())
                 .setContentIntent(pendingIntent)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .addAction(R.drawable.ic_zetor_small, "more", piCalEvent) // API 16 TODO change that icon
                 .setOngoing(true);
     }
 
@@ -65,6 +74,8 @@ public class GcmMessageHandler extends IntentService
     {
         myNotificationBuilder
                 .setTicker(getText(R.string.message_arrived))
+                //.setStyle(new NotificationCompat.BigTextStyle()
+                //.bigText("jio")) // API 16
                 .setContentText(excr);
 
         if (myNotificationManager != null)
@@ -82,6 +93,7 @@ public class GcmMessageHandler extends IntentService
         String messageType = gcm.getMessageType(intent);
         mes = extras.getString(Config.EXTRA_MESSAGE);
         excrept=mes;
+        MyPreference.setfMESSAGE(this,mes);
         setupNotifications(mes);
         if (myNotificationManager != null)
         {

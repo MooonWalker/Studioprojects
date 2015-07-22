@@ -3,7 +3,6 @@ package ati.lunarmessages;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import java.io.IOException;
@@ -52,6 +50,7 @@ public class MainActivity extends ActionBarActivity
         activity=this;
         ctx=this;
 
+        strMsgText=MyPreference.getfMESSAGE(this); // restore message
         isRegistered=MyPreference.getISREGISTERED(this);
         strRegid=MyPreference.getREGID(this);
 
@@ -70,19 +69,22 @@ public class MainActivity extends ActionBarActivity
                 Config.YOUR_SERVER_URL.length() == 0
                 || Config.GOOGLE_SENDER_ID.length() == 0)
         {
-
             // GCM sernder id / server url is missing
             Controller.showAlertDialog(this, "Configuration Error!",
                     "Please set your Server URL and GCM Sender ID", false);
-
             // stop executing code by return
             return;
         }
+    }
 
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
         if(!isRegistered) //nem regisztrált
         {
             doReg(); //force register
-            Toast.makeText(this,"Device registered", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Feliratkozás...", Toast.LENGTH_LONG).show();
         }
         else //már regisztrált
         {
@@ -90,15 +92,16 @@ public class MainActivity extends ActionBarActivity
 
         }
 
+
     }
 
     @Override
-    protected void onStart()
+    protected void onResume()
     {
-        super.onStart();
-        SharedPreferences pref = this.getPreferences(0);
-        //fragmentMsgs.tMsg.setText(pref.getString(MyPreference.fMESSAGE," "));
+        super.onResume();
+        MyPreference.getfMESSAGE(this);
         fragmentMsgs.tMsg.setText(strMsgText);
+
     }
 
     @Override
@@ -123,16 +126,17 @@ public class MainActivity extends ActionBarActivity
         {
             case GcmMessageHandler.TOUCH_ACTION:
                 strMsgText = intent.getStringExtra("handover");
+                MyPreference.setfMESSAGE(this,strMsgText);
                 break;
         }
         return;
     }
 
-    private void exit()
-    {
-        stopService(new Intent(this, GcmMessageHandler.class));
-        finish();
-    }
+//    private void exit()
+//    {
+//        stopService(new Intent(this, GcmMessageHandler.class));
+//        finish();
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -324,17 +328,9 @@ public class MainActivity extends ActionBarActivity
     }
 
     @Override
-    protected void onStop()
-    {
-        super.onStop();
-        MyPreference.setISREGISTERED(this, isRegistered);
-    }
-
-    @Override
     public void onConfigurationChanged(Configuration newConfig)
     {
         super.onConfigurationChanged(newConfig);
-
     }
 
     private void setUpTabs(Bundle savedInstanceState)
@@ -368,5 +364,29 @@ public class MainActivity extends ActionBarActivity
             //  get the saved selected tab's index and set that tab as selected
             actionBar.setSelectedNavigationItem(savedInstanceState.getInt("tabIndex", 0));
         }
+    }
+
+    @Override
+    protected void onPause()
+    {
+        MyPreference.setISREGISTERED(this, isRegistered);
+        MyPreference.setfMESSAGE(this, strMsgText); //save the message
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop()
+    {
+        MyPreference.setISREGISTERED(this, isRegistered);
+        MyPreference.setfMESSAGE(this, strMsgText); //save the message
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        MyPreference.setISREGISTERED(this, isRegistered);
+        MyPreference.setfMESSAGE(this, strMsgText); //save the message
+        super.onDestroy();
     }
 }

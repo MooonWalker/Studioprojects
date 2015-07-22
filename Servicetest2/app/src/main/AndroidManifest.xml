@@ -42,6 +42,7 @@
                 <category android:name="ati.lunarmessages" />
             </intent-filter>
         </receiver>
+
         <receiver android:name=".Updatereceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REPLACED" />
@@ -51,6 +52,7 @@
                     android:scheme="package" />
             </intent-filter>
         </receiver>
+
         <receiver
             android:name=".Bootreceiver"
             android:enabled="true"
@@ -84,5 +86,4 @@
             android:value="@integer/google_play_services_version" />
 
     </application>
-
 </manifest>

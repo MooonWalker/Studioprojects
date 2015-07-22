@@ -43,29 +43,21 @@ public class FragmentMsgs extends Fragment
     }
 
 
-
-    public void setText(String msg)
-    {
-        TextView textView =(TextView)this.getView().findViewById(R.id.tMsg);
-        textView.setText("kaka");
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_layout_msgs, container, false);
-        Button button = (Button)view.findViewById(R.id.btnMsgTest);
         tMsg =(TextView)view.findViewById(R.id.tMsg);
         tMsg.setText(viewcontent);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                tMsg.setText("kaka");
-            }
-        });
+//        button.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                tMsg.setText("kaka");
+//            }
+//        });
         // Inflate the layout for this fragment
         return view;
     }
