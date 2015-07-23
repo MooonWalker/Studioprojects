@@ -79,16 +79,6 @@
             android:enabled="true"
             android:icon="@drawable/ic_service" />
 
-        <service
-            android:name=".CalUpdater"
-            android:enabled="true"
-            android:icon="@drawable/ic_service" />
-
-        <activity
-            android:name=".MessageViewer"
-            android:label="@string/title_activity_message_viewer" >
-        </activity>
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
