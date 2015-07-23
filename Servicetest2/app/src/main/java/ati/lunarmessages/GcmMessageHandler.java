@@ -20,6 +20,7 @@ public class GcmMessageHandler extends IntentService
     private final NotificationCompat.Builder myNotificationBuilder=new NotificationCompat.Builder(this);
     public static final String CLOSE_ACTION = "close";
     public static final String TOUCH_ACTION = "touch";
+    public static final String EVENT_ACTION = "event";
     Intent intentM;
     Intent iCal;
 
@@ -47,14 +48,12 @@ public class GcmMessageHandler extends IntentService
         intentM.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intentM.setAction(TOUCH_ACTION);
 
-        iCal =new Intent(this,MessageViewer.class);
+        iCal =new Intent(this,CalUpdater.class);
         iCal.putExtra("handover", fullMsg);
-        iCal.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        iCal.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        iCal.setAction(TOUCH_ACTION);
+
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intentM, PendingIntent.FLAG_UPDATE_CURRENT);
-        PendingIntent piCalEvent = PendingIntent.getActivity(this, 0, iCal, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent piCalEvent = PendingIntent.getService(this, 0, iCal, PendingIntent.FLAG_UPDATE_CURRENT);
 
         Resources res= this.getResources();
         myNotificationBuilder
@@ -65,8 +64,8 @@ public class GcmMessageHandler extends IntentService
                 .setContentTitle(getText(R.string.app_name))
                 .setWhen(System.currentTimeMillis())
                 .setContentIntent(pendingIntent)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .addAction(R.drawable.ic_event, "Emlékeztetõ", piCalEvent) // API 16 TODO change that icon
+                .setPriority(NotificationCompat.PRIORITY_MAX)
+                .addAction(R.drawable.ic_event, getString(R.string.ntitle), piCalEvent) // API 16
                 .setOngoing(true);
     }
 
@@ -93,15 +92,17 @@ public class GcmMessageHandler extends IntentService
         String messageType = gcm.getMessageType(intent);
         mes = extras.getString(Config.EXTRA_MESSAGE);
         excrept=mes;
-        MyPreference.setfMESSAGE(this,mes);
+        MyPreference.setfMESSAGE(MainActivity.ctx, mes);
         setupNotifications(mes);
         if (myNotificationManager != null)
         {
             myNotificationManager.cancel(NOTIFICATION);
+            //setupNotifications(mes);
             if(mes.length()>15)
             {
                 excrept=mes.substring(0, 15) + "..."; //show only excrept
             }
+
             showNotification(excrept);
         }
         Log.i(Config.TAG, "Received : (" + messageType + ")  " + extras.getString(Config.EXTRA_MESSAGE));

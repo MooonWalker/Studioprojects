@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
@@ -18,6 +19,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import java.io.IOException;
+import java.util.Calendar;
 
 public class MainActivity extends ActionBarActivity
 {
@@ -128,15 +130,18 @@ public class MainActivity extends ActionBarActivity
                 strMsgText = intent.getStringExtra("handover");
                 MyPreference.setfMESSAGE(this,strMsgText);
                 break;
+
+            case GcmMessageHandler.EVENT_ACTION:
+                break;
         }
         return;
     }
 
-//    private void exit()
-//    {
-//        stopService(new Intent(this, GcmMessageHandler.class));
-//        finish();
-//    }
+    private void exit()
+    {
+        //stopService(new Intent(this, GcmMessageHandler.class));
+            finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
