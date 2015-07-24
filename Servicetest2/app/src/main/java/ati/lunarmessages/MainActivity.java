@@ -160,13 +160,19 @@ public class MainActivity extends ActionBarActivity
             case R.id.action_unsubscribe:
                 doDereg();
                 break;
+            case R.id.action_about:
+                AboutDialog about = new AboutDialog(this);
+                about.setTitle("Zetor-Vas Kft.");
+                about.show();
+                break;
         }
 
         if (itemID == R.id.action_settings)
         {
             return true;
         }
-        return super.onOptionsItemSelected(item);
+        //return super.onOptionsItemSelected(item);
+        return true;
     }
 
     public void doDereg()

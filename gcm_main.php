@@ -53,8 +53,8 @@ function redirect($url)
 
 $pushStatus = '';
 
-if(!empty($_GET['push'])) {
-
+if(!empty($_GET['push'])) 
+{
     $query = "SELECT gcm_regid FROM gcm_users";
     if($query_run = mysql_query($query)) {
 
@@ -77,7 +77,7 @@ if(!empty($_GET['push'])) {
 		}
     }   
    $url="http://somejourney.info/gcm_server_files/gcm_main.php";
-         redirect($url);
+   redirect($url);
 
 }
 
@@ -97,7 +97,7 @@ if(!empty($_GET['shareRegId'])) {
 <meta type="utf-8">
 <meta charset="utf-8" /> 
     <head>
-        <title>Whatever Title</title>
+        <title>GCM Üzenet küldés</title>
     </head>
     <body>
 
@@ -110,15 +110,17 @@ if(!empty($_GET['shareRegId'])) {
         else
             $no_of_users = 0;
         ?>
-    <h1>Whatever you want</h1>
-    <h2>Whatever you want</h2>
-    <h3>Push Notification Admin Panel</h3>
-    <h4>Current Registered users: <?php echo $no_of_users; ?></h4>
+    <h1>GCM Üzenetküldés</h1>
+    <h4>Jelenlegi címzettek száma: <?php echo $no_of_users; ?></h4>
     <h4></h4>
     <form method = 'POST' action = 'gcm_main.php/?push=1'>
         <div>
             <textarea rows = "3" name = "message" cols = "75" placeholder = "Type message here"></textarea>
         </div>
+		<div>
+			<input type = "button" value = "Insert Event tags">
+		</div>
+		<br><br>
         <div>
             <input type = "submit" value = "Send Notification">
         </div>
