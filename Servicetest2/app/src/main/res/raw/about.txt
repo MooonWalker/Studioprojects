@@ -1,8 +1,13 @@
-<h3>Gong Fu Timer</h3>
+<h3>Zetor-Vas Kft.</h3>
+<b>www.zetorvas.hu</b><br><br>
+Cím: 4400 Nyíregyháza, <br>
+Tiszavasvári út 46-47 km-kő<br>
+Telefon: 42/401 628, <br>30/953 6966<br>
+Fax: 42/401 628/13-as mellék<br>
+Email: iroda@zetorvas.hu<br>
+<br>
+Copyright 2015 Neuroweb<br>
 
-Version 1.6.2<br>
-Copyright 2012-2014 A. Szasz<br>
-<b>gongfucha.info</b><br><br>
-You can also send comments<br>
-and bug reports to me at:<br><br>
+Fejlesztés: Neuroweb<br>
+Verzió: 1.6.2<br>
 moonsurveyor@gmail.com

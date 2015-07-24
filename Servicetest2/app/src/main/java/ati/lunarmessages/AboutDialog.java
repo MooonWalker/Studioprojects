@@ -4,6 +4,7 @@ package ati.lunarmessages;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.net.MailTo;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.util.Linkify;
@@ -13,6 +14,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.Formatter;
 
 public class AboutDialog extends Dialog
 {
@@ -33,8 +35,8 @@ public class AboutDialog extends Dialog
         tv.setText(readRawTextFile(R.raw.legal));
         tv = (TextView)findViewById(R.id.info_text);
         tv.setText(Html.fromHtml(readRawTextFile(R.raw.about)));
-        tv.setLinkTextColor(Color.WHITE);
-        Linkify.addLinks(tv, Linkify.WEB_URLS);
+        tv.setLinkTextColor(Color.BLUE);
+        Linkify.addLinks(tv, Linkify.WEB_URLS|Linkify.EMAIL_ADDRESSES);
     }
 
     public static String readRawTextFile(int id)
@@ -44,6 +46,7 @@ public class AboutDialog extends Dialog
         BufferedReader buf = new BufferedReader(in);
         String line;
         StringBuilder text = new StringBuilder();
+
         try
         {
             while (( line = buf.readLine()) != null) text.append(line);
@@ -52,7 +55,7 @@ public class AboutDialog extends Dialog
         {
             return null;
         }
-        return text.toString();
+        return  text.toString();
     }
 
 
