@@ -1,12 +1,12 @@
 package ati.lunarmessages;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
@@ -14,18 +14,18 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.google.android.gms.iid.InstanceID;
+
 import java.io.IOException;
-import java.util.Calendar;
+
 
 public class MainActivity extends ActionBarActivity
 {
     static Context ctx;
-    Button btnDereg;
-    EditText etRegId;
     GoogleCloudMessaging gcm;
     String regid="";
     String strRegid=""; //regid from sharedpreferences
@@ -77,6 +77,33 @@ public class MainActivity extends ActionBarActivity
             // stop executing code by return
             return;
         }
+        // stop executing code by return
+        if(!chkGooglePlayservices()) return;
+    }
+
+    private boolean chkGooglePlayservices()
+    {
+        int ret= GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if (ret!= ConnectionResult.SUCCESS)
+        {
+            Log.e("statuscode", ret + "");
+            if(GooglePlayServicesUtil.isUserRecoverableError(ret))
+            {
+                Dialog errorDialog = GooglePlayServicesUtil.getErrorDialog(ret, this, 1);
+                if (errorDialog != null)
+                {
+                    errorDialog.show();
+                }
+                return false;
+            }
+            else
+            {
+                Toast.makeText(this, getString(R.string.toast_google_play_services_not_found)
+                        , Toast.LENGTH_LONG).show();
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
@@ -91,19 +118,17 @@ public class MainActivity extends ActionBarActivity
         else //már regisztrált
         {
             Toast.makeText(this,"Already registered", Toast.LENGTH_SHORT).show();
-
         }
-
-
     }
 
     @Override
     protected void onResume()
     {
         super.onResume();
+        chkGooglePlayservices();
         MyPreference.getfMESSAGE(this);
+        strRegid=MyPreference.getREGID(this);
         fragmentMsgs.tMsg.setText(strMsgText);
-
     }
 
     @Override
@@ -249,7 +274,13 @@ public class MainActivity extends ActionBarActivity
                         {
                             gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
                         }
-                        regid = gcm.register(Config.GOOGLE_SENDER_ID);
+                        InstanceID instanceID = InstanceID.getInstance(getApplicationContext());
+                        regid = instanceID.getToken((Config.GOOGLE_SENDER_ID),
+                                GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
+
+                        //regid = gcm.register(Config.GOOGLE_SENDER_ID);
+
+                        Log.i(Config.TAG,regid);
                         break;
                     }
                     catch (IOException e)
@@ -283,6 +314,7 @@ public class MainActivity extends ActionBarActivity
                         if(regres==1)
                         {
                             isRegistered = true;
+                            strRegid=regid;
                             MyPreference.setREGID(MainActivity.ctx, regid);
                             MyPreference.setNEEDREREG(MainActivity.ctx,false);
                         }

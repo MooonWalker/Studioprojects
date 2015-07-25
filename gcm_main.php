@@ -9,7 +9,7 @@ function sPushNotification($registration_ids, $message) {
         'data' => $message,
     );
 
-    define('GOOGLE_API_KEY', 'your_google_api_key_here');
+    //define('GOOGLE_API_KEY', 'your_google_api_key_here');
 
     $headers = array(
         'Authorization:key=' . GOOGLE_API_KEY,

@@ -14,7 +14,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import java.util.Calendar;
 
-public class GcmMessageHandler extends IntentService
+public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerService
 {
     private static final int NOTIFICATION = 1;
     String mes, excrept;
@@ -26,10 +26,10 @@ public class GcmMessageHandler extends IntentService
     Intent intentM;
     Intent newCal;
 
-    public GcmMessageHandler()
-    {
-        super("GcmMessageHandler");
-    }
+ //   public GcmMessageHandler()
+ //   {
+ //       super("GcmMessageHandler");
+ //   }
 
     @Override
     public void onCreate()
@@ -129,17 +129,25 @@ public class GcmMessageHandler extends IntentService
         }
     }
     @Override
-    protected void onHandleIntent(Intent intent)
+    public void onMessageReceived(String from, Bundle data)
     {
-        Bundle extras = intent.getExtras();
+
         GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
         // The getMessageType() intent parameter must be the intent you received
         // in your BroadcastReceiver.
-        String messageType = gcm.getMessageType(intent);
-        mes = extras.getString(Config.EXTRA_MESSAGE);
+        //String messageType = gcm.getMessageType(intent);
+        //mes = extras.getString(Config.EXTRA_MESSAGE);
+        mes=data.getString("message");
         mes=setupNotifications(mes);
         excrept=mes;
-        MyPreference.setfMESSAGE(MainActivity.ctx, mes);
+        try
+        {
+            MyPreference.setfMESSAGE(this, mes);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         if (myNotificationManager != null)
         {
             myNotificationManager.cancel(NOTIFICATION);
@@ -147,10 +155,9 @@ public class GcmMessageHandler extends IntentService
             {
                 excrept=mes.substring(0, 15) + "..."; //show only excrept
             }
-
             showNotification(excrept);
         }
-        Log.i(Config.TAG, "Received : (" + messageType + ")  " + extras.getString(Config.EXTRA_MESSAGE));
-        GcmBroadcastReceiver.completeWakefulIntent(intent);
+        Log.i(Config.TAG, "Received : " + data.getString(Config.EXTRA_MESSAGE));
+        //GcmBroadcastReceiver.completeWakefulIntent(intent);
     }
 }

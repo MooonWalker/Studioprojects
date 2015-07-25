@@ -35,7 +35,7 @@ public class Controller
     //Unregister the given regid
     public static int deregister(String name, String email, String strRegid)
     {
-        Log.i(Config.TAG, "registering device (regId = " + strRegid + ")");
+        Log.i(Config.TAG, "Deregistering device (regId = " + strRegid + ")");
         String serverUrl = Config.DEREGISTER_URL;
         int jsonres;
         Map<String, String> params = new HashMap<String, String>();
@@ -60,6 +60,7 @@ public class Controller
             // application, it should retry only on recoverable errors
             // (like HTTP error code 503).
             Log.e(Config.TAG, "Failed to deregister: " + e);
+            e.printStackTrace();
             return 0;
         }
     }
@@ -133,7 +134,7 @@ public class Controller
         HttpURLConnection conn = null;
         try
         {
-            Log.e("URL", "> " + url);
+            Log.i(Config.TAG, "> " + url);
             //conn = (HttpURLConnection) url.openConnection(proxy);
             conn = (HttpURLConnection)url.openConnection();
             conn.setDoOutput(true);

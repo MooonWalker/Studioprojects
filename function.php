@@ -2,7 +2,9 @@
 //Deleting a user
 function delUser($gcm_regid)
 {
-	$result = mysql_query("DELETE FROM gcm_users WHERE gcm_regid = '$gcm_regid'") or die(mysql_error());		
+	
+	$result = mysql_query("DELETE FROM gcm_users WHERE gcm_regid = '$gcm_regid'") or die(mysql_error());	
+	
 	return $result; //result is 1 if success
 }
  //Storing new user and returns user details    

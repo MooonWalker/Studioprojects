@@ -21,7 +21,7 @@ public class MyPreference
     public static Boolean getNEEDSREREG(Context ctx)
     {
         SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
-        return settings.getBoolean(NEEDSREREG,false);
+        return settings.getBoolean(NEEDSREREG, false);
     }
 
     public static String getREGID(Context ctx)
@@ -47,9 +47,11 @@ public class MyPreference
     public static void setfMESSAGE(Context ctx, String fMESSAGE)
     {
         SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putString(MyPreference.fMESSAGE, fMESSAGE);
-        editor.apply();
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putString(MyPreference.fMESSAGE, fMESSAGE);
+            editor.apply();
+
+
     }
 
     public static void setNEEDREREG(Context ctx, Boolean needsrereg)
