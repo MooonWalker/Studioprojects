@@ -1,8 +1,8 @@
 <?php
 require_once('loader.php'); //this is the same as as other answers on this topic
 
-function sPushNotification($registration_ids, $message) {
-
+function sPushNotification($registration_ids, $message) 
+{
     $url = 'https://android.googleapis.com/gcm/send';
     $fields = array(
         'registration_ids' => $registration_ids,
@@ -38,9 +38,9 @@ function redirect($url)
     {    
         header('Location: '.$url);
         exit;
-        }
+    }
     else
-        {  
+    {  
         echo '<script type="text/javascript">';
         echo 'window.location.href="'.$url.'";';
         echo '</script>';
@@ -56,15 +56,13 @@ $pushStatus = '';
 if(!empty($_GET['push'])) 
 {
     $query = "SELECT gcm_regid FROM gcm_users";
-    if($query_run = mysql_query($query)) {
-
+    if($query_run = mysql_query($query)) 
+	{
         $gcmRegIds = array();
-        while($query_row = mysql_fetch_assoc($query_run)) {
-
+        while($query_row = mysql_fetch_assoc($query_run)) 
+		{
             array_push($gcmRegIds, $query_row['gcm_regid']);
-
         }
-
     }
     $pushMessage = $_POST['message'];
     if(isset($gcmRegIds) && isset($pushMessage)) 
@@ -86,7 +84,8 @@ if(!empty($_GET['shareRegId'])) {
 
     $gcmRegId = $_POST['gcm_regid'];
     $query = "INSERT INTO gcm_users VALUES ('', '$gcmRegId')";
-    if($query_run = mysql_query($query)) {
+    if($query_run = mysql_query($query)) 
+	{
        // echo 'OK';
         exit;
     }   
@@ -118,7 +117,7 @@ if(!empty($_GET['shareRegId'])) {
             <textarea rows = "3" name = "message" cols = "75" placeholder = "Type message here"></textarea>
         </div>
 		<div>
-			<input type = "button" value = "Insert Event tags">
+			<input type = "button" value = "Insert Event tags" OnClick="message.value='[e]'+message.value">
 		</div>
 		<br><br>
         <div>
