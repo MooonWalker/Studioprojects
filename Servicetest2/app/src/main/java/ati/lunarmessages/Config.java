@@ -13,10 +13,13 @@ public class Config
          * Tag used on log messages.
          */
         static final String TAG = "GCM Ati";
-        static final int TOAST_LENGTH = 2;
 
         static final String DISPLAY_MESSAGE_ACTION =
                 "ati.servicesteszts.DISPLAY_MESSAGE";
         //GCM message tag
         static final String EXTRA_MESSAGE = "message";
+        static final String RSS_URL =
+                "http://www.zetor.webcucc.hu/index.php/esemenyek?format=feed&type=rss";
+        static final String DATABASE_PATH = "/data/data/ati.lunarmessages/databases/";
+        static final String DB_BACKUP_PATH = "/lunarmessages/backup";
 }

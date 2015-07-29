@@ -14,8 +14,11 @@ function sPushNotification($registration_ids, $message)
     $headers = array(
         'Authorization:key=' . GOOGLE_API_KEY,
         'Content-Type: application/json');
-		
+	
+	// write out the json	
     echo json_encode($fields);
+	
+	
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_POST, true);
@@ -50,8 +53,12 @@ function redirect($url)
     }
 }
 
-
+//main routine============================================================
 $pushStatus = '';
+$dateErr = $dateFromForm ='';
+$okCode=1;
+
+
 
 if(!empty($_GET['push'])) 
 {
@@ -64,24 +71,58 @@ if(!empty($_GET['push']))
             array_push($gcmRegIds, $query_row['gcm_regid']);
         }
     }
+	
+	// get if it is an event with date attributes
+	$isEvent = $_POST['chkIsEvent'];
+	
+	// get date from html date field after submit
+	$dateFromForm = $_POST['calendar-input'];
+	// get message field from html
     $pushMessage = $_POST['message'];
-    if(isset($gcmRegIds) && isset($pushMessage)) 
+	
+	if(isset($isEvent))
 	{
-        $message = array('message' => $pushMessage);
-		$regIdChunk=array_chunk($gcmRegIds,1000);
-		foreach($regIdChunk as $RegId)
+		if(empty($dateFromForm))
 		{
-			$pushStatus = sPushNotification($RegId, $message);
+			$dateErr="A dátum kötelező!";
+			$okCode=0;
+			
 		}
-    }   
-   $url="http://somejourney.info/gcm_server_files/gcm_main.php";
-   redirect($url);
-
+		else
+		{
+			$okCode=1;
+		}
+		//interpreted in android client
+		$pushMessage="[e]{$dateFromForm}[/e]{$pushMessage}";
+		echo $pushMessage;
+	}
+	else
+	{
+		$okCode=1;
+	}
+	
+	//redirect url
+	$url="http://somejourney.info/gcm_server_files/gcm_main.php";
+	 
+	
+		if(isset($gcmRegIds) && isset($pushMessage)) 
+		{
+			$message = array('message' => $pushMessage);
+			$regIdChunk=array_chunk($gcmRegIds,1000);
+			foreach($regIdChunk as $RegId)
+			{
+				$pushStatus = sPushNotification($RegId, $message);
+			}
+			
+			redirect($url);
+		} 
+	
+	      
 }
 
-
-if(!empty($_GET['shareRegId'])) {
-
+//not used
+if(!empty($_GET['shareRegId'])) 
+{
     $gcmRegId = $_POST['gcm_regid'];
     $query = "INSERT INTO gcm_users VALUES ('', '$gcmRegId')";
     if($query_run = mysql_query($query)) 
@@ -95,11 +136,65 @@ if(!empty($_GET['shareRegId'])) {
 <html>
 <meta type="utf-8">
 <meta charset="utf-8" /> 
+<link rel="stylesheet" type="text/css" href="src/datepickr.min.css">
+<style>
+            body 
+			{
+                font-family: Verdana;
+            }
+
+            h1 
+			{
+                font-size: 25px;
+            }
+
+            .calendar-icon 
+			{
+                display: inline-block;
+                vertical-align: middle;
+                width: 32px;
+                height: 32px;
+                background: url(images/calendar.png);
+            }   
+			.error {color: #FF0000;}
+			
+        </style>
     <head>
         <title>GCM Üzenet küldés</title>
+				
+		<script type="text/javascript">
+        function clrChkBox() 
+		{
+            document.getElementById("chkIsEvent").checked=false;
+        }
+		
+		function validateForm()
+		{
+			var value1 = document.getElementById('txtMsg').value;
+			var value2 = document.getElementById('calendar-input').value;
+			var isEvent = document.getElementById('chkIsEvent').checked;
+			
+			if( value1 == "") 
+			{
+				alert("Az üzenet mező nem lehet üres!");
+				return false;    
+			}
+			
+			if(isEvent)
+			{
+				if(value2=="")
+				{
+					alert("Az dátum nem lehet üres!");
+					return false;
+				}
+			}
+			return true;
+		}
+		//var php_okCode =  "<?php echo $okCode; ?>";		
+			window.onload = clrChkBox;		
+        </script>
     </head>
     <body>
-
         <?php
         include_once 'db_functions.php';
         $db = new DB_Functions();
@@ -112,18 +207,40 @@ if(!empty($_GET['shareRegId'])) {
     <h1>GCM Üzenetküldés</h1>
     <h4>Jelenlegi címzettek száma: <?php echo $no_of_users; ?></h4>
     <h4></h4>
-    <form method = 'POST' action = 'gcm_main.php/?push=1'>
-        <div>
-            <textarea rows = "3" name = "message" cols = "75" placeholder = "Type message here"></textarea>
-        </div>
+    <form method = 'POST' action = 'gcm_main.php/?push=1' onsubmit="return validateForm();">
 		<div>
-			<input type = "button" value = "Insert Event tags" OnClick="message.value='[e]'+message.value">
+			Üzenet naptárba?:
+			<input type = "checkbox" value="Event" name="chkIsEvent" id="chkIsEvent" onchange="chkIsEventOnChange(this)"/>
 		</div>
-		<br><br>
         <div>
-            <input type = "submit" value = "Send Notification">
+			
+            <textarea rows = "3" name = "message" id="txtMsg" cols = "70" placeholder = "Ide írja az üzenetet" ></textarea>
+        </div>
+		<p>
+		<span style="display:none" id="spnDate">
+            <span class="calendar-icon"></span>
+            <input readonly name="calendar-input" id="calendar-input" placeholder="Kattintson az ikonra">
+			<span class="error">* <?php echo $dateErr;?></span>
+		</span>
+        </p>
+		
+		<br><br><br>
+        <div>
+            <input type = "submit" value = "Üzenet elküldése">
         </div>
 
     </form>
+	<script src="src/datepickr.min.js"></script>
+	<script>
+	function chkIsEventOnChange(element)
+	{
+		//var php_okCode1 =  "<?php echo $okCode; ?>";
+			element.checked ? document.getElementById("spnDate").style.display = 'block' : document.getElementById("spnDate").style.display = 'none';    
+	}
+	
+	// datepickr on an icon, using altInput to store the value
+    // altInput must be a direct reference to an input element (for now)
+    datepickr('.calendar-icon', { dateFormat: 'Y.m.d', altInput: document.getElementById('calendar-input') });
+	</script>
     </body>
 </html>
