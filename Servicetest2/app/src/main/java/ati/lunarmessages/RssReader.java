@@ -8,20 +8,21 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
 public class RssReader
 {
-    private String title = "title";
-    private String link = "link";
-    private String description = "description";
+
     private String urlString = null;
     private XmlPullParserFactory xmlFactoryObject;
     public volatile boolean parsingComplete = true;
-    private ArrayList<PostData> dataArrayList = new ArrayList();
-    private PostData postData =null;
+    private ArrayList<RssItem> dataArrayList = new ArrayList();
+    //private PostData postData =null;
+    private RssItem rssItem =null;
 
 
     public RssReader(String url)
@@ -29,81 +30,139 @@ public class RssReader
         this.urlString=url;
     }
 
-    public String getTitle()
-    {
-        return title;
-    }
-
-    public String getLink()
-    {
-        return link;
-    }
-
     public ArrayList getDataArrayList()
     {
         return dataArrayList;
     }
 
-    public String getDescription()
-    {
-        return description;
-    }
-
     public void parseXMLAndStoreIt(XmlPullParser myParser)
     {
         int event;
-        String text=null;
+        String text=" ";
         try
         {
             event = myParser.getEventType();
+            String currTag=null;
+            SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss");
+            SimpleDateFormat targetFormat = new SimpleDateFormat("yyyy.MM.dd, HH:mm:ss");
 
             while (event != XmlPullParser.END_DOCUMENT)
             {
                 String name=myParser.getName();
 
-                switch (event)
+                if (event == XmlPullParser.START_DOCUMENT)
                 {
-                    case XmlPullParser.START_TAG:
-                        if(name.equals("item"))
-                        {
-                            postData = new PostData();
-                        }
-                        break;
 
-                    case XmlPullParser.TEXT:
-                        text = myParser.getText();
-                        break;
+                }
+                else if (event == XmlPullParser.START_TAG)
+                {
+                    if(name.equals("item"))
+                    {
+                        currTag="item";
+                        rssItem = new RssItem();
+                    }
+                    else if(name.equals("link"))
+                    {
+                        currTag="link";
+                    }
+                    else if (name.equals("pubDate"))
+                    {
+                        currTag="pubDate";
+                    }
+                    else if (name.equals("title"))
+                    {
+                        currTag="title";
+                    }
+                    else if (name.equals("description"))
+                    {
+                        currTag="description";
+                    }
+                    else if (name.equals("categroy"))
+                    {
+                        currTag="category";
+                    }
+                }
+                else if (event==XmlPullParser.END_TAG)
+                {
+                    if (myParser.getName().equals("item"))
+                    {
+                        Date postDate = dateFormat.parse(rssItem.getPubdate());
+                        rssItem.setPubdate(targetFormat.format(postDate));
 
-                    case XmlPullParser.END_TAG:
+                        dataArrayList.add(rssItem);
+                    }
+                }
+                else if (event==XmlPullParser.TEXT)
+                {
+                    text = myParser.getText();
+                    text=text.trim();
+                    if (rssItem!=null)
+                    {
+                        switch (currTag)
+                        {
+                            case "title":
+                                if (text.length() != 0)
+                                {
+                                    if (rssItem.getTitle() != null)
+                                    {
+                                        rssItem.title += text;
+                                    }
+                                    else
+                                    {
+                                        rssItem.setTitle(text);
+                                    }
+                                }
+                                break;
+                            case "link":
+                            break;
 
-                        if(name.equals("title"))
-                        {
-                            if(postData!=null)postData.postTitle=text;
-                            title = text;
-                        }
-                        else if(name.equals("link"))
-                        {
-                            link = text;
-                        }
-                        else if(name.equals("description"))
-                        {
-                            description = text;
-                        }
-                        else if (name.equals("item"))
-                        {
-                            dataArrayList.add(postData);
-                        }
-                        else
-                        {
+                            case "category":
+                                if (text.length() != 0)
+                                {
+                                    if (rssItem.getCategory() != null)
+                                    {
+                                        rssItem.category += text;
+                                    } else
+                                    {
+                                        rssItem.setCategory(text);
+                                    }
+                                }
+                            break;
 
+                            case "pubDate":
+                                if (text.length() != 0)
+                                {
+                                    if (rssItem.getPubdate() != null)
+                                    {
+                                        rssItem.pubdate += text;
+                                    }
+                                    else
+                                    {
+                                        rssItem.setPubdate(text);
+                                    }
+                                }
+                            break;
+
+                            case "description":
+                                if (text.length() != 0)
+                                {
+                                    if (rssItem.getDescription() != null)
+                                    {
+                                        rssItem.description += text;
+                                    }
+                                    else
+                                    {
+                                        rssItem.setDescription(text);
+                                    }
+                                }
+                            break;
                         }
-                        break;
+                    }
                 }
                 event = myParser.next();
             } // end while
             parsingComplete = false;
         }
-
         catch (Exception e)
         {
             e.printStackTrace();
@@ -144,6 +203,7 @@ public class RssReader
                 catch (Exception e)
                 {
                     e.printStackTrace();
+                    return;
                 }
             }
         });

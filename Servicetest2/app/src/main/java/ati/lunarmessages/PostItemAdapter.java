@@ -13,16 +13,17 @@ import ati.lunarmessages.PostData;
 import ati.lunarmessages.R;
 
 
-public class PostItemAdapter extends ArrayAdapter<PostData>
+public class PostItemAdapter extends ArrayAdapter<RssItem>
 {
     private Activity myContext;
-    private PostData[] datas;
 
-    public PostItemAdapter(Context context, int textViewResourceId, PostData[] objects)
+    private RssItem[] rssItems;
+
+    public PostItemAdapter(Context context, int textViewResourceId, RssItem[] objects)
     {
         super(context, textViewResourceId, objects);
         myContext = (Activity) context;
-        datas = objects;
+        rssItems = objects;
     }
 
 
@@ -53,13 +54,13 @@ public class PostItemAdapter extends ArrayAdapter<PostData>
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        if (datas[position].postThumbUrl == null)
+        if (rssItems[position].imageUrl == null)
         {
             viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);
         }
 
-        viewHolder.postTitleView.setText(datas[position].postTitle);
-        viewHolder.postDateView.setText(datas[position].postDate);
+        viewHolder.postTitleView.setText(rssItems[position].getTitle());
+        viewHolder.postDateView.setText(rssItems[position].getPubdate());
 
         return convertView;
     }

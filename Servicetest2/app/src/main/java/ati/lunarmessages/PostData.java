@@ -6,4 +6,5 @@ public class PostData
     public String postTitle;
     public String postDate;
     public String postDescription;
+    public String postCategory;
 }

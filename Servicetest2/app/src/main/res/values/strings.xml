@@ -29,4 +29,5 @@
     <string name="ntitle">Emlékeztető</string>
     <string name="caleventtitle">Zetor-Vas esemény</string>
     <string name="toast_google_play_services_not_found">A google play services nem elérhető</string>
+    <string name="title_activity_rss_view">RssViewActivity</string>
 </resources>

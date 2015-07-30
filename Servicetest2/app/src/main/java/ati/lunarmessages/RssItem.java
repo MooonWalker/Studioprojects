@@ -67,4 +67,9 @@ public class RssItem
     {
         return pubdate;
     }
+
+    public void setPubdate(String date)
+    {
+        this.pubdate=date;
+    }
 }

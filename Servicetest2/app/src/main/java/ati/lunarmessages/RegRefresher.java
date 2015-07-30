@@ -114,7 +114,7 @@ public class RegRefresher extends IntentService
             protected void onPostExecute(String msg)
             {
                 // etRegId.setText(msg + "\n");
-                Toast.makeText(RegRefresher.this,"A készülék leiratkozott",Toast.LENGTH_LONG).show();
+                Toast.makeText(RegRefresher.this,"Leiratkozott",Toast.LENGTH_LONG).show();
             }
         }.execute(null, null, null);
     }
