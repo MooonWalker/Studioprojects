@@ -4,9 +4,9 @@ public class Config
 {
         // CONSTANTS
         static final String YOUR_SERVER_URL =
-                "http://somejourney.info/gcm_server_files/register.php";
+                "http://gongfucha.info/GCM_files/register.php";
         static final String DEREGISTER_URL =
-                "http://somejourney.info/gcm_server_files/deregister.php";
+                "http://gongfucha.info/GCM_files/deregister.php";
         // Google project id
         static final String GOOGLE_SENDER_ID = "865494874332";
         /**

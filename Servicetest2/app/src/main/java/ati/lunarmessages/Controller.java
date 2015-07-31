@@ -31,6 +31,12 @@ public class Controller
     public static final int MAX_ATTEMPTS = 5;
     public static final int BACKOFF_MILLI_SECONDS = 2000;
     public static final Random random = new Random();
+    public static final int TO_YEAR=1;
+    public static final int TO_MONTH=2;
+    public static final int TO_DAY=3;
+    public static final int TO_HOUR=4;
+    public static final int TO_MINUTE=5;
+
 
     //Unregister the given regid
     public static int deregister(String name, String email, String strRegid)

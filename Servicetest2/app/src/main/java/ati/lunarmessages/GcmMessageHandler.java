@@ -13,6 +13,7 @@ import android.util.Log;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerService
 {
@@ -48,7 +49,14 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
 
         if(fullMsg.substring(0,3).equals("[e]"))
         {
-            fullMsg=fullMsg.substring(3);
+            //get the datetime part 2015.07.31. 20:51
+            String dateTime = fullMsg.substring(fullMsg.indexOf("[e]")+3,fullMsg.indexOf("[/e]"));
+            //Parse datetime string to integers
+            EventData eventData=new EventData(dateTime);
+            //get the real message text
+            fullMsg=fullMsg.substring(fullMsg.indexOf("[/e]")+4);
+
+
             intentM = new Intent(this,MainActivity.class);
             intentM.putExtra("handover", fullMsg);
             intentM.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -56,9 +64,14 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
             intentM.setAction(TOUCH_ACTION);
 
             Calendar beginTime = Calendar.getInstance();
-            beginTime.set(2015, 9, 14, 7, 30);
             Calendar endTime = Calendar.getInstance();
-            endTime.set(2015, 9, 14, 8, 45);
+            beginTime.set(eventData.getYEAR(),eventData.getMONTH()
+                            ,eventData.getDAY(),eventData.getHOUR()
+                            ,eventData.getMINUTE());
+            endTime.set(eventData.getYEAR(),eventData.getMONTH()
+                            ,eventData.getDAY(),eventData.getHOUR()+1
+                            ,eventData.getMINUTE());
+
             newCal = new Intent(Intent.ACTION_EDIT)
                     .setType("vnd.android.cursor.item/event")
                     .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, beginTime.getTimeInMillis())
@@ -137,17 +150,26 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
         // in your BroadcastReceiver.
         //String messageType = gcm.getMessageType(intent);
         //mes = extras.getString(Config.EXTRA_MESSAGE);
-        mes=data.getString("message");
-        mes=setupNotifications(mes);
-        excrept=mes;
+        if (data!=null)
+        {
+            mes = data.getString("message");
+        }
         try
         {
+            if (mes.length()!=0)
+            {
+                mes = setupNotifications(mes);
+            }
+            else mes = "Üres üzenet!";
+
+            excrept = mes;
             MyPreference.setfMESSAGE(this, mes);
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
+
         if (myNotificationManager != null)
         {
             myNotificationManager.cancel(NOTIFICATION);

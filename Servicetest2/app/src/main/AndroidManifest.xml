@@ -49,7 +49,6 @@
         <receiver android:name=".Updatereceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REPLACED" />
-
                 <data
                     android:path="ati.lunarmessages"
                     android:scheme="package" />

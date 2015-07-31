@@ -149,8 +149,7 @@ public class RssReader
                                     if (rssItem.getDescription() != null)
                                     {
                                         rssItem.description += text;
-                                    }
-                                    else
+                                    } else
                                     {
                                         rssItem.setDescription(text);
                                     }

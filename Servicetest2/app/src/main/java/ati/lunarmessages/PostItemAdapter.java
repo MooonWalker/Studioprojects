@@ -9,6 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Node;
+
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
 import ati.lunarmessages.PostData;
 import ati.lunarmessages.R;
 
@@ -61,6 +68,20 @@ public class PostItemAdapter extends ArrayAdapter<RssItem>
 
         viewHolder.postTitleView.setText(rssItems[position].getTitle());
         viewHolder.postDateView.setText(rssItems[position].getPubdate());
+
+//  TEXT PARSING
+//        if(tagName.equals("description")){
+//            int token = parser.nextToken();
+//            while(token!=XmlPullParser.CDSECT){
+//                token = parser.nextToken();
+//            }
+//            String cdata = parser.getText();
+//            Log.i("Info", cdata);
+//            String result = cdata.substring(cdata.indexOf("src='")+5, cdata.indexOf("jpg")+3);
+//            Log.i("Info", result);
+//            pic = getBitmapFromURL(result);
+//        }
+
 
         return convertView;
     }
