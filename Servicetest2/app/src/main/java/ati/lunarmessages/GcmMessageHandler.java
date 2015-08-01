@@ -156,7 +156,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
         }
         try
         {
-            if (mes.length()!=0)
+            if (mes != null && mes.length()!=0)
             {
                 mes = setupNotifications(mes);
             }

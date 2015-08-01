@@ -58,8 +58,6 @@ public class FragmentRSS extends Fragment implements AdapterView.OnItemClickList
         postList= reader.getDataArrayList();
 
         listData= postList.toArray(new RssItem[postList.size()]);
-
-
     }
 
     private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener()

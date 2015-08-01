@@ -39,7 +39,8 @@
                 android:nextFocusUp="@id/editText1"
                 android:text="00:00"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textSize="55dp" >
+                android:textSize="55dp"
+                android:textColor="#FF000000">
             </TextView>
         </LinearLayout>
 

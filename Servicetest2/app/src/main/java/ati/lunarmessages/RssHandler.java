@@ -18,7 +18,8 @@ public class RssHandler extends DefaultHandler
     private boolean parsingLink;
     private boolean parsingDescription;
 
-    public RssHandler() {
+    public RssHandler()
+    {
         //Initializes a new ArrayList that will hold all the generated RSS items.
         rssItemList = new ArrayList<RssItem>();
     }

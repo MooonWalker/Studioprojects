@@ -88,7 +88,22 @@ public class RssReader
                     {
                         Date postDate = dateFormat.parse(rssItem.getPubdate());
                         rssItem.setPubdate(targetFormat.format(postDate));
+                        if (rssItem.getDescription()!=null && rssItem.getDescription().length() > 0)
+                        {
+                            String tempString=rssItem.getDescription();
+                            try
+                            {
+                                tempString=tempString.substring(tempString.indexOf("src=\"") + 5
+                                        , tempString.indexOf("jpg")+3);
+                            }
+                            catch (StringIndexOutOfBoundsException e)
+                            {
+                                tempString=tempString.substring(tempString.indexOf("src=\"") + 5
+                                        , tempString.indexOf("png")+3);
+                            }
 
+                            rssItem.setImageUrl(tempString);
+                        }
                         dataArrayList.add(rssItem);
                     }
                 }

@@ -180,7 +180,6 @@ public class DatabaseHandler extends SQLiteOpenHelper
 	
 	private void createUUID(SQLiteDatabase db)
 	{
-			
 			UUID uuid = UUID.randomUUID();
 			ContentValues values = new ContentValues();
 			
@@ -257,7 +256,6 @@ public class DatabaseHandler extends SQLiteOpenHelper
 	    String dbPath = DATABASE_PATH + DATABASE_NAME;
 	    dataBase = SQLiteDatabase.openDatabase(dbPath, null, SQLiteDatabase.OPEN_READWRITE);
 	    this.close();
-	    
 	}
 	
 	private boolean checkDataBase() 
