@@ -11,6 +11,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,7 +24,7 @@ import com.google.android.gms.iid.InstanceID;
 import java.io.IOException;
 
 
-public class MainActivity extends ActionBarActivity
+public class MainActivity extends AppCompatActivity
 {
     static Context ctx;
     GoogleCloudMessaging gcm;
@@ -61,8 +62,8 @@ public class MainActivity extends ActionBarActivity
         {
             // Internet Connection is not present
             Controller.showAlertDialog(this,
-                    "Internet Connection Error",
-                    "Please connect to Internet connection", false);
+                    "Nincs internet kapcsolat!",
+                    "Csatlakoztassa, majd indítsa újra!", false);
             // stop executing code by return
             return;
         }

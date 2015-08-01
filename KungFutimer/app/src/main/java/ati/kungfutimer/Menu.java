@@ -28,7 +28,7 @@ public class Menu extends ListActivity
 		
 		try
 		{
-		Class ourClass=Class.forName("com.test.savaz." + cheese);
+		Class ourClass=Class.forName("ati.kungfutimer." + cheese);
 		Intent ourIntent =new Intent(Menu.this, ourClass);
 		
 		startActivity(ourIntent);

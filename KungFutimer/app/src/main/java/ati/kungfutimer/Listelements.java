@@ -1,7 +1,7 @@
 package ati.kungfutimer;
 
-public class Listelements {
-	
+public class Listelements
+{
 	public int teaId=0;
 	public String title1;
     public String title;
@@ -25,8 +25,5 @@ public class Listelements {
 		this.teaId = _teaId;
 		this.title1 = title1;
 		this.title = title;
-		
 	}
-    
-    
 }

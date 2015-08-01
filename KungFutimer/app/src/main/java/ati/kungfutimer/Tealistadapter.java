@@ -33,7 +33,6 @@ public class Tealistadapter extends ArrayAdapter<Listelements>
 	        this.context = context;
 	        this.data = data;
 	        this.flag =flag;
-	        
 	    }
 
 
@@ -61,18 +60,14 @@ public class Tealistadapter extends ArrayAdapter<Listelements>
 	            holder = (Holder)row.getTag();
 	        }
 	       
-	        
-	       
 			Listelements teaListelement = data[position];
 	        holder.txtTea.setText(teaListelement.title);
-	       
 	        
 	        return row;
 	    }
 	   
 	    static class Holder
 	    {
-	    
 	        TextView txtTea;
 			//TextView txtTitle;
 	    }

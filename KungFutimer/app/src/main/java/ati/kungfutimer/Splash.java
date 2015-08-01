@@ -36,9 +36,8 @@ public class Splash extends Activity
 				}
 				finally				
 				{
-					Intent openStartingPoint = new Intent("com.test.savaz.MAINACTIVITY");
-					startActivity(openStartingPoint);
-					
+					Intent intent = new Intent("ati.kungfutimer.MAINACTIVITY");
+					startActivity(intent);
 				}	
 			}//run
 		}; //Thread

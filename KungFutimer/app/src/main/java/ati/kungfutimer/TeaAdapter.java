@@ -83,7 +83,6 @@ public class TeaAdapter extends ArrayAdapter<Listelements>
    
     static class Holder
     {
-    
         TextView txtTitle1;
 		TextView txtTitle;
     }

@@ -3,7 +3,6 @@ package ati.kungfutimer;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,6 +21,7 @@ import android.os.SystemClock;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
@@ -40,7 +40,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class MainActivity extends Activity implements MycountFinished, View.OnClickListener, OnClickListener, OnTouchListener, OnPreferenceChangeListener 
+public class MainActivity extends AppCompatActivity implements MycountFinished, View.OnClickListener, OnClickListener, OnTouchListener, OnPreferenceChangeListener
 {
 	//public static TextView tw1;
   
@@ -111,7 +111,6 @@ public class MainActivity extends Activity implements MycountFinished, View.OnCl
 	    
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);  
         setContentView(R.layout.activity_main);
-       
         
         new EventNotifier(this);
 	
@@ -133,11 +132,9 @@ public class MainActivity extends Activity implements MycountFinished, View.OnCl
 		
 		tealist.setOnItemClickListener(new ListView.OnItemClickListener()
 		{
-				
 				public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
 						long id) 
 				{
-					
 					tw1.setTextSize(55);
 					for(int i = 0; i < isSelected.length; ++i)  //deselect array
 					{
@@ -637,11 +634,11 @@ public class MainActivity extends Activity implements MycountFinished, View.OnCl
 
 	public void setupKungFuState()
 	{
-		tealist.setVisibility(0);
+		tealist.setVisibility(View.VISIBLE);
 		btn1.setEnabled(false);
 		btn2.setEnabled(false);
 		btn2.setVisibility(View.INVISIBLE);
-		btn3.setVisibility(0);
+		btn3.setVisibility(View.VISIBLE);
 		
 		for(int i =0; i < tealist.getChildCount(); i++)
 		{tealist.getChildAt(i).setBackgroundColor(Color.TRANSPARENT);}
@@ -654,8 +651,8 @@ public class MainActivity extends Activity implements MycountFinished, View.OnCl
 		btn2.setEnabled(false);
 		btn3.setEnabled(false);
 		btn2.setVisibility(View.INVISIBLE);
-		btn3.setVisibility(4);
-		tealist.setVisibility(4);
+		btn3.setVisibility(View.INVISIBLE);
+		tealist.setVisibility(View.INVISIBLE);
 		if(session!=null)
 		{
 			session.stop();
@@ -1126,7 +1123,7 @@ public class MainActivity extends Activity implements MycountFinished, View.OnCl
 		btn1.setEnabled(false);
 		btn3.setEnabled(false);
 		btn2.setEnabled(false);
-		btn2.setVisibility(4);
+		btn2.setVisibility(View.INVISIBLE);
 		
 	}
 	
@@ -1160,14 +1157,13 @@ public class MainActivity extends Activity implements MycountFinished, View.OnCl
         	
 		}
         
-        
         Listelements teak[]=new Listelements[teas.size()];
         for (int i = 0; i < teas.size(); i++)
         {
     		List<Brewing> brewings = db.getBrewings(teas.get(i).getID());
-    		
-    		teak[i]= new Listelements(teas.get(i).getID(), teas.get(i).get_note1().toString()+"�C, Brews: "+brewings.size(),
-    				teas.get(i).getName().toString());
+    		teak[i]= new Listelements(teas.get(i).getID()
+					, teas.get(i).get_note1().toString()+"°C, Brews: "+brewings.size()
+					, teas.get(i).getName().toString());
         }
         adapter = new TeaAdapter(this, R.layout.listview_item_row, teak);
         tealist.setAdapter(adapter);

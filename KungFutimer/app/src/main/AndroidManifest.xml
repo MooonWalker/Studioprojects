@@ -3,7 +3,6 @@
     android:versionCode="27"
     android:versionName="1.6.2" android:installLocation="internalOnly" >
 
-
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -15,14 +14,13 @@
     <application
         android:icon="@drawable/chakicsi"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.AppCompat" >
         <activity
             android:name="ati.kungfutimer.Splash"
             android:label="@string/title_activity_main" 
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -48,8 +46,7 @@
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="com.test.savaz.MAINACTIVITY" />
-
+                <action android:name="ati.kungfutimer.MAINACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -58,7 +55,7 @@
             android:name="ati.kungfutimer.Menu"
             android:label="@string/title_activity_main" >
             <intent-filter>
-                <action android:name="com.test.savaz.MENU" />
+                <action android:name="ati.kungfutimer.MENU" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -68,8 +65,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/YourStyle" >
             <intent-filter>
-                <action android:name="com.test.savaz.SETTINGS" />
-
+                <action android:name="ati.kungfutimer.SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -78,7 +74,7 @@
             android:label="@string/title_activity_learn_session"
             android:screenOrientation="portrait" >
             <intent-filter>
-                <action android:name="com.test.savaz.LEARNSESSION" />
+                <action android:name="ati.kungfutimer.LEARNSESSION" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

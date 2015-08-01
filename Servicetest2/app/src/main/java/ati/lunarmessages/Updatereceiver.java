@@ -14,17 +14,17 @@ public class Updatereceiver extends WakefulBroadcastReceiver
     @Override
     public void onReceive(final Context context, Intent intent)
     {
-        if(intent!=null && intent.getAction().equals(Intent.ACTION_PACKAGE_REPLACED))
+        if(intent!=null && intent.getAction().equals(Intent.ACTION_MY_PACKAGE_REPLACED))
         {
-            if(intent.getData().getSchemeSpecificPart().equals(context.getPackageName()))
-            {
+           // if(intent.getData().getSchemeSpecificPart().equals(context.getPackageName()))
+           // {
                 // Explicitly specify that RegRefresher will handle the intent.
                 ComponentName comp = new ComponentName(context.getPackageName(),
                         RegRefresher.class.getName());
                 // Start the service, keeping the device awake while it is launching.
                 startWakefulService(context, (intent.setComponent(comp)));
                 //setResultCode(MainActivity.RESULT_OK);
-            }
+            //}
         }
 
     }

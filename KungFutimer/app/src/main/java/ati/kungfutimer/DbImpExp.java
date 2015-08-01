@@ -29,11 +29,11 @@ import java.util.Map.Entry;
 		/** File path of Db to be imported **/
 		protected static final File IMPORT_FILE =new File(DATABASE_DIRECTORY,"Kungfutimer.db");
 	 
-		public static final String PACKAGE_NAME = "com.test.savaz";
+		public static final String PACKAGE_NAME = "ati.kungfutimer";
 		public static final String DATABASE_NAME = "Kungfutimer.db";
 		public static final String DATABASE_TABLE = "tblTeas";
 	 
-		/** Contains: /data/data/com.test.savaz/databases/Kungfutimer.db **/
+		/** Contains: /data/data/ati.kungfutimer/databases/Kungfutimer.db **/
 		private static final File DATA_DIRECTORY_DATABASE =	new File(Environment.getDataDirectory() +
 				"/data/" + PACKAGE_NAME +"/databases/" + DATABASE_NAME );
 	 

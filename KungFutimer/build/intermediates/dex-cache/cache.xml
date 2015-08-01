@@ -2,11 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jar="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
-        <dex dex="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-3626930b7c6ab0d248ae4672a51b8283ea160e91.jar" />
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\classes-231fe5ee4ddbcb268fe3f2522c61a617b292794a.jar" />
+    </item>
+    <item
+        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-ef05771db036490503dd2f8600a363a29858b833.jar" />
+    </item>
+    <item
+        jar="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\classes-4ebbed8734cb2c665afc38f744f2ed20b9b2a9e9.jar" />
+    </item>
+    <item
+        jar="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-0a660b388c672a7470edb384cdec2a008f574625.jar" />
     </item>
 
 </items>
