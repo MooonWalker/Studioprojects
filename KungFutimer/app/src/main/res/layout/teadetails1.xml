@@ -1,0 +1,130 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000" >
+
+        <TextView
+            android:id="@+id/tdTname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFDC2F0E" />
+
+        <TextView
+            android:id="@+id/tdTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tdTname"
+            android:layout_marginTop="48dp"
+            android:text="Temperature:"
+            android:textColor="#FFDC2F0E" />
+
+        <EditText
+            android:id="@+id/tdeTemp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tdTemp"
+            android:layout_alignBottom="@+id/tdTemp"
+            android:layout_toRightOf="@+id/tdTemp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="95" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/tdCels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tdTemp"
+            android:layout_toRightOf="@+id/tdeTemp"
+            android:text="°C"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFDC2F0E" />
+
+        <TextView
+            android:id="@+id/tdNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tdeTemp"
+            android:layout_marginTop="53dp"
+            android:text="Notes:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFDC2F0E" />
+
+        <EditText
+            android:id="@+id/tedNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tdNote"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/tdNote"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:maxLines="4"
+            android:scrollbars="vertical"
+            android:text=" no
+            fffferfer" />
+
+        <Button
+            android:id="@+id/tdSave"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/tedNotes"
+            android:layout_marginBottom="40dp"
+            android:text="Save" />
+
+        <TextView
+            android:id="@+id/tdBrew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tedNotes"
+            android:layout_marginTop="17dp"
+            android:text="Brewings:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFDC2F0E" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tdBrew"
+            android:background="#FFDC2F0E"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/tdBrews"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:padding="3dp"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFDC2F0E" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="#000000"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arrow_right_redcrop" />
+
+        </LinearLayout>
+
+    </RelativeLayout>

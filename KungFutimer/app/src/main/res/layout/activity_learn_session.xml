@@ -1,0 +1,109 @@
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/txtTeaname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:gravity="center"
+            android:text="Medium Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="79dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tElapsedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTeaname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="Elapsed time:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Chronometer
+            android:id="@+id/chronometer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tElapsedTime"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Chronometer"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/tBrewings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chronometer1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Recorded brewings:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="51dp"
+            android:text="Save and close" />
+
+        <TextView
+            android:id="@+id/tBrewValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tBrewings"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tBrewValues"
+            android:layout_centerHorizontal="true"
+            android:padding="2dp"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/btnplus1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/chronometer1"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/chronometer1"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnmin1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnplus1"
+            android:layout_alignBottom="@+id/btnplus1"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/chronometer1"
+            android:text="-" />
+
+    </RelativeLayout>
+    

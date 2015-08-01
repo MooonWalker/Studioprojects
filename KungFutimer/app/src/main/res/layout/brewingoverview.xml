@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/brewingroot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:gravity="top"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/brewingtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFDC2F0E" />
+
+    <ListView
+        android:id="@+id/blist1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.63"
+        android:listSelector="#000000" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/tdAppendb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Append brew" />
+
+</LinearLayout>

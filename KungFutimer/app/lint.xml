@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src\com\test\kungfutimer\Textformatter.java" />
+        <ignore path="src\com\test\savaz\Textformatter.java" />
+    </issue>
+</lint>

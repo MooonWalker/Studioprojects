@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listOptions">
+        <item>No sound</item>
+        <item>Ding</item>
+        <item>Sulik</item>
+        <item>Electra</item>
+        <item >Flute 1</item>
+        <item >Flute 2</item>
+        <item >Bowl</item>
+        <item >Guzheng</item>
+        <item >Medieval</item>
+    </string-array>
+    
+    
+    <string-array name="listValues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+  
+    
+    <string-array name="contextmenuitems">
+        <item >Show/edit notice</item>
+        <item >Delete tea</item>        
+        <item >Append brews</item>
+        <item >LEARN session</item>
+    </string-array>
+    
+    
+    
+</resources>

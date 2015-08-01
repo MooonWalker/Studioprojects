@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flip1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <include android:id="@+id/first" layout="@layout/teaoverview"/>
+    <include android:id="@+id/second" layout="@layout/teadetails1"/>
+    <include android:id="@+id/third" layout="@layout/brewingoverview"/>
+
+  
+
+</ViewFlipper>

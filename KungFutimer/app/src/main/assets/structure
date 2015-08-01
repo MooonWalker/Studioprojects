@@ -1,0 +1,47 @@
+-- Table: android_metadata
+CREATE TABLE android_metadata ( 
+    locale TEXT 
+);
+
+
+
+
+-- Table: tblBrews
+CREATE TABLE tblBrews ( 
+    brew_num  INTEGER DEFAULT ( 1 ),
+    brew_time INTEGER,
+    tea_ID    INTEGER 
+);
+
+-- Table: tblTeas
+CREATE TABLE tblTeas ( 
+    id    INTEGER PRIMARY KEY AUTOINCREMENT,
+    name  TEXT    NOT NULL
+                  UNIQUE,
+    note1 TEXT,
+    note2 TEXT,
+    note3 TEXT 
+);
+
+
+-- Table: tblSessionH
+CREATE TABLE tblSessionH ( 
+    sessionID   INTEGER PRIMARY KEY ASC AUTOINCREMENT
+                        NOT NULL,
+    teaName     TEXT,
+    sessionDate DATE 
+);
+
+
+-- Table: tblBrewingsH
+CREATE TABLE tblBrewingsH ( 
+    sessionID INTEGER NOT NULL
+                      REFERENCES tblSessionH ( sessionID ) ON DELETE CASCADE,
+    brewnum   INTEGER NOT NULL,
+    brewtime  INTEGER NOT NULL 
+);
+
+
+
+
+

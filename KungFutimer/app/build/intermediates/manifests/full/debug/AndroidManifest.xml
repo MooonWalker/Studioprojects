@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ati.kungfutimer"
+    android:installLocation="internalOnly"
+    android:versionCode="27"
+    android:versionName="1.6.2" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:icon="@drawable/chakicsi"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="ati.kungfutimer.Splash"
+            android:label="@string/title_activity_main"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- <activity android:name=".Addteatab" android:label="@string/app_name" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"></activity> -->
+
+        <activity
+            android:name="ati.kungfutimer.Addtea"
+            android:label="Add new tea and brewing"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- <activity android:name=".AddTblTea" android:label="@string/app_name" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"></activity> -->
+
+
+        <!-- <activity android:name=".AddTblBrewings" android:label="@string/app_name" -->
+        <!-- android:theme="@android:style/Theme.NoTitleBar"></activity> -->
+
+        <activity
+            android:name="ati.kungfutimer.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.test.savaz.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ati.kungfutimer.Menu"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="com.test.savaz.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ati.kungfutimer.Settings"
+            android:label="@string/title_activity_main"
+            android:theme="@style/YourStyle" >
+            <intent-filter>
+                <action android:name="com.test.savaz.SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ati.kungfutimer.LearnSession"
+            android:label="@string/title_activity_learn_session"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.test.savaz.LEARNSESSION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ati.kungfutimer.Edittea"
+            android:label="Edit"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
