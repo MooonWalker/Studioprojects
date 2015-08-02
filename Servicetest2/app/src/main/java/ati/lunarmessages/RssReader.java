@@ -88,6 +88,7 @@ public class RssReader
                     {
                         Date postDate = dateFormat.parse(rssItem.getPubdate());
                         rssItem.setPubdate(targetFormat.format(postDate));
+
                         if (rssItem.getDescription()!=null && rssItem.getDescription().length() > 0)
                         {
                             String tempString=rssItem.getDescription();
@@ -98,8 +99,16 @@ public class RssReader
                             }
                             catch (StringIndexOutOfBoundsException e)
                             {
-                                tempString=tempString.substring(tempString.indexOf("src=\"") + 5
-                                        , tempString.indexOf("png")+3);
+                                try
+                                {
+                                    tempString = tempString.substring(tempString.indexOf("src=\"") + 5
+                                            , tempString.indexOf("png") + 3);
+                                }
+                                catch (StringIndexOutOfBoundsException j)
+                                {
+                                    //invalid picture file extension...
+                                    tempString="";
+                                }
                             }
 
                             rssItem.setImageUrl(tempString);
@@ -180,6 +189,7 @@ public class RssReader
         catch (Exception e)
         {
             e.printStackTrace();
+            //TODO stop that thread somehow
         }
     }
 
