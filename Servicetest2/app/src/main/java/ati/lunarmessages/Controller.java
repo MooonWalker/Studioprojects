@@ -4,12 +4,21 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Environment;
 import android.os.PowerManager;
 import android.util.Log;
+import android.widget.ImageView;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -17,6 +26,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -68,6 +78,80 @@ public class Controller
             Log.e(Config.TAG, "Failed to deregister: " + e);
             e.printStackTrace();
             return 0;
+        }
+    }
+
+    public File getCacheFolder(Context context)
+    {
+        File cacheDir = null;
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))
+        {
+            cacheDir = new File(Environment.getExternalStorageDirectory(), "cachefolder");
+            if(!cacheDir.isDirectory())
+            {
+                cacheDir.mkdirs();
+            }
+        }
+        if(!cacheDir.isDirectory())
+        {
+            cacheDir = context.getCacheDir(); //get system cache folder
+        }
+        return cacheDir;
+    }
+
+    public void loadImageFromCache(Context ctx)
+    {
+        File cacheDir = ctx.getCacheDir();
+        //TODO filename
+        File cacheFile = new File(cacheDir, "localFileName.jpg");
+        InputStream fileInputStream = null;
+        try
+        {
+            fileInputStream = new FileInputStream(cacheFile);
+        } catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
+        //bitmapOptions.inSampleSize = scale;
+        bitmapOptions.inJustDecodeBounds = false;
+        Bitmap wallpaperBitmap = BitmapFactory.decodeStream(fileInputStream, null, bitmapOptions);
+        //ImageView imageView = (ImageView)this.findViewById(R.id.preview);
+        //imageView.setImageBitmap(wallpaperBitmap);
+
+    }
+    public void saveImageToCache(String imageurlStr, Context ctx)
+    {
+        URL imageUrl = null;
+        try
+        {
+            imageUrl = new URL(imageurlStr);
+        } catch (MalformedURLException e)
+        {
+            e.printStackTrace();
+        }
+
+        try
+        {
+            URLConnection connection = imageUrl.openConnection();
+            InputStream inputStream = new BufferedInputStream(imageUrl.openStream(), 10240);
+            File cacheDir = getCacheFolder(ctx);
+            //TODO Filename...
+            File cacheFile = new File(cacheDir, "localFileName.jpg");
+            FileOutputStream outputStream = new FileOutputStream(cacheFile);
+            byte buffer[] = new byte[1024];
+            int dataSize;
+            int loadedSize = 0;
+            while ((dataSize = inputStream.read(buffer)) != -1)
+            {
+                loadedSize += dataSize;
+                // TODO publishProgress(loadedSize);
+                outputStream.write(buffer, 0, dataSize);
+            }
+            outputStream.close();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
         }
     }
 

@@ -31,13 +31,15 @@ public class FragmentRSS extends Fragment implements AdapterView.OnItemClickList
     {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_layout_rss, container, false);
-
-
-        generateData();
         ListView listView = (ListView)view.findViewById(R.id.fRSS);
+        listView.setVisibility(View.GONE);
+        view.findViewById(R.id.loadingPanel).setVisibility(View.VISIBLE);
+        generateData();
         RssItemAdapter itemAdapter = new RssItemAdapter(view.getContext(), R.layout.postitem, listData);
         //generateRssFeed(itemAdapter);
         //db= new DatabaseHandler(view.getContext());
+        view.findViewById(R.id.loadingPanel).setVisibility(View.GONE);
+        listView.setVisibility(View.VISIBLE);
         listView.setOnItemClickListener(onItemClickListener);
 
         listView.setAdapter(itemAdapter);
