@@ -1,5 +1,7 @@
 package ati.lunarmessages;
 
+import java.io.File;
+
 public class Config
 {
         // CONSTANTS
@@ -22,4 +24,5 @@ public class Config
                 "http://www.zetor.webcucc.hu/index.php/esemenyek?format=feed&type=rss";
         static final String DATABASE_PATH = "/data/data/ati.lunarmessages/databases/";
         static final String DB_BACKUP_PATH = "/lunarmessages/backup";
+        static File cacheDir=null;
 }

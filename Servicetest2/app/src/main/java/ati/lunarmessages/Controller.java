@@ -81,7 +81,8 @@ public class Controller
         }
     }
 
-    public File getCacheFolder(Context context)
+
+    public static File getCacheFolder(Context context)
     {
         File cacheDir = null;
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))
@@ -99,7 +100,7 @@ public class Controller
         return cacheDir;
     }
 
-    public void loadImageFromCache(Context ctx)
+    public static void loadImageFromCache(Context ctx)
     {
         File cacheDir = ctx.getCacheDir();
         //TODO filename
@@ -120,7 +121,7 @@ public class Controller
         //imageView.setImageBitmap(wallpaperBitmap);
 
     }
-    public void saveImageToCache(String imageurlStr, Context ctx)
+    public static void downloadImageToCache(String imageurlStr, Context ctx)
     {
         URL imageUrl = null;
         try
@@ -136,8 +137,7 @@ public class Controller
             URLConnection connection = imageUrl.openConnection();
             InputStream inputStream = new BufferedInputStream(imageUrl.openStream(), 10240);
             File cacheDir = getCacheFolder(ctx);
-            //TODO Filename...
-            File cacheFile = new File(cacheDir, "localFileName.jpg");
+            File cacheFile = new File(cacheDir, imageurlStr.substring(imageurlStr.lastIndexOf("/")+1));
             FileOutputStream outputStream = new FileOutputStream(cacheFile);
             byte buffer[] = new byte[1024];
             int dataSize;

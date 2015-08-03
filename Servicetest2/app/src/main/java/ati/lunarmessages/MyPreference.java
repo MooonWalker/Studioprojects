@@ -3,6 +3,8 @@ package ati.lunarmessages;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.io.File;
+
 public class MyPreference
 {
     static final String PREFS_NAME = "Moon_push_settings";
@@ -10,7 +12,21 @@ public class MyPreference
     static final String ISREGISTERED = "isregistered";
     static final String NEEDSREREG = "needsReReg";
     static final String fMESSAGE = "fMessage";
+    static final String sCACHE_DIR = "sCACHE_DIR";
 
+    public static String getCACHE_DIR(Context ctx)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        return settings.getString(sCACHE_DIR," ");
+    }
+
+    public static void setCACHE_DIR(Context ctx, String cachepath)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(MyPreference.sCACHE_DIR, cachepath);
+        editor.apply();
+    }
 
     public static Boolean getISREGISTERED(Context ctx)
     {

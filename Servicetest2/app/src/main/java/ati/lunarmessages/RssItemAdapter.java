@@ -5,7 +5,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.support.v4.os.AsyncTaskCompat;
+
+import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,24 +15,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Node;
-
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-
-import ati.lunarmessages.PostData;
-import ati.lunarmessages.R;
 
 
 public class RssItemAdapter extends ArrayAdapter<RssItem>
 {
     private Activity myContext;
-
     private RssItem[] rssItems;
 
     public RssItemAdapter(Context context, int textViewResourceId, RssItem[] objects)
@@ -78,6 +70,9 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         else
         {
             viewItem.rssItemThumbUrl=rssItems[position].getImageUrl();
+            //TODO check image locally
+            //if ()
+            //downloading and saving images
             new DownloadImageTask().execute(viewItem);
         }
 
@@ -98,7 +93,22 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             try
             {
                 URL imageURL = new URL(viewItem.rssItemThumbUrl);
+                BitmapFactory.Options o = new BitmapFactory.Options();
+                //o.inJustDecodeBounds=true;
+                // http://stackoverflow.com/questions/3331527/android-resize-a-large-bitmap-file-to-scaled-output-file
                 viewItem.bitmap = BitmapFactory.decodeStream(imageURL.openStream());
+
+                File cacheFile = new File(Config.cacheDir, viewItem.rssItemThumbUrl
+                                        .substring(viewItem.rssItemThumbUrl.lastIndexOf("/") + 1));
+
+                FileOutputStream outputStream = new FileOutputStream(cacheFile);
+                viewItem.bitmap.compress(Bitmap.CompressFormat.PNG,100,outputStream);
+                if (outputStream != null)
+                {
+                    outputStream.flush();
+                    outputStream.close();
+                }
+
             }
             catch (IOException e)
             {
@@ -118,6 +128,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             else
             {
                 result.postThumbView.setImageBitmap(result.bitmap);
+
             }
 
         }

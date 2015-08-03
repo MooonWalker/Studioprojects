@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        Config.cacheDir=Controller.getCacheFolder(this);
+        MyPreference.setCACHE_DIR(this,Config.cacheDir.toString());
+
         setContentView(R.layout.activity_main_tabbed);
         fragmentMsgs = new FragmentMsgs();
         fragmentRSS = new FragmentRSS();
