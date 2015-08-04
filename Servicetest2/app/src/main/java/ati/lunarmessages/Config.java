@@ -25,4 +25,5 @@ public class Config
         static final String DATABASE_PATH = "/data/data/ati.lunarmessages/databases/";
         static final String DB_BACKUP_PATH = "/lunarmessages/backup";
         static File cacheDir=null;
+        static final String CONTACT_EMAIL = "iroda@zetorvas.hu";
 }

@@ -8,8 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
+import android.widget.Toast;
 import java.util.List;
+import android.os.Handler;
 
 public class FragmentRSS extends Fragment implements AdapterView.OnItemClickListener
 {
@@ -19,21 +20,18 @@ public class FragmentRSS extends Fragment implements AdapterView.OnItemClickList
     private RssReader reader;
     DatabaseHandler db;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
+
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_layout_rss, container, false);
         ListView listView = (ListView)view.findViewById(R.id.fRSS);
         listView.setVisibility(View.GONE);
         view.findViewById(R.id.loadingPanel).setVisibility(View.VISIBLE);
+        //download rss feed
         generateData();
         RssItemAdapter itemAdapter = new RssItemAdapter(view.getContext(), R.layout.postitem, listData);
         //generateRssFeed(itemAdapter);

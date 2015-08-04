@@ -1,17 +1,19 @@
 package ati.lunarmessages;
 
 
+import android.os.Handler;
+import android.widget.Toast;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
-
 import java.io.InputStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 
 
 public class RssReader
@@ -197,6 +199,7 @@ public class RssReader
     {
         final Thread thread = new Thread(new Runnable()
         {
+
             @Override
             public void run()
             {
@@ -222,6 +225,7 @@ public class RssReader
 
                     parseXMLAndStoreIt(myparser);
                     stream.close();
+
                 }
 
                 catch (Exception e)
@@ -233,6 +237,8 @@ public class RssReader
         });
         thread.start();
     }
+
+
 
 
     public List<RssItem> getItems() throws Exception

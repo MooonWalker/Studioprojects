@@ -35,7 +35,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         rssItems = objects;
     }
 
-
+    //viewHOLDER
     static class ViewItem
     {
         TextView postTitleView;
@@ -44,7 +44,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         String rssItemThumbUrl;
         public Bitmap bitmap;
     }
-
+    
     public View getView(int position, View convertView, ViewGroup parent)
     {
         ViewItem viewItem;
@@ -88,6 +88,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             }
             else
             {
+                viewItem.postThumbView.setImageResource(R.drawable.ic_zetor_small);
                 //downloading and saving images
                 new DownloadImageTask().execute(viewItem);
             }
@@ -95,6 +96,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         }
     }
 
+    //TODO resize bitmap!!
     //decodes image and scales it to reduce memory consumption
     private Bitmap decodeFile(File f)
     {

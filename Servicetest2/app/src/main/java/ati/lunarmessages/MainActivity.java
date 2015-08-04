@@ -2,6 +2,7 @@ package ati.lunarmessages;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -156,11 +157,24 @@ public class MainActivity extends AppCompatActivity
         switch (action)
         {
             case GcmMessageHandler.TOUCH_ACTION:
+                //get and save the message from intent
                 strMsgText = intent.getStringExtra("handover");
                 MyPreference.setfMESSAGE(this,strMsgText);
                 break;
 
             case GcmMessageHandler.EVENT_ACTION:
+//                String notManagerName = Context.NOTIFICATION_SERVICE;
+//                NotificationManager notificationManager = (NotificationManager) getSystemService(notManagerName);
+//                notificationManager.cancel(ProximityAlerts.NOTIFICATION_ID_PROXIMITY_ALERT_FIRED);
+                break;
+            case GcmMessageHandler.CANCEL_ACTION:
+                //get and save the message from intent
+                strMsgText = intent.getStringExtra("handover");
+                MyPreference.setfMESSAGE(this,strMsgText);
+                //cancel the notification
+                String notManagerName = Context.NOTIFICATION_SERVICE;
+                NotificationManager notificationManager = (NotificationManager) getSystemService(notManagerName);
+                notificationManager.cancel(GcmMessageHandler.NOTIFICATION);
                 break;
         }
         return;

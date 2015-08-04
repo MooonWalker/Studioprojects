@@ -17,15 +17,18 @@ import java.util.GregorianCalendar;
 
 public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerService
 {
-    private static final int NOTIFICATION = 1;
-    String mes, excrept;
-    private NotificationManager myNotificationManager=null;
-    private final NotificationCompat.Builder myNotificationBuilder=new NotificationCompat.Builder(this);
-    public static final String CLOSE_ACTION = "close";
+    //notification unique id
+    public static final int NOTIFICATION = 1;
+    public static final String CANCEL_ACTION = "cancel";
+    //public static final String CLOSE_ACTION = "close";
     public static final String TOUCH_ACTION = "touch";
     public static final String EVENT_ACTION = "event";
+    private NotificationManager myNotificationManager=null;
+    private final NotificationCompat.Builder myNotificationBuilder=new NotificationCompat.Builder(this);
+    String mes, excrept;
     Intent intentM;
     Intent newCal;
+    Intent intentCanc;
 
  //   public GcmMessageHandler()
  //   {
@@ -46,7 +49,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
         }
 
         Resources res= this.getResources();
-
+        //message as event
         if(fullMsg.substring(0,3).equals("[e]"))
         {
             //get the datetime part 2015.07.31. 20:51
@@ -55,13 +58,18 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
             EventData eventData=new EventData(dateTime);
             //get the real message text
             fullMsg=fullMsg.substring(fullMsg.indexOf("[/e]")+4);
-
-
+            //intent for touch the notificaton
             intentM = new Intent(this,MainActivity.class);
             intentM.putExtra("handover", fullMsg);
             intentM.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intentM.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             intentM.setAction(TOUCH_ACTION);
+            //intent for cancelling the notification
+            intentCanc = new Intent(this,MainActivity.class);
+            intentCanc.putExtra("handover", fullMsg);
+            intentCanc.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intentCanc.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            intentCanc.setAction(CANCEL_ACTION);
 
             Calendar beginTime = Calendar.getInstance();
             Calendar endTime = Calendar.getInstance();
@@ -83,12 +91,15 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
                     .putExtra(CalendarContract.Events.RRULE, "FREQ=DAILY;COUNT=10")
                     .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
                     .putExtra(CalendarContract.Events.ACCESS_LEVEL, CalendarContract.Events.ACCESS_PRIVATE)
-                    .putExtra(Intent.EXTRA_EMAIL, "my.friend@example.com")
+                    //TODO add real email address
+                    .putExtra(Intent.EXTRA_EMAIL, Config.CONTACT_EMAIL)
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intentM, PendingIntent.FLAG_UPDATE_CURRENT);
             PendingIntent piCalEvent = PendingIntent.getActivity(this, 0, newCal, PendingIntent.FLAG_UPDATE_CURRENT);
+            PendingIntent piCancel = PendingIntent.getActivity(this, 0, intentCanc, PendingIntent.FLAG_CANCEL_CURRENT);
+
             myNotificationBuilder
                     .setSmallIcon(R.drawable.ic_zetor_small)
                     .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.app_icon_64))
@@ -98,10 +109,13 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
                     .setWhen(System.currentTimeMillis())
                     .setContentIntent(pendingIntent)
                     .setPriority(NotificationCompat.PRIORITY_MAX)
+                    .addAction(R.drawable.ic_action_cancel,getString(R.string.cancel), piCancel)
                     .addAction(R.drawable.ic_event, getString(R.string.ntitle), piCalEvent) // API 16
+                    //TODO .setAutoCancel(true)
                     .setOngoing(true);
             return fullMsg;
         }
+        //normal messages
         else
         {
             intentM = new Intent(this,MainActivity.class);

@@ -3,4 +3,5 @@
     <string name="action_about">Névjegy</string>
     <string name="action_unsubscribe">Leiratkozás</string>
     <string name="action_settings">Beállítások</string>
+    <string name="cancel">Törlés</string>
 </resources>
