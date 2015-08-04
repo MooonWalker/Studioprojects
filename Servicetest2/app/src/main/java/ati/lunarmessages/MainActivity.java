@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity
         }
         else //már regisztrált
         {
-            Toast.makeText(this,"Already registered", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"Already registered", Toast.LENGTH_SHORT).show();
         }
     }
 

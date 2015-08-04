@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -62,25 +64,55 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         {
             viewItem = (ViewItem) convertView.getTag();
         }
+        viewItem.postTitleView.setText(rssItems[position].getTitle());
+        viewItem.postDateView.setText(rssItems[position].getPubdate());
+
         // check if there is an image or invalid image extension (accepted jpg, png)
         if (rssItems[position].imageUrl == null || rssItems[position].imageUrl=="")
         {
             viewItem.postThumbView.setImageResource(R.drawable.ic_zetor_small);
+            return convertView;
         }
         else
         {
             viewItem.rssItemThumbUrl=rssItems[position].getImageUrl();
-            //TODO check image locally
-            //if ()
-            //downloading and saving images
-            new DownloadImageTask().execute(viewItem);
+
+            FileCache fileCache = new FileCache(MainActivity.ctx);
+            File f = fileCache.getFile(viewItem.rssItemThumbUrl
+                    .substring(viewItem.rssItemThumbUrl.lastIndexOf("/") + 1));
+            //does it exist locally?
+            if (f.exists())
+            {
+                Bitmap b=decodeFile(f);
+                if (b!=null) viewItem.postThumbView.setImageBitmap(b);
+            }
+            else
+            {
+                //downloading and saving images
+                new DownloadImageTask().execute(viewItem);
+            }
+            return convertView;
         }
+    }
 
-        viewItem.postTitleView.setText(rssItems[position].getTitle());
-        viewItem.postDateView.setText(rssItems[position].getPubdate());
-
-
-        return convertView;
+    //decodes image and scales it to reduce memory consumption
+    private Bitmap decodeFile(File f)
+    {
+        Bitmap ret = null;
+        try
+        {
+            FileInputStream is = new FileInputStream(f);
+            ret = BitmapFactory.decodeStream(is, null, null);
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return ret;
     }
 
     private class DownloadImageTask extends AsyncTask<ViewItem, Void, ViewItem>
