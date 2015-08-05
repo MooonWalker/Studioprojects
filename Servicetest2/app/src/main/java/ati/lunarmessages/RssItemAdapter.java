@@ -5,8 +5,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-
-import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,22 +19,26 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 
 public class RssItemAdapter extends ArrayAdapter<RssItem>
 {
+    private LayoutInflater inflater;
     private Activity myContext;
-    private RssItem[] rssItems;
+    //private RssItem[] rssItems;
+    private ArrayList<RssItem> rssItems;
 
-    public RssItemAdapter(Context context, int textViewResourceId, RssItem[] objects)
+    public RssItemAdapter(Context context, int textViewResourceId, ArrayList<RssItem> objects)
     {
         super(context, textViewResourceId, objects);
         myContext = (Activity) context;
+        inflater = ((Activity) context).getLayoutInflater();
         rssItems = objects;
     }
 
     //viewHOLDER
-    static class ViewItem
+    static class ViewHolder
     {
         TextView postTitleView;
         TextView postDateView;
@@ -47,50 +49,56 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
     
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        ViewItem viewItem;
+        ViewHolder viewHolder;
 
         if (convertView == null)
         {
-            LayoutInflater inflater = myContext.getLayoutInflater();
             convertView = inflater.inflate(R.layout.postitem, null);
 
-            viewItem = new ViewItem();
-            viewItem.postThumbView = (ImageView) convertView.findViewById(R.id.postThumb);
-            viewItem.postTitleView = (TextView) convertView.findViewById(R.id.postTitleLabel);
-            viewItem.postDateView = (TextView) convertView.findViewById(R.id.postDateLabel);
-            convertView.setTag(viewItem);
+            viewHolder = new ViewHolder();
+            viewHolder.postThumbView = (ImageView) convertView.findViewById(R.id.postThumb);
+            viewHolder.postTitleView = (TextView) convertView.findViewById(R.id.postTitleLabel);
+            viewHolder.postDateView = (TextView) convertView.findViewById(R.id.postDateLabel);
+            convertView.setTag(viewHolder);
         }
         else
         {
-            viewItem = (ViewItem) convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
-        viewItem.postTitleView.setText(rssItems[position].getTitle());
-        viewItem.postDateView.setText(rssItems[position].getPubdate());
+
+        if (rssItems.get(position).imageUrl == null)
+        {
+            viewHolder.postThumbView
+                    .setImageResource(R.drawable.postthumb_loading);
+        }
+
+        viewHolder.postTitleView.setText(rssItems.get(position).getTitle());
+        viewHolder.postDateView.setText(rssItems.get(position).getPubdate());
 
         // check if there is an image or invalid image extension (accepted jpg, png)
-        if (rssItems[position].imageUrl == null || rssItems[position].imageUrl=="")
+        if (rssItems.get(position).imageUrl == null || rssItems.get(position).imageUrl=="")
         {
-            viewItem.postThumbView.setImageResource(R.drawable.ic_zetor_small);
+            viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);
             return convertView;
         }
         else
         {
-            viewItem.rssItemThumbUrl=rssItems[position].getImageUrl();
+            viewHolder.rssItemThumbUrl=rssItems.get(position).getImageUrl();
 
             FileCache fileCache = new FileCache(MainActivity.ctx);
-            File f = fileCache.getFile(viewItem.rssItemThumbUrl
-                    .substring(viewItem.rssItemThumbUrl.lastIndexOf("/") + 1));
+            File f = fileCache.getFile(viewHolder.rssItemThumbUrl
+                    .substring(viewHolder.rssItemThumbUrl.lastIndexOf("/") + 1));
             //does it exist locally?
             if (f.exists())
             {
                 Bitmap b=decodeFile(f);
-                if (b!=null) viewItem.postThumbView.setImageBitmap(b);
+                if (b!=null) viewHolder.postThumbView.setImageBitmap(b);
             }
             else
             {
-                viewItem.postThumbView.setImageResource(R.drawable.ic_zetor_small);
+                viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);
                 //downloading and saving images
-                new DownloadImageTask().execute(viewItem);
+                new DownloadImageTask().execute(viewHolder);
             }
             return convertView;
         }
@@ -117,26 +125,26 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         return ret;
     }
 
-    private class DownloadImageTask extends AsyncTask<ViewItem, Void, ViewItem>
+    private class DownloadImageTask extends AsyncTask<ViewHolder, Void, ViewHolder>
     {
 
         @Override
-        protected ViewItem doInBackground(ViewItem... params)
+        protected ViewHolder doInBackground(ViewHolder... params)
         {
-            ViewItem viewItem=params[0];
+            ViewHolder viewHolder =params[0];
             try
             {
-                URL imageURL = new URL(viewItem.rssItemThumbUrl);
+                URL imageURL = new URL(viewHolder.rssItemThumbUrl);
                 BitmapFactory.Options o = new BitmapFactory.Options();
                 //o.inJustDecodeBounds=true;
                 // http://stackoverflow.com/questions/3331527/android-resize-a-large-bitmap-file-to-scaled-output-file
-                viewItem.bitmap = BitmapFactory.decodeStream(imageURL.openStream());
+                viewHolder.bitmap = BitmapFactory.decodeStream(imageURL.openStream());
 
-                File cacheFile = new File(Config.cacheDir, viewItem.rssItemThumbUrl
-                                        .substring(viewItem.rssItemThumbUrl.lastIndexOf("/") + 1));
+                File cacheFile = new File(Config.cacheDir, viewHolder.rssItemThumbUrl
+                                        .substring(viewHolder.rssItemThumbUrl.lastIndexOf("/") + 1));
 
                 FileOutputStream outputStream = new FileOutputStream(cacheFile);
-                viewItem.bitmap.compress(Bitmap.CompressFormat.PNG,100,outputStream);
+                viewHolder.bitmap.compress(Bitmap.CompressFormat.PNG,100,outputStream);
                 if (outputStream != null)
                 {
                     outputStream.flush();
@@ -147,13 +155,13 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             catch (IOException e)
             {
                 Log.e("error", "Downloading Image Failed");
-                viewItem.bitmap = null;
+                viewHolder.bitmap = null;
             }
-            return viewItem;
+            return viewHolder;
         }
 
         @Override
-        protected void onPostExecute(ViewItem result)
+        protected void onPostExecute(ViewHolder result)
         {
             if (result.bitmap==null)
             {
@@ -164,7 +172,6 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
                 result.postThumbView.setImageBitmap(result.bitmap);
 
             }
-
         }
     }
 }

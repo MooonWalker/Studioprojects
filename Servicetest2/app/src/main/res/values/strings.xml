@@ -31,4 +31,10 @@
     <string name="toast_google_play_services_not_found">A google play services nem elérhető</string>
     <string name="title_activity_rss_view">RssViewActivity</string>
     <string name="cancel">Törlés</string>
+    <string name="pull_to_refresh">Frissítéshez húzza</string>
+    <string name="release_to_refresh">Engedje el a frissítéshez</string>
+    <string name="loading">Töltés...</string>
+    <string name="footer_loading">Még több...</string>
+    <string name="head_arrowImage">head_arrowimage</string>
+    <string name="lastupdated">"Legutóbb frissítve: "</string>
 </resources>

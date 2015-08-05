@@ -4,4 +4,10 @@
     <string name="action_unsubscribe">Leiratkozás</string>
     <string name="action_settings">Beállítások</string>
     <string name="cancel">Törlés</string>
+    <string name="pull_to_refresh">Frissítéshez húzza</string>
+    <string name="release_to_refresh">Engedje el a frissítéshez</string>
+    <string name="loading">Töltés...</string>
+    <string name="footer_loading">Még több...</string>
+    <string name="head_arrowImage">head_arrowimage</string>
+    <string name="lastupdated">"Last Updated: "</string>
 </resources>

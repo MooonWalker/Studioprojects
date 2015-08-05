@@ -10,6 +10,8 @@ public class RssItem
     String author;
     String category;
 
+
+
     public String getAuthor()
     {
         return author;
