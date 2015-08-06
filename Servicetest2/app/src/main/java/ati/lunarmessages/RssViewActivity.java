@@ -46,4 +46,11 @@ public class RssViewActivity extends ActionBarActivity
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onStop()
+    {
+        webView.destroy();
+        super.onStop();
+    }
 }

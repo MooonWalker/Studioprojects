@@ -97,6 +97,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             else
             {
                 viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);
+
                 //downloading and saving images
                 new DownloadImageTask().execute(viewHolder);
             }
@@ -135,14 +136,21 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             try
             {
                 URL imageURL = new URL(viewHolder.rssItemThumbUrl);
-                BitmapFactory.Options o = new BitmapFactory.Options();
-                //o.inJustDecodeBounds=true;
-                // http://stackoverflow.com/questions/3331527/android-resize-a-large-bitmap-file-to-scaled-output-file
-                viewHolder.bitmap = BitmapFactory.decodeStream(imageURL.openStream());
+                final BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inJustDecodeBounds=true;
+            // http://stackoverflow.com/questions/3331527/android-resize-a-large-bitmap-file-to-scaled-output-file
+                BitmapFactory.decodeStream(imageURL.openStream(),null,options);
+                int imageHeight = options.outHeight;
+                int imageWidth = options.outWidth;
+            //target size 100*100
+                options.inSampleSize=Controller.calculateInSampleSize(options,100,100);
+                options.inJustDecodeBounds=false;
+
+                viewHolder.bitmap = BitmapFactory.decodeStream(imageURL.openStream(),null,options);
 
                 File cacheFile = new File(Config.cacheDir, viewHolder.rssItemThumbUrl
                                         .substring(viewHolder.rssItemThumbUrl.lastIndexOf("/") + 1));
-
+            //save image as png to file
                 FileOutputStream outputStream = new FileOutputStream(cacheFile);
                 viewHolder.bitmap.compress(Bitmap.CompressFormat.PNG,100,outputStream);
                 if (outputStream != null)
@@ -170,7 +178,6 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             else
             {
                 result.postThumbView.setImageBitmap(result.bitmap);
-
             }
         }
     }

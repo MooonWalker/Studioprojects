@@ -31,7 +31,6 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
     public FragmentRSS(){/* Required empty public constructor*/ }
     //private PostData[] listData;
     private ArrayList<RssItem> listData;
-    private RssReader reader;
     private RefreshableListView listView;
     private RssItemAdapter itemAdapter;
     private boolean isLoading = false;
@@ -61,15 +60,15 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
 
     private void generateData()
     {
-        ArrayList<RssItem> rssItemList;
-        reader = new RssReader(Config.RSS_URL);
-        reader.fetchXML();
-
-        //parse the RSS in new thread
-        while(reader.parsingComplete);
-        rssItemList= reader.getDataArrayList();
-
-        listData= rssItemList;//.toArray(new RssItem[rssItemList.size()])
+//        ArrayList<RssItem> rssItemList;
+//        reader = new RssReader(Config.RSS_URL);
+//        reader.fetchXML();
+//
+//        //parse the RSS in new thread
+//        while(reader.parsingComplete);
+//        rssItemList= reader.getDataArrayList();
+//
+//        listData= rssItemList;//.toArray(new RssItem[rssItemList.size()])
     }
 
     private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener()
