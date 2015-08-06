@@ -79,7 +79,8 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
             RssItem rssItem=listData.get(position-1);
 
             Bundle rssItemdetail = new Bundle();
-            rssItemdetail.putString("content",rssItem.getDescription());
+            rssItemdetail.putString("content"
+                    ,"<html><h2>"+rssItem.getTitle()+"</h2></html>"+rssItem.getDescription());
 
             Intent rssViewIntent = new Intent(MainActivity.ctx, RssViewActivity.class);
             rssViewIntent.putExtras(rssItemdetail);

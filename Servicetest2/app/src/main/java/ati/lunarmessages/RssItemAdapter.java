@@ -88,7 +88,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             FileCache fileCache = new FileCache(MainActivity.ctx);
             File f = fileCache.getFile(viewHolder.rssItemThumbUrl
                     .substring(viewHolder.rssItemThumbUrl.lastIndexOf("/") + 1));
-            //does it exist locally?
+        //does it exist locally?
             if (f.exists())
             {
                 Bitmap b=decodeFile(f);
@@ -98,15 +98,14 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             {
                 viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);
 
-                //downloading and saving images
+            //downloading resizing and saving images
                 new DownloadImageTask().execute(viewHolder);
             }
             return convertView;
         }
     }
 
-    //TODO resize bitmap!!
-    //decodes image and scales it to reduce memory consumption
+//decodes image from file
     private Bitmap decodeFile(File f)
     {
         Bitmap ret = null;
@@ -128,7 +127,6 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
 
     private class DownloadImageTask extends AsyncTask<ViewHolder, Void, ViewHolder>
     {
-
         @Override
         protected ViewHolder doInBackground(ViewHolder... params)
         {

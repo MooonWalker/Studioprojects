@@ -1,9 +1,11 @@
 package ati.lunarmessages;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -16,6 +18,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -39,23 +44,28 @@ public class MainActivity extends AppCompatActivity
     ActionBar actionBar;
     FragmentMsgs fragmentMsgs;
     FragmentRSS fragmentRSS;
-
+    Boolean accepted=false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        activity=this;
+        ctx=this;
         Config.cacheDir=Controller.getCacheFolder(this);
-        MyPreference.setCACHE_DIR(this,Config.cacheDir.toString());
+        MyPreference.setCACHE_DIR(this, Config.cacheDir.toString());
+
+    //handle disclaimer once
+        if (!MyPreference.getWELCOMESCREENSHOWN(this))
+        {
+            handleDisclaimer(ctx);
+        }
 
         setContentView(R.layout.activity_main_tabbed);
         fragmentMsgs = new FragmentMsgs();
         fragmentRSS = new FragmentRSS();
         setUpTabs(savedInstanceState);
-
-        activity=this;
-        ctx=this;
 
         strMsgText=MyPreference.getfMESSAGE(this); // restore message
         isRegistered=MyPreference.getISREGISTERED(this);
@@ -84,6 +94,47 @@ public class MainActivity extends AppCompatActivity
         }
         // stop executing code by return
         if(!chkGooglePlayservices()) return;
+    }
+
+    private void handleDisclaimer(Context ctx)
+    {
+        View checkboxView=View.inflate(ctx, R.layout.checkbox,null);
+        CheckBox mycheckBox=(CheckBox)checkboxView.findViewById(R.id.checkBox);
+        mycheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if (isChecked)accepted=true;
+                else accepted=false;
+            }
+        });
+
+        String whatsNewTitle = getResources().getString(R.string.whatsNewTitle);
+        String whatsNewText = getResources().getString(R.string.whatsNewText);
+        new AlertDialog.Builder(ctx)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle(whatsNewTitle)
+                .setMessage(whatsNewText)
+                .setView(checkboxView)
+                .setPositiveButton(
+                        R.string.ok, new DialogInterface.OnClickListener()
+                        {
+                            public void onClick(DialogInterface dialog, int which)
+                            {
+                                //user not accepted the terms
+                                if (!accepted)
+                                {
+                                    // stop executing code
+                                    MainActivity.activity.finish();
+                                } else
+                                {
+                                    MyPreference.setWELCOMESCREENSHOWN(MainActivity.ctx, true);
+                                    dialog.dismiss();
+                                }
+                            }
+                        })
+                .show();
     }
 
     private boolean chkGooglePlayservices()

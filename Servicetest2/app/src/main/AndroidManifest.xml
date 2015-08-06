@@ -83,6 +83,7 @@
 
         <activity
             android:name=".RssViewActivity"
+            android:configChanges="orientation|screenLayout|screenSize"
             android:label="@string/title_activity_rss_view"
             android:parentActivityName=".MainActivity" >
             <meta-data

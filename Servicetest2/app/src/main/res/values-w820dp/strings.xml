@@ -10,4 +10,8 @@
     <string name="footer_loading">Még több...</string>
     <string name="head_arrowImage">head_arrowimage</string>
     <string name="lastupdated">"Last Updated: "</string>
+    <string name="whatsNewTitle">whatsNewTitle</string>
+    <string name="whatsNewText">whatsNewText</string>
+    <string name="ok">Tovább!</string>
+    <string name="accept">Elfogadom!</string>
 </resources>

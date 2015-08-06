@@ -13,6 +13,23 @@ public class MyPreference
     static final String NEEDSREREG = "needsReReg";
     static final String fMESSAGE = "fMessage";
     static final String sCACHE_DIR = "sCACHE_DIR";
+    static final String WELCOMESCREENSHOWN = "sWELCOMESHOWN";
+
+
+    public static void setWELCOMESCREENSHOWN(Context ctx, Boolean shown)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean(MyPreference.WELCOMESCREENSHOWN, shown);
+        editor.apply();
+    }
+
+    public static Boolean getWELCOMESCREENSHOWN(Context ctx)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        return settings.getBoolean(WELCOMESCREENSHOWN,false);
+    }
+
 
     public static String getCACHE_DIR(Context ctx)
     {
