@@ -4,11 +4,11 @@ android {
     signingConfigs {
         config
                 {
-            keyAlias 'Ati'
-            keyPassword 'Flight58'
-            storeFile file('C:/DATA/Dropbox/Studioprojects/Atikeys.jks')
-            storePassword 'Flight58'
-        }
+                    keyAlias 'Ati'
+                    keyPassword 'Flight58'
+                    storeFile file('C:/DATA/Dropbox/Studioprojects/Atikeys.jks')
+                    storePassword 'Flight58'
+                }
     }
     compileSdkVersion 22
     buildToolsVersion '22.0.1'
@@ -32,7 +32,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.google.android.gms:play-services:7.5.0'
-    compile 'com.android.support:support-v4:22.2.0'
+    compile 'com.android.support:support-v4:22.2.1'
+    compile files('libs/core-3.2.0.jar')
 }

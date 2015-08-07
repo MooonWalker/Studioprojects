@@ -120,8 +120,14 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                if (isChecked)accepted=true;
-                else accepted=false;
+                if (isChecked)
+                {
+                    accepted = true;
+                }
+                else
+                {
+                    accepted = false;
+                }
             }
         });
 
@@ -251,8 +257,6 @@ public class MainActivity extends AppCompatActivity
         return;
     }
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -271,6 +275,11 @@ public class MainActivity extends AppCompatActivity
                 MyPreference.setWELCOMESCREENSHOWN(this,false);
                 MyPreference.setDISCLAIMER_ACCEPTED(this,false);
                 doDereg();
+                break;
+            case R.id.action_coupon:
+            //TODO kedvezménykártya
+                Intent openCoupon = new Intent(getApplicationContext(), CouponActivity.class);
+                startActivity(openCoupon);
                 break;
             case R.id.action_about:
                 AboutDialog about = new AboutDialog(this);

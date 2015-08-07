@@ -60,19 +60,6 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
         return view;
     }
 
-    private void generateData()
-    {
-//        ArrayList<RssItem> rssItemList;
-//        reader = new RssReader(Config.RSS_URL);
-//        reader.fetchXML();
-//
-//        //parse the RSS in new thread
-//        while(reader.parsingComplete);
-//        rssItemList= reader.getDataArrayList();
-//
-//        listData= rssItemList;//.toArray(new RssItem[rssItemList.size()])
-    }
-
     private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener()
     {
         @Override
@@ -282,7 +269,7 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
             catch (UnknownHostException e)
             {
                 // Internet Connection is not present
-                Log.d(Config.TAG, "No CONNECTION ");
+                //Log.d(Config.TAG, "No CONNECTION ");
                 exceptionToBeThrown=true;
                 e.printStackTrace();
             }

@@ -15,4 +15,5 @@
     <string name="ok">Tovább!</string>
     <string name="accept">Elfogadom!</string>
     <string name="no_internet">Nincs internetkapcsolat!</string>
+    <string name="coupon">Kedvezménykártya</string>
 </resources>
