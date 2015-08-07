@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -20,6 +21,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -90,6 +92,7 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
 
     private class RssDataController extends AsyncTask<String, Integer, ArrayList<RssItem>>
     {
+        private Boolean exceptionToBeThrown=false;
         @Override
         protected ArrayList<RssItem> doInBackground(String... params)
         {
@@ -276,6 +279,13 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
 
                 iStream.close();
             }
+            catch (UnknownHostException e)
+            {
+                // Internet Connection is not present
+                Log.d(Config.TAG, "No CONNECTION ");
+                exceptionToBeThrown=true;
+                e.printStackTrace();
+            }
             catch (MalformedURLException e)
             {
                 e.printStackTrace();
@@ -298,6 +308,10 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
         @Override
         protected void onPostExecute(ArrayList<RssItem> rssItems)
         {
+            if (exceptionToBeThrown)
+            {
+                Toast.makeText(getActivity(), R.string.no_internet, Toast.LENGTH_SHORT).show();
+            }
             boolean isupdated = false;
             int j = 0;
             for (int i = 0; i < rssItems.size(); i++)

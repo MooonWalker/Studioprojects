@@ -10,10 +10,12 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Looper;
+import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
-import android.support.v7.app.ActionBarActivity;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -44,7 +46,9 @@ public class MainActivity extends AppCompatActivity
     ActionBar actionBar;
     FragmentMsgs fragmentMsgs;
     FragmentRSS fragmentRSS;
+    Boolean disclaimerShowed=false;
     Boolean accepted=false;
+    Handler handler;
 
 
     @Override
@@ -55,11 +59,32 @@ public class MainActivity extends AppCompatActivity
         ctx=this;
         Config.cacheDir=Controller.getCacheFolder(this);
         MyPreference.setCACHE_DIR(this, Config.cacheDir.toString());
-
+        handler = new Handler()
+        {
+            @Override
+            public void handleMessage(Message mesg)
+            {
+                throw new RuntimeException();
+            }
+        };
     //handle disclaimer once
         if (!MyPreference.getWELCOMESCREENSHOWN(this))
         {
+            // Check if Internet present
+            if (!Controller.isConnectingToInternet(this))
+            {
+            // Internet Connection is not present
+                Controller.showAlertDialog(this,
+                        "Nincs internet kapcsolat!",
+                        "Csatlakoztassa, majd indítsa újra!", false);
+            // stop executing code by return
+                return;
+            }
             handleDisclaimer(ctx);
+    //wait for confirmation
+            try { Looper.loop(); }
+            catch(RuntimeException e2) {}
+
         }
 
         setContentView(R.layout.activity_main_tabbed);
@@ -71,16 +96,6 @@ public class MainActivity extends AppCompatActivity
         isRegistered=MyPreference.getISREGISTERED(this);
         strRegid=MyPreference.getREGID(this);
 
-        // Check if Internet present
-        if (!Controller.isConnectingToInternet(this))
-        {
-            // Internet Connection is not present
-            Controller.showAlertDialog(this,
-                    "Nincs internet kapcsolat!",
-                    "Csatlakoztassa, majd indítsa újra!", false);
-            // stop executing code by return
-            return;
-        }
         // Check if GCM configuration is set
         if (Config.YOUR_SERVER_URL == null || Config.GOOGLE_SENDER_ID == null ||
                 Config.YOUR_SERVER_URL.length() == 0
@@ -98,7 +113,7 @@ public class MainActivity extends AppCompatActivity
 
     private void handleDisclaimer(Context ctx)
     {
-        View checkboxView=View.inflate(ctx, R.layout.checkbox,null);
+        View checkboxView=View.inflate(ctx, R.layout.checkbox, null);
         CheckBox mycheckBox=(CheckBox)checkboxView.findViewById(R.id.checkBox);
         mycheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
         {
@@ -129,7 +144,10 @@ public class MainActivity extends AppCompatActivity
                                     MainActivity.activity.finish();
                                 } else
                                 {
+                                    MyPreference.setDISCLAIMER_ACCEPTED(MainActivity.ctx, true);
                                     MyPreference.setWELCOMESCREENSHOWN(MainActivity.ctx, true);
+                                    disclaimerShowed=true;
+                                    handler.sendMessage(handler.obtainMessage());
                                     dialog.dismiss();
                                 }
                             }
@@ -182,8 +200,10 @@ public class MainActivity extends AppCompatActivity
     {
         super.onResume();
         chkGooglePlayservices();
+    //get message text
         MyPreference.getfMESSAGE(this);
         strRegid=MyPreference.getREGID(this);
+    //put message text to fragment
         fragmentMsgs.tMsg.setText(strMsgText);
     }
 
@@ -231,11 +251,7 @@ public class MainActivity extends AppCompatActivity
         return;
     }
 
-    private void exit()
-    {
-        //stopService(new Intent(this, GcmMessageHandler.class));
-            finish();
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -252,6 +268,8 @@ public class MainActivity extends AppCompatActivity
         switch (itemID)
         {
             case R.id.action_unsubscribe:
+                MyPreference.setWELCOMESCREENSHOWN(this,false);
+                MyPreference.setDISCLAIMER_ACCEPTED(this,false);
                 doDereg();
                 break;
             case R.id.action_about:

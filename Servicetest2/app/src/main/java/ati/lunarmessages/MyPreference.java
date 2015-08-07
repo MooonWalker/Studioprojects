@@ -14,6 +14,24 @@ public class MyPreference
     static final String fMESSAGE = "fMessage";
     static final String sCACHE_DIR = "sCACHE_DIR";
     static final String WELCOMESCREENSHOWN = "sWELCOMESHOWN";
+    static final String DISCLAIMER_ACCEPTED = "ACCEPTED";
+
+
+
+    public static void setDISCLAIMER_ACCEPTED(Context ctx, Boolean acc)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean(MyPreference.DISCLAIMER_ACCEPTED, acc);
+        editor.apply();
+    }
+
+    public static Boolean getDisclaimerAccepted(Context ctx, Boolean acc)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        return settings.getBoolean(DISCLAIMER_ACCEPTED,false);
+    }
+
 
 
     public static void setWELCOMESCREENSHOWN(Context ctx, Boolean shown)

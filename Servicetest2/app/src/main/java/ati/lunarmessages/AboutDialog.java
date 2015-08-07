@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Formatter;
+import java.util.regex.Pattern;
 
 public class AboutDialog extends Dialog
 {
@@ -36,7 +37,8 @@ public class AboutDialog extends Dialog
         tv = (TextView)findViewById(R.id.info_text);
         tv.setText(Html.fromHtml(readRawTextFile(R.raw.about)));
         tv.setLinkTextColor(Color.BLUE);
-        Linkify.addLinks(tv, Linkify.WEB_URLS|Linkify.EMAIL_ADDRESSES);
+        Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
+        Linkify.addLinks(tv, Pattern.compile("06\\d+\\S\\d+\\S\\d+"), "tel:");
     }
 
     public static String readRawTextFile(int id)
