@@ -30,6 +30,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
 
 import java.io.IOException;
+import java.util.Date;
 
 
 public class MainActivity extends AppCompatActivity
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity
     FragmentRSS fragmentRSS;
     Boolean disclaimerShowed=false;
     Boolean accepted=false;
+    Boolean isFirstStart=true;
     Handler handler;
 
 
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity
                 throw new RuntimeException();
             }
         };
-    //handle disclaimer once
+    //handle disclaimer one time
         if (!MyPreference.getWELCOMESCREENSHOWN(this))
         {
             // Check if Internet present
@@ -208,6 +210,15 @@ public class MainActivity extends AppCompatActivity
         chkGooglePlayservices();
     //get message text
         MyPreference.getfMESSAGE(this);
+    //Handle first run
+        if (MyPreference.getISFIRSTSTART(this))
+        {
+            Date date=new Date(System.currentTimeMillis());
+            long millis=date.getTime();
+            MyPreference.setInstalledOn(this,millis);
+            MyPreference.setISFIRSTSTART(this,false);
+        }
+
         strRegid=MyPreference.getREGID(this);
     //put message text to fragment
         fragmentMsgs.tMsg.setText(strMsgText);

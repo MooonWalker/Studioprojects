@@ -174,7 +174,7 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
                                     }
                                     catch (StringIndexOutOfBoundsException j)
                                     {
-                                        //invalid picture file extension...
+                                    //invalid picture file extension or no picture...
                                         tempString="";
                                     }
                                 }

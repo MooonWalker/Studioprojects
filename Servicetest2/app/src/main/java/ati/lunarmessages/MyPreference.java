@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import java.io.File;
+import java.util.Date;
 
 public class MyPreference
 {
@@ -15,8 +16,40 @@ public class MyPreference
     static final String sCACHE_DIR = "sCACHE_DIR";
     static final String WELCOMESCREENSHOWN = "sWELCOMESHOWN";
     static final String DISCLAIMER_ACCEPTED = "ACCEPTED";
+    static final String INSTALLED_ON ="dMemorySection";
+    static final String ISFIRSTSTART="isFirstStart";
 
 
+
+    public static Boolean getISFIRSTSTART(Context ctx)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        return settings.getBoolean(ISFIRSTSTART, true);
+    }
+
+    public static void setISFIRSTSTART(Context ctx, Boolean isFirst)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean(MyPreference.ISFIRSTSTART, isFirst);
+        editor.apply();
+    }
+
+    public static void setInstalledOn(Context ctx, long date)
+    {
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putLong(MyPreference.INSTALLED_ON, date);
+        editor.apply();
+    }
+
+    public static long getInstalledOn(Context ctx)
+    {
+        Date date=new Date();
+        Long millis=date.getTime();
+        SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
+        return settings.getLong(INSTALLED_ON, millis);
+    }
 
     public static void setDISCLAIMER_ACCEPTED(Context ctx, Boolean acc)
     {
@@ -26,7 +59,7 @@ public class MyPreference
         editor.apply();
     }
 
-    public static Boolean getDisclaimerAccepted(Context ctx, Boolean acc)
+    public static Boolean getDisclaimerAccepted(Context ctx)
     {
         SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
         return settings.getBoolean(DISCLAIMER_ACCEPTED,false);
@@ -47,7 +80,6 @@ public class MyPreference
         SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
         return settings.getBoolean(WELCOMESCREENSHOWN,false);
     }
-
 
     public static String getCACHE_DIR(Context ctx)
     {

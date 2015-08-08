@@ -75,7 +75,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         viewHolder.postTitleView.setText(rssItems.get(position).getTitle());
         viewHolder.postDateView.setText(rssItems.get(position).getPubdate());
 
-        // check if there is an image or invalid image extension (accepted jpg, png)
+    // check if there is an image or invalid image extension (accepted jpg, png)
         if (rssItems.get(position).imageUrl == null || rssItems.get(position).imageUrl=="")
         {
             viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);

@@ -43,7 +43,7 @@ public class CouponActivity extends Activity
         //setupActionBar();
 
     // barcode data
-        String barcode_data = "12345676";
+        String barcode_data = "Zetor-Vas";
 
         // barcode image
         try

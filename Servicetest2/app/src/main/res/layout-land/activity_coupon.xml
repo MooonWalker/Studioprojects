@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right|bottom"
         android:id="@+id/imgView"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp"/>
+        android:paddingRight="40dp"
+        android:paddingBottom="30dp"/>
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
