@@ -12,7 +12,9 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerService
@@ -49,7 +51,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
         }
 
         Resources res= this.getResources();
-        //message as event
+     //message as event
         if(fullMsg.substring(0,3).equals("[e]"))
         {
             //get the datetime part 2015.07.31. 20:51
@@ -88,7 +90,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
                     .putExtra(CalendarContract.Events.TITLE, getString(R.string.caleventtitle))
                     .putExtra(CalendarContract.Events.DESCRIPTION, fullMsg)
                     .putExtra(CalendarContract.Events.EVENT_LOCATION, "Earth")
-                    .putExtra(CalendarContract.Events.RRULE, "FREQ=DAILY;COUNT=10")
+                    .putExtra(CalendarContract.Events.RRULE, "FREQ=DAILY;COUNT=1")
                     .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
                     .putExtra(CalendarContract.Events.ACCESS_LEVEL, CalendarContract.Events.ACCESS_PRIVATE)
                     //TODO add real email address
@@ -115,7 +117,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
                     .setOngoing(true);
             return fullMsg;
         }
-        //normal messages
+     //normal messages
         else
         {
             intentM = new Intent(this,MainActivity.class);
@@ -140,10 +142,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
         }
     }
 
-    private void setupCal()
-    {
 
-    }
     private void showNotification(String excr)
     {
         myNotificationBuilder
@@ -155,6 +154,8 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
             myNotificationManager.notify(NOTIFICATION, myNotificationBuilder.build());
         }
     }
+
+
     @Override
     public void onMessageReceived(String from, Bundle data)
     {
@@ -170,6 +171,11 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
         }
         try
         {
+        //log the message
+            SimpleDateFormat targetFormat = new SimpleDateFormat("yyyy.MM.dd, HH:mm:ss");
+            Date now=new Date(System.currentTimeMillis());
+            Controller.appendLog(targetFormat.format(now)+"|"+mes);
+        //start notification
             if (mes != null && mes.length()!=0)
             {
                 mes = setupNotifications(mes);
@@ -192,8 +198,11 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
                 excrept=mes.substring(0, 15) + "..."; //show only excrept
             }
             showNotification(excrept);
+
         }
         Log.i(Config.TAG, "Received : " + data.getString(Config.EXTRA_MESSAGE));
         //GcmBroadcastReceiver.completeWakefulIntent(intent);
+        //this.stopSelf();
+        //com.google.android.gms.gcm.GcmReceiver.completeWakefulIntent();
     }
 }

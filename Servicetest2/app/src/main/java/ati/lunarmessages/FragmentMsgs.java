@@ -32,17 +32,13 @@ public class FragmentMsgs extends Fragment
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        SharedPreferences pref = getActivity().getPreferences(0);
-        viewcontent= pref.getString(MyPreference.fMESSAGE," ");
+        viewcontent= MyPreference.getfMESSAGE(MainActivity.ctx);
     }
 
     @Override
     public void onDetach()
     {
-        SharedPreferences pref = getActivity().getPreferences(0);
-        SharedPreferences.Editor edt = pref.edit();
-        edt.putString(MyPreference.fMESSAGE, tMsg.getText().toString());
-        edt.apply();
+        MyPreference.setfMESSAGE(MainActivity.ctx,tMsg.getText().toString());
         super.onDetach();
     }
 

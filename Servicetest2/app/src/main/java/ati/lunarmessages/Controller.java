@@ -11,14 +11,15 @@ import android.net.NetworkInfo;
 import android.os.Environment;
 import android.os.PowerManager;
 import android.util.Log;
-import android.widget.ImageView;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -27,6 +28,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -47,6 +49,20 @@ public class Controller
     public static final int TO_HOUR=4;
     public static final int TO_MINUTE=5;
 
+
+    public static void appendLog(String txt)
+    {
+        try
+        {
+            BufferedWriter buf = new BufferedWriter(new FileWriter(Config.logFile, true));
+            buf.append(txt);
+            buf.newLine();
+            buf.close();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 
     //Unregister the given regid
     public static int deregister(String name, String email, String strRegid)
@@ -104,12 +120,41 @@ public class Controller
         return inSampleSize;
     }
 
+    public static File getLogFile(Context context)
+    {
+        File logDir = null;
+        File logFile=null;
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))
+        {
+            logDir = new File(Environment.getExternalStorageDirectory(), Config.LOG_DIR);
+            if(!logDir.exists())
+            {
+                try
+                {
+                    logDir.mkdirs();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+        if(!logDir.exists())
+        {
+        //problem with creating logdir
+            return null;
+        }
+
+        logFile=new File(logDir+Config.LOG_FILE);
+        return logFile;
+    }
+
     public static File getCacheFolder(Context context)
     {
         File cacheDir = null;
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))
         {
-            cacheDir = new File(Environment.getExternalStorageDirectory(), "cachefolder");
+            cacheDir = new File(Environment.getExternalStorageDirectory(), Config.CACHE_DIR);
             if(!cacheDir.isDirectory())
             {
                 cacheDir.mkdirs();
@@ -125,7 +170,6 @@ public class Controller
     public static void loadImageFromCache(Context ctx)
     {
         File cacheDir = ctx.getCacheDir();
-        //TODO filename
         File cacheFile = new File(cacheDir, "localFileName.jpg");
         InputStream fileInputStream = null;
         try
@@ -143,6 +187,23 @@ public class Controller
         //imageView.setImageBitmap(wallpaperBitmap);
 
     }
+
+    public static long calcElapsedDays(Date installedOn, Date today)
+    {
+        double elapsedDays=0;
+        //milliseconds
+        long secondsInMilli = 1000;
+        long minutesInMilli = secondsInMilli * 60;
+        long hoursInMilli = minutesInMilli * 60;
+        long daysInMilli = hoursInMilli * 24;
+
+        double different = today.getTime() - installedOn.getTime();
+        elapsedDays = different / daysInMilli;
+
+        return Math.round(elapsedDays);
+    }
+
+
     public static void downloadImageToCache(String imageurlStr, Context ctx)
     {
         URL imageUrl = null;

@@ -137,7 +137,7 @@ public class MyPreference
 
     }
 
-    public static void setNEEDREREG(Context ctx, Boolean needsrereg)
+    public static void setNEEDSREREG(Context ctx, Boolean needsrereg)
     {
         SharedPreferences settings = ctx.getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();

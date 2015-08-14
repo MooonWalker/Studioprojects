@@ -59,7 +59,10 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         activity=this;
         ctx=this;
+    //Sets up the cache directory
         Config.cacheDir=Controller.getCacheFolder(this);
+        Config.logFile =Controller.getLogFile(this);
+
         MyPreference.setCACHE_DIR(this, Config.cacheDir.toString());
         handler = new Handler()
         {
@@ -72,13 +75,14 @@ public class MainActivity extends AppCompatActivity
     //handle disclaimer one time
         if (!MyPreference.getWELCOMESCREENSHOWN(this))
         {
-            // Check if Internet present
+        // Check if Internet present
             if (!Controller.isConnectingToInternet(this))
             {
             // Internet Connection is not present
                 Controller.showAlertDialog(this,
                         "Nincs internet kapcsolat!",
                         "Csatlakoztassa, majd indítsa újra!", false);
+
             // stop executing code by return
                 return;
             }
@@ -86,7 +90,6 @@ public class MainActivity extends AppCompatActivity
     //wait for confirmation
             try { Looper.loop(); }
             catch(RuntimeException e2) {}
-
         }
 
         setContentView(R.layout.activity_main_tabbed);
@@ -194,8 +197,21 @@ public class MainActivity extends AppCompatActivity
         super.onStart();
         if(!isRegistered) //nem regisztrált
         {
-            doReg(); //force register
-            Toast.makeText(this,"Feliratkozás...", Toast.LENGTH_LONG).show();
+            // Check if Internet present
+            if (!Controller.isConnectingToInternet(this))
+            {
+                // Internet Connection is not present
+                Controller.showAlertDialog(this,
+                        "Nincs internet kapcsolat!",
+                        "Csatlakoztassa, majd indítsa újra!", false);
+                // stop executing code by return
+                return;
+            }
+            else
+            {
+                doReg(); //force register
+                Toast.makeText(this, "Feliratkozás...", Toast.LENGTH_LONG).show();
+            }
         }
         else //már regisztrált
         {
@@ -228,7 +244,7 @@ public class MainActivity extends AppCompatActivity
     protected void onSaveInstanceState(Bundle outState)
     {
         super.onSaveInstanceState(outState);
-        //            save the selected tab's index so it's re-selected on orientation change
+    //save the selected tab's index so it's re-selected on orientation change
         outState.putInt("tabIndex", getSupportActionBar().getSelectedNavigationIndex());
     }
 
@@ -245,7 +261,7 @@ public class MainActivity extends AppCompatActivity
         switch (action)
         {
             case GcmMessageHandler.TOUCH_ACTION:
-                //get and save the message from intent
+            //get and save the message from intent
                 strMsgText = intent.getStringExtra("handover");
                 MyPreference.setfMESSAGE(this,strMsgText);
                 break;
@@ -288,7 +304,6 @@ public class MainActivity extends AppCompatActivity
                 doDereg();
                 break;
             case R.id.action_coupon:
-            //TODO kedvezménykártya
                 Intent openCoupon = new Intent(getApplicationContext(), CouponActivity.class);
                 startActivity(openCoupon);
                 break;
@@ -327,9 +342,9 @@ public class MainActivity extends AppCompatActivity
                     if(delres==10)
                     {
                         isRegistered = false;
-                        MyPreference.setREGID(MainActivity.ctx,"");
-                        MyPreference.setNEEDREREG(MainActivity.ctx,false);
-                        msg = "Device deregistered.";
+                        MyPreference.setREGID(MainActivity.ctx, "");
+                        MyPreference.setNEEDSREREG(MainActivity.ctx, false);
+                        msg = getString(R.string.device_unregistered);
                         Log.i(Config.TAG, msg);
                     }
                     if(delres!=10)throw new IOException(); //del 10 = SUCCESS
@@ -358,7 +373,7 @@ public class MainActivity extends AppCompatActivity
             protected void onPostExecute(String msg)
             {
                // etRegId.setText(msg + "\n");
-                Toast.makeText(MainActivity.this,"A készülék leiratkozott",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.device_unregistered,Toast.LENGTH_LONG).show();
             }
         }.execute(null, null, null);
     }
@@ -423,11 +438,12 @@ public class MainActivity extends AppCompatActivity
                             isRegistered = true;
                             strRegid=regid;
                             MyPreference.setREGID(MainActivity.ctx, regid);
-                            MyPreference.setNEEDREREG(MainActivity.ctx,false);
+                            MyPreference.setNEEDSREREG(MainActivity.ctx, false);
+                            MyPreference.setISREGISTERED(ctx,true);
                         }
                         if(regres!=1)
                         {
-                            MyPreference.setNEEDREREG(MainActivity.ctx,true);
+                            MyPreference.setNEEDSREREG(MainActivity.ctx, true);
                             throw new IOException(); //regres 1 = SUCCESS
                         }
                     }
@@ -455,13 +471,13 @@ public class MainActivity extends AppCompatActivity
                         case 15:
                             msg="Error by registering on Google!\n" +
                                     "No regid received from Google.";
-                            MyPreference.setNEEDREREG(MainActivity.ctx,true);
+                            MyPreference.setNEEDSREREG(MainActivity.ctx, true);
                             break;
 
                         default:
                             msg = "Error :" + ex.getMessage();
                             msg+="Fatal error! \n Contact the developer!";
-                            MyPreference.setNEEDREREG(MainActivity.ctx,true);
+                            MyPreference.setNEEDSREREG(MainActivity.ctx, true);
                     }
                     Log.i(Config.TAG, msg);
                 }
@@ -471,7 +487,7 @@ public class MainActivity extends AppCompatActivity
             protected void onPostExecute(String msg)
             {
                 //etRegId.setText(msg + "\n");
-                Toast.makeText(MainActivity.this,"A feliratkozás sikerült.",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, R.string.register_successful,Toast.LENGTH_LONG).show();
             }
         }.execute(null, null, null);    //new Asynctask
 

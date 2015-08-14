@@ -40,7 +40,7 @@ public class CalUpdater extends IntentService
                 .putExtra(CalendarContract.Events.TITLE, "My Awesome Event")
                 .putExtra(CalendarContract.Events.DESCRIPTION, "Heading out with friends to do something awesome.")
                 .putExtra(CalendarContract.Events.EVENT_LOCATION, "Earth")
-                .putExtra(CalendarContract.Events.RRULE, "FREQ=DAILY;COUNT=10")
+                .putExtra(CalendarContract.Events.RRULE, "FREQ=DAILY;COUNT=1")
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
                 .putExtra(CalendarContract.Events.ACCESS_LEVEL, CalendarContract.Events.ACCESS_PRIVATE)
                 .putExtra(Intent.EXTRA_EMAIL, "my.friend@example.com")

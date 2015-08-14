@@ -11,6 +11,7 @@ import android.support.v4.app.NavUtils;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -18,6 +19,7 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 
+import java.util.Date;
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -37,8 +39,13 @@ public class CouponActivity extends Activity
         setContentView(R.layout.activity_coupon);
         contentView = findViewById(R.id.fullscreen_content);
         iView = (ImageView)findViewById(R.id.imgView);
-        Bitmap bitmap = null;
+        TextView txtDays=(TextView)findViewById(R.id.txtDays);
+    //read installed date back
+        Date installedOn = new Date(MyPreference.getInstalledOn(this));
+        Date today=new Date(System.currentTimeMillis());
 
+        txtDays.setText("Eltelt napok: "+(int) Controller.calcElapsedDays(installedOn,today));
+        Bitmap bitmap = null;
 
         //setupActionBar();
 
@@ -139,7 +146,6 @@ public class CouponActivity extends Activity
             //
             // http://developer.android.com/design/patterns/navigation.html#up-vs-back
             //
-            // TODO: If Settings has multiple levels, Up should navigate up
             // that hierarchy.
             NavUtils.navigateUpFromSameTask(this);
             return true;

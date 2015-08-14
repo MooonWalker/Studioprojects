@@ -191,7 +191,7 @@
 //        catch (Exception e)
 //        {
 //            e.printStackTrace();
-//            //TODO stop that thread somehow
+//
 //        }
 //    }
 //

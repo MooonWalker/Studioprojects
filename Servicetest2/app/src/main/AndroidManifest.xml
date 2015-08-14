@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="ati.lunarmessages.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!--
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
@@ -59,6 +60,12 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".NetReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
         <service
             android:name=".GcmMessageHandler"
             android:enabled="true"
@@ -99,10 +106,10 @@
         </activity>
         <activity
             android:name=".CouponActivity"
-            android:screenOrientation="landscape"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_coupon"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

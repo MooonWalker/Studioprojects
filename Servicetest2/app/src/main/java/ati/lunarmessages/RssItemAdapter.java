@@ -145,7 +145,6 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
                 options.inJustDecodeBounds=false;
 
                 viewHolder.bitmap = BitmapFactory.decodeStream(imageURL.openStream(),null,options);
-
                 File cacheFile = new File(Config.cacheDir, viewHolder.rssItemThumbUrl
                                         .substring(viewHolder.rssItemThumbUrl.lastIndexOf("/") + 1));
             //save image as png to file
@@ -160,7 +159,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
             }
             catch (IOException e)
             {
-                Log.e("error", "Downloading Image Failed");
+                Log.e(Config.TAG+"Rssitemadapter", "Downloading Image Failed");
                 viewHolder.bitmap = null;
             }
             return viewHolder;

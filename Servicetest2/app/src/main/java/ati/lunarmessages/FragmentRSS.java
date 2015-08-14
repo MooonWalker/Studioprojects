@@ -9,7 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
+import android.widget.GridLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -44,19 +49,32 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        // Inflate the layout for this fragment
+    // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_layout_rss, container, false);
-        listData=new ArrayList<RssItem>();
-        itemUrlList = new ArrayList<String>();
-        listView = (RefreshableListView)view.findViewById(R.id.fRSS);
-        //download rss feed
-        //generateData();
-        itemAdapter = new RssItemAdapter(view.getContext(), R.layout.postitem, listData);
-        listView.setAdapter(itemAdapter);
-        listView.setOnRefresh(this);
-        listView.onRefreshStart();
-        listView.setOnItemClickListener(onItemClickListener);
+    //Check internet connection here to not destroy the service
+        if (Controller.isConnectingToInternet(MainActivity.ctx))
+        {
+            listData = new ArrayList<RssItem>();
+            itemUrlList = new ArrayList<String>();
+            listView = (RefreshableListView) view.findViewById(R.id.fRSS);
+            //download rss feed
+            //generateData();
+            itemAdapter = new RssItemAdapter(view.getContext(), R.layout.postitem, listData);
+            listView.setAdapter(itemAdapter);
+            listView.setOnRefresh(this);
+            listView.onRefreshStart();
+            listView.setOnItemClickListener(onItemClickListener);
+        }
+        else
+        {
 
+            TextView textView= new TextView(getActivity());
+            textView.setText(R.string.no_internet);
+            textView.setPadding(10,10,10,10);
+            FrameLayout frameLayout=(FrameLayout)view.findViewById(R.id.rssFramelayout);
+            frameLayout.addView(textView);
+
+        }
         return view;
     }
 
@@ -268,8 +286,8 @@ public class FragmentRSS extends Fragment implements RefreshableInterface
             }
             catch (UnknownHostException e)
             {
-                // Internet Connection is not present
-                //Log.d(Config.TAG, "No CONNECTION ");
+            // Internet Connection is not present
+            //Log.d(Config.TAG, "No CONNECTION ");
                 exceptionToBeThrown=true;
                 e.printStackTrace();
             }

@@ -16,4 +16,8 @@
     <string name="accept">Elfogadom!</string>
     <string name="no_internet">Nincs internetkapcsolat!</string>
     <string name="coupon">Kedvezménykártya</string>
+    <string name="txtNointernet">Nincs internetkapcsolat!</string>
+    <string name="device_unregistered">A készülék leiratkozott</string>
+    <string name="register_successful">A feliratkozás sikerült.</string>
+    <string name="from_netreceiver">fromNetreceiver</string>
 </resources>

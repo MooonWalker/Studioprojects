@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="txtNointernet">Nincs internetkapcsolat!</string>
+    <string name="device_unregistered">A készülék leiratkozott</string>
+    <string name="register_successful">A feliratkozás sikerült.</string>
+    <string name="from_netreceiver">fromNetreceiver</string>
+</resources>

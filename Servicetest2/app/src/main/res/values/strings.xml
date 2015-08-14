@@ -47,4 +47,10 @@
     <string name="title_activity_coupon">CouponActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="txtNointernet">Nincs internetkapcsolat!</string>
+    <string name="device_unregistered">A készülék leiratkozott</string>
+    <string name="register_successful">A feliratkozás sikerült.</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="from_netreceiver">fromNetreceiver</string>
 </resources>

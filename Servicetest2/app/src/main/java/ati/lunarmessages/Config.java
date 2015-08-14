@@ -4,26 +4,34 @@ import java.io.File;
 
 public class Config
 {
-        // CONSTANTS
+     //app name for directories
+        static final String APP_NAME="zetorvas";
         static final String YOUR_SERVER_URL =
                 "http://gongfucha.info/GCM_files/register.php";
         static final String DEREGISTER_URL =
                 "http://gongfucha.info/GCM_files/deregister.php";
-        // Google project id
+     // Google project id
         static final String GOOGLE_SENDER_ID = "865494874332";
-        /**
-         * Tag used on log messages.
-         */
+     // Tag used on log messages.
         static final String TAG = "GCM Ati";
-
         static final String DISPLAY_MESSAGE_ACTION =
                 "ati.servicesteszts.DISPLAY_MESSAGE";
-        //GCM message tag
+     //GCM message tag
         static final String EXTRA_MESSAGE = "message";
         static final String RSS_URL =
                 "http://www.zetor.webcucc.hu/index.php/esemenyek?format=feed&type=rss";
         static final String DATABASE_PATH = "/data/data/ati.lunarmessages/databases/";
-        static final String DB_BACKUP_PATH = "/lunarmessages/backup";
+     //external backup path
+        static final String DB_BACKUP_PATH = APP_NAME+"/backup";
+     //Cachedir
         static File cacheDir=null;
+        static File logDir =null;
+        static File logFile=null;
+        static final String CACHE_DIR= APP_NAME+"/cache";
+        static final String LOG_DIR =APP_NAME+"/log";
+        static final String LOG_FILE="/messagelog.log";
+
         static final String CONTACT_EMAIL = "iroda@zetorvas.hu";
+     //discount days
+        static final int DAYS_TO_DISCOUNT1 = 2;
 }

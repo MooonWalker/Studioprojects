@@ -7,11 +7,15 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
+import com.google.android.gms.iid.InstanceID;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class RegRefresher extends IntentService
 {
@@ -19,7 +23,10 @@ public class RegRefresher extends IntentService
     private Handler handler;
     GoogleCloudMessaging gcm;
     String strRegid=""; //regid from sharedpreferences
+    String regid="";
     private Boolean isRegistered;
+    private int regres=0;
+
 
     public RegRefresher()
     {
@@ -38,85 +45,175 @@ public class RegRefresher extends IntentService
     @Override
     protected void onHandleIntent(Intent intent)
     {
-        Bundle extras = intent.getExtras();
-        mes = "Updated";
-        handler.post(new Runnable()
+        MyPreference.setNEEDSREREG(getApplicationContext(), true);
+     //Check internet connection here to not destroy the service
+        if (Controller.isConnectingToInternet(this))
         {
-            public void run()
-            {
-                Toast.makeText(getApplicationContext(), mes, Toast.LENGTH_LONG).show();
-            }
-        });
-
-//        // Remove the stored GCM registration ID
-//        clearGcmRegistrationId();
-//        GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(this);
-//        String regId = gcm.register(getGcmSenderId());
-//        // You should send the registration ID to your server over HTTP,
-//        // so it can use GCM/HTTP or CCS to send messages to your app.
-//        // The request to your server should be authenticated if your app
-//        // is using accounts.
-//        sendRegistrationIdToBackend(regId);
-//        // store the regId locally somewhere (e.g. SharedPreferences)
-//        storeGcmRegistrationId(regId);
-//        // Release the wake lock provided by the
-
-        Updatereceiver.completeWakefulIntent(intent);
-    }
-    public void doDereg()
-    {
-        new AsyncTask<Void, Void, String>()
-        {
+         //do rereg
             int delres=0;
-            @Override
-            protected String doInBackground(Void... params)
+            String msg = "";
+            try
             {
-                String msg = "";
+                if (gcm == null)
+                {
+                    gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
+                }
+                gcm.unregister();
+                delres = Controller.deregister("Ati", "moonsurveyor@gmail.com", strRegid);
+                if(delres==10)
+                {
+                    isRegistered = false;
+                    MyPreference.setREGID(MainActivity.ctx, "");
+                    MyPreference.setNEEDSREREG(MainActivity.ctx, true);
+                    MyPreference.setISREGISTERED(MainActivity.ctx, false);
+                    msg = "Device deregistered.";
+                    Log.i(Config.TAG, msg);
+                    mes="Dereg";
+                    handler.post(new Runnable()
+                    {
+                        public void run()
+                        {
+                            Toast.makeText(getApplicationContext(), mes, Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+                if(delres!=10)throw new IOException(); //del 10 = SUCCESS
+
+            }
+            catch (IOException ex)
+            {
+                switch (delres)
+                {
+                    case 20:
+                        msg="User could not be deleted from db.\n " +
+                                "Please contact admin!";
+                        break;
+                    case 30:
+                        msg="RegID not arrived to webserver.";
+                        break;
+
+                    default:
+                        msg = "Error :" + ex.getMessage();
+                        msg+="Fatal error! \n Contact the developer!";
+                        MyPreference.setNEEDSREREG(MainActivity.ctx,true);
+                }
+            }
+
+            long backoff = Controller.BACKOFF_MILLI_SECONDS + Controller.random.nextInt(1000);
+            for (int i = 1; i <= Controller.MAX_ATTEMPTS; i++)
+            {
+                Log.d(Config.TAG, "Attempt #" + i + " to register");
                 try
                 {
                     if (gcm == null)
                     {
                         gcm = GoogleCloudMessaging.getInstance(getApplicationContext());
                     }
-                    gcm.unregister();
-                    delres = Controller.deregister("Ati", "moonsurveyor@gmail.com", strRegid);
-                    if(delres==10)
-                    {
-                        isRegistered = false;
-                        MyPreference.setREGID(MainActivity.ctx,"");
-                        MyPreference.setNEEDREREG(MainActivity.ctx,false);
-                        msg = "Device deregistered.";
-                        Log.i(Config.TAG, msg);
-                    }
-                    if(delres!=10)throw new IOException(); //del 10 = SUCCESS
+                    InstanceID instanceID = InstanceID.getInstance(getApplicationContext());
+                    regid = instanceID.getToken((Config.GOOGLE_SENDER_ID),
+                            GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
+
+                    Log.i(Config.TAG,regid);
+                    break;
                 }
-                catch (IOException ex)
+                catch (IOException e)
                 {
-                    switch (delres)
+                    Log.e(Config.TAG, "Failed to register on attempt " + i + ":" + e);
+                    if (i == Controller.MAX_ATTEMPTS)
                     {
-                        case 20:
-                            msg="User could not be deleted from db.\n " +
-                                    "Please contact admin!";
-                            break;
-                        case 30:
-                            msg="RegID not arrived to webserver.";
-                            break;
-
-                        default:
-                            msg = "Error :" + ex.getMessage();
-                            msg+="Fatal error! \n Contact the developer!";
+                        break;
+                    }
+                    try
+                    {
+                        Log.d(Config.TAG, "Sleeping for " + backoff + " ms before retry");
+                        Thread.sleep(backoff);
+                    }
+                    catch (InterruptedException e1)
+                    {
+                        // Activity finished before we complete - exit.
+                        Log.d(Config.TAG, "Thread interrupted: abort remaining retries!");
+                        Thread.currentThread().interrupt();
+                        break;
                     }
                 }
-                return msg;
-            }
-
-            @Override
-            protected void onPostExecute(String msg)
+            }// end for
+            try
             {
-                // etRegId.setText(msg + "\n");
-                Toast.makeText(RegRefresher.this,"Leiratkozott",Toast.LENGTH_LONG).show();
+                if (regid!="")
+                {
+                //Send regid to webserver...
+                    regres = Controller.register("Ati", "moonsurveyor@gmail.com", regid);
+                    if(regres==1)
+                    {
+                        isRegistered = true;
+                        strRegid=regid;
+                        MyPreference.setREGID(MainActivity.ctx, regid);
+                        MyPreference.setNEEDSREREG(MainActivity.ctx, false);
+                        MyPreference.setISREGISTERED(MainActivity.ctx, true);
+                        mes="Reg";
+                        handler.post(new Runnable()
+                        {
+                            public void run()
+                            {
+                                Toast.makeText(getApplicationContext(), mes, Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                    if(regres!=1)
+                    {
+                        MyPreference.setNEEDSREREG(MainActivity.ctx, true);
+                        throw new IOException(); //regres 1 = SUCCESS
+                    }
+                }
+                else
+                {
+                    regres=15; //No regid came back!!
+                    throw new IOException();
+                }
+                msg = "Device registered, registration ID= " + regid;
+                Log.i(Config.TAG, msg);
+                Log.i(Config.TAG, String.valueOf(regres));
+
             }
-        }.execute(null, null, null);
+            catch (IOException ex)
+            {
+                switch (regres)
+                {
+                    case 2:
+                        msg="User already registered \n on the webserver!\n " +
+                                "Please contact admin!";
+                        break;
+                    case 3:
+                        msg="User details not arrived at webserver.";
+                        break;
+                    case 15:
+                        msg="Error by registering on Google!\n" +
+                                "No regid received from Google.";
+                        MyPreference.setNEEDSREREG(MainActivity.ctx, true);
+                        break;
+
+                    default:
+                        msg = "Error :" + ex.getMessage();
+                        msg+="Fatal error! \n Contact the developer!";
+                        MyPreference.setNEEDSREREG(MainActivity.ctx, true);
+                }
+                Log.i(Config.TAG, msg);
+            }
+            //MyPreference.setNEEDSREREG(getApplicationContext(),false);
+        }
+        else
+        {
+            MyPreference.setNEEDSREREG(getApplicationContext(),true);
+        }
+
+        if (intent.getAction().equals(Intent.ACTION_MY_PACKAGE_REPLACED))
+        {
+            Updatereceiver.completeWakefulIntent(intent);
+        }
+        else if (intent.getAction().equals(this.getString(R.string.from_netreceiver)))
+        {
+            NetReceiver.completeWakefulIntent(intent);
+        }
     }
 
 }

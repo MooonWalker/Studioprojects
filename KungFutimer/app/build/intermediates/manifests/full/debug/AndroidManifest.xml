@@ -3,7 +3,7 @@
     package="ati.kungfutimer"
     android:installLocation="internalOnly"
     android:versionCode="27"
-    android:versionName="1.6.2" >
+    android:versionName="1.7" >
 
     <uses-sdk
         android:minSdkVersion="9"
