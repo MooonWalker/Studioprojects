@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity
     //Sets up the cache directory
         Config.cacheDir=Controller.getCacheFolder(this);
         Config.logFile =Controller.getLogFile(this);
-
         MyPreference.setCACHE_DIR(this, Config.cacheDir.toString());
         handler = new Handler()
         {

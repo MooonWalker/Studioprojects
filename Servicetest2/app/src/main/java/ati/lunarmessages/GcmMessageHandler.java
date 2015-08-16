@@ -174,6 +174,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
         //log the message
             SimpleDateFormat targetFormat = new SimpleDateFormat("yyyy.MM.dd, HH:mm:ss");
             Date now=new Date(System.currentTimeMillis());
+            Config.logFile =Controller.getLogFile(this);
             Controller.appendLog(targetFormat.format(now)+"|"+mes);
         //start notification
             if (mes != null && mes.length()!=0)
