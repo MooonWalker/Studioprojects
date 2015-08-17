@@ -63,9 +63,9 @@ public class RegRefresher extends IntentService
                 if(delres==10)
                 {
                     isRegistered = false;
-                    MyPreference.setREGID(MainActivity.ctx, "");
-                    MyPreference.setNEEDSREREG(MainActivity.ctx, true);
-                    MyPreference.setISREGISTERED(MainActivity.ctx, false);
+                    MyPreference.setREGID(getApplicationContext(), "");
+                    MyPreference.setNEEDSREREG(getApplicationContext(), true);
+                    MyPreference.setISREGISTERED(getApplicationContext(), false);
                     msg = "Device deregistered.";
                     Log.i(Config.TAG, msg);
                     mes="Dereg";
@@ -95,7 +95,7 @@ public class RegRefresher extends IntentService
                     default:
                         msg = "Error :" + ex.getMessage();
                         msg+="Fatal error! \n Contact the developer!";
-                        MyPreference.setNEEDSREREG(MainActivity.ctx,true);
+                        MyPreference.setNEEDSREREG(getApplicationContext(),true);
                 }
             }
 
@@ -147,9 +147,9 @@ public class RegRefresher extends IntentService
                     {
                         isRegistered = true;
                         strRegid=regid;
-                        MyPreference.setREGID(MainActivity.ctx, regid);
-                        MyPreference.setNEEDSREREG(MainActivity.ctx, false);
-                        MyPreference.setISREGISTERED(MainActivity.ctx, true);
+                        MyPreference.setREGID(getApplicationContext(), regid);
+                        MyPreference.setNEEDSREREG(getApplicationContext(), false);
+                        MyPreference.setISREGISTERED(getApplicationContext(), true);
                         mes="Reg";
                         handler.post(new Runnable()
                         {
@@ -161,7 +161,7 @@ public class RegRefresher extends IntentService
                     }
                     if(regres!=1)
                     {
-                        MyPreference.setNEEDSREREG(MainActivity.ctx, true);
+                        MyPreference.setNEEDSREREG(getApplicationContext(), true);
                         throw new IOException(); //regres 1 = SUCCESS
                     }
                 }
@@ -189,13 +189,13 @@ public class RegRefresher extends IntentService
                     case 15:
                         msg="Error by registering on Google!\n" +
                                 "No regid received from Google.";
-                        MyPreference.setNEEDSREREG(MainActivity.ctx, true);
+                        MyPreference.setNEEDSREREG(getApplicationContext(), true);
                         break;
 
                     default:
                         msg = "Error :" + ex.getMessage();
                         msg+="Fatal error! \n Contact the developer!";
-                        MyPreference.setNEEDSREREG(MainActivity.ctx, true);
+                        MyPreference.setNEEDSREREG(getApplicationContext(), true);
                 }
                 Log.i(Config.TAG, msg);
             }
