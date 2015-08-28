@@ -37,7 +37,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
         rssItems = objects;
     }
 
-    //viewHOLDER
+ //viewHOLDER
     static class ViewHolder
     {
         TextView postTitleView;
@@ -78,7 +78,7 @@ public class RssItemAdapter extends ArrayAdapter<RssItem>
     // check if there is an image or invalid image extension (accepted jpg, png)
         if (rssItems.get(position).imageUrl == null || rssItems.get(position).imageUrl=="")
         {
-            viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);
+            //viewHolder.postThumbView.setImageResource(R.drawable.ic_zetor_small);
             return convertView;
         }
         else

@@ -9,6 +9,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@color/background_material_dark"
-        android:src="@drawable/zetor128" />
+        android:src="@drawable/splash_720" />
 
 </LinearLayout>
