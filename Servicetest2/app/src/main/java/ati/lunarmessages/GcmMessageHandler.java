@@ -113,7 +113,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
                     .setPriority(NotificationCompat.PRIORITY_MAX)
                     .addAction(R.drawable.ic_action_cancel,getString(R.string.cancel), piCancel)
                     .addAction(R.drawable.ic_event, getString(R.string.ntitle), piCalEvent) // API 16
-                    //TODO .setAutoCancel(true)
+                  //TODO .setAutoCancel(true)
                     .setOngoing(true);
             return fullMsg;
         }
@@ -137,6 +137,7 @@ public class GcmMessageHandler extends com.google.android.gms.gcm.GcmListenerSer
                     .setWhen(System.currentTimeMillis())
                     .setContentIntent(pendingIntent)
                     .setPriority(NotificationCompat.PRIORITY_MAX)
+                    .setAutoCancel(true)
                     .setOngoing(true);
             return fullMsg;
         }
