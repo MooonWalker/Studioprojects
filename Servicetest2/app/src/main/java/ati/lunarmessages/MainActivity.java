@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
     ActionBar actionBar;
     FragmentMsgs fragmentMsgs;
     FragmentRSS fragmentRSS;
+    FragmentService fragmentService;
     Boolean disclaimerShowed=false;
     Boolean accepted=false;
     Boolean isFirstStart=true;
@@ -94,6 +95,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main_tabbed);
         fragmentMsgs = new FragmentMsgs();
         fragmentRSS = new FragmentRSS();
+        fragmentService = new FragmentService();
+
         setUpTabs(savedInstanceState);
 
         strMsgText=MyPreference.getfMESSAGE(this); // restore message
@@ -506,6 +509,7 @@ public class MainActivity extends AppCompatActivity
 
         Tab tab_one = actionBar.newTab();
         Tab tab_two = actionBar.newTab();
+        Tab tab_three = actionBar.newTab();
 
 
         tab_one.setText(R.string.tab1_name)
@@ -520,8 +524,15 @@ public class MainActivity extends AppCompatActivity
                         new MyTabListener<FragmentRSS>(
                                 fragmentRSS));
 
+        tab_three.setText(R.string.tab3_name)
+                .setContentDescription("The third tab")
+                .setTabListener(
+                        new MyTabListener<FragmentService>(
+                                fragmentService));
+
         actionBar.addTab(tab_one);
         actionBar.addTab(tab_two);
+        actionBar.addTab(tab_three);
 
         if (savedInstanceState != null)
         {
