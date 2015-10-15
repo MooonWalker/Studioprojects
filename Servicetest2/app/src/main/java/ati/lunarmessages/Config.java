@@ -6,6 +6,7 @@ public class Config
 {
      //app name for directories
         static final String APP_NAME="zetorvas";
+        static final String SERVICE_TELEPHONE="+36302786363";
         static final String YOUR_SERVER_URL =
                 "http://gongfucha.info/GCM_files/register.php";
         static final String DEREGISTER_URL =

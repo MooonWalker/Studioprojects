@@ -9,5 +9,5 @@ Email: iroda@zetorvas.hu<br>
 Copyright 2015 Neuroweb<br>
 
 Fejlesztés: Neuroweb<br>
-Verzió: 1.0.4<br>
+Verzió: 1.0.5<br>
 moonsurveyor@gmail.com
