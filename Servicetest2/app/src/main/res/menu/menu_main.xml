@@ -10,10 +10,7 @@
           android:title="@string/action_settings"
           android:orderInCategory="100"
           app:showAsAction="never"/>-->
-    <item android:id="@+id/action_coupon"
-          android:title="@string/coupon"
-          android:orderInCategory="120"
-          app:showAsAction="never"/>
+
 
     <item android:id="@+id/action_about"
             android:title="@string/action_about"

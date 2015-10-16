@@ -33,6 +33,9 @@ public class Config
         static final String LOG_FILE="/messagelog.log";
 
         static final String CONTACT_EMAIL = "iroda@zetorvas.hu";
+     //setupdiscountmodule
+        static final boolean isDISCOUNTACTIVE = false; // values: true or false
      //discount days
         static final int DAYS_TO_DISCOUNT1 = 2;
+
 }

@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
     int regres=0;
     public static Activity activity = null;
     private boolean isRegistered=false;
+    private static final int action_coupon=5;
     private ViewPager viewPager;
     ActionBar actionBar;
     FragmentMsgs fragmentMsgs;
@@ -286,9 +287,14 @@ public class MainActivity extends AppCompatActivity
         return;
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
+        if (Config.isDISCOUNTACTIVE)
+        {
+            menu.add(0,action_coupon,120,R.string.coupon);
+        }
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -305,7 +311,7 @@ public class MainActivity extends AppCompatActivity
                 MyPreference.setDISCLAIMER_ACCEPTED(this,false);
                 doDereg();
                 break;
-            case R.id.action_coupon:
+            case action_coupon:
                 Intent openCoupon = new Intent(getApplicationContext(), CouponActivity.class);
                 startActivity(openCoupon);
                 break;
