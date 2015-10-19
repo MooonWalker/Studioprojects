@@ -16,8 +16,8 @@ android {
         applicationId "ati.lunarmessages"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 7
-        versionName '1.07'
+        versionCode 8
+        versionName '1.08'
         signingConfig signingConfigs.config
     }
     buildTypes {

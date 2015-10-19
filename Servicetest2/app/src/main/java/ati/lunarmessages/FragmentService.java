@@ -17,17 +17,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 
 public class FragmentService extends Fragment
 {
-    OurView v;
     public FragmentService(){/* Required empty public constructor*/ }
 
     @Override
@@ -37,13 +30,11 @@ public class FragmentService extends Fragment
 
     // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_layout_service, container, false);
-        //ImageView imageView = new ImageView(getActivity());
         Button btnService;
         ImageButton ibtnService;
-
         ibtnService=(ImageButton) view.findViewById(R.id.imbtnService);
-        btnService=(Button) view.findViewById(R.id.btnService);
 
+        btnService=(Button) view.findViewById(R.id.btnService);
         btnService.setText(R.string.serviceTelephone);
         btnService.setOnClickListener(new View.OnClickListener()
         {
@@ -64,28 +55,4 @@ public class FragmentService extends Fragment
     }
 
 
-    public class OurView extends SurfaceView implements Runnable
-    {
-        public OurView(Context context)
-        {
-            super(context);
-        }
-
-        @Override
-        public void run()
-        {
-
-        }
-
-        public void pause()
-        {
-
-        }
-
-        public void resume()
-        {
-
-        }
-
-    }
 }

@@ -5,6 +5,7 @@
              android:layout_height="match_parent"
              tools:context="ati.lunarmessages.FragmentService">
 
+
     <ImageView
         android:id="@+id/imgService"
         android:adjustViewBounds="true"
