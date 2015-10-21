@@ -31,8 +31,8 @@ public class FragmentService extends Fragment
     // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_layout_service, container, false);
         Button btnService;
-        ImageButton ibtnService;
-        ibtnService=(ImageButton) view.findViewById(R.id.imbtnService);
+//        ImageButton ibtnService;
+//        ibtnService=(ImageButton) view.findViewById(R.id.imbtnService);
 
         btnService=(Button) view.findViewById(R.id.btnService);
         btnService.setText(R.string.serviceTelephone);

@@ -37,7 +37,9 @@ public class AboutDialog extends Dialog
         tv = (TextView)findViewById(R.id.info_text);
         tv.setText(Html.fromHtml(readRawTextFile(R.raw.about)));
         tv.setLinkTextColor(Color.BLUE);
-        Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
+//to not render ordinary numbers
+        //Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES | Linkify.PHONE_NUMBERS);
+        Linkify.addLinks(tv, Linkify.WEB_URLS | Linkify.EMAIL_ADDRESSES);
         Linkify.addLinks(tv, Pattern.compile("06\\d+\\S\\d+\\S\\d+"), "tel:");
     }
 

@@ -10,21 +10,9 @@
         android:id="@+id/imgService"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/service_720"
+        android:src="@drawable/service_2_720"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-    <ImageButton
-        android:id="@+id/imbtnService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:src="@android:drawable/ic_delete"
-        android:layout_alignTop="@+id/btnService"
-        android:layout_toRightOf="@+id/tService"
-        android:layout_toEndOf="@+id/tService"
-        android:layout_marginLeft="49dp"
-        android:layout_marginStart="49dp"/>
 
     <TextView
         android:id="@+id/tService"
@@ -39,16 +27,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnService"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="65dp"
         android:background="@drawable/mybutton"
-        android:layout_below="@+id/tService"
-        android:layout_toLeftOf="@+id/tService"
-        android:layout_toStartOf="@+id/tService"
-        android:layout_marginRight="34dp"
-        android:layout_marginEnd="34dp"
         android:alpha="0.5"
         android:textStyle="bold"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:layout_below="@+id/tService"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>
