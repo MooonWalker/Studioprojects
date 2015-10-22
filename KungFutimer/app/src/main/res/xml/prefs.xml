@@ -32,15 +32,20 @@
         
     </PreferenceCategory>
     
-    <PreferenceCategory
-        android:title="Misc">
-            
-            <CheckBoxPreference android:summary="Don't allow the phone to go to sleep" 
+    <PreferenceCategory android:title="Misc">
+            <CheckBoxPreference
+                android:summary="Don't allow the phone to go to sleep"
                 android:title="Stay awake"
                 android:key="stayawake"
                 android:defaultValue="true">                
             </CheckBoxPreference>
-            
+
+            <CheckBoxPreference
+                android:summary="Display the first 10 characters of the notice in the list"
+                android:title="Display notice in list"
+                android:key="displaynotice"
+                android:defaultValue="false">
+            </CheckBoxPreference>
      </PreferenceCategory>
      
     <PreferenceCategory android:title="Statistics">

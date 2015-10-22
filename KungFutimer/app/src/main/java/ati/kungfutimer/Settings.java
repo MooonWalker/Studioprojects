@@ -31,14 +31,24 @@ public class Settings extends PreferenceActivity
              final CheckBoxPreference stayAwake=(CheckBoxPreference)findPreference("stayawake");
              final CheckBoxPreference stat=(CheckBoxPreference)findPreference("stat");
              stat.setEnabled(false);
-             
+
+		 	 final CheckBoxPreference displaynotice=(CheckBoxPreference)findPreference("displaynotice");
              final CheckBoxPreference sendstat=(CheckBoxPreference)findPreference("sendstat");
              final Preference backup = (Preference)findPreference("backup");
              final Preference restore = (Preference)findPreference("restore");
              
              if(stat.isChecked())stat.setSummary("Written records: "+statcount);
              
-             
+             displaynotice.setOnPreferenceChangeListener(new CheckBoxPreference.OnPreferenceChangeListener()
+			 {
+				 public boolean onPreferenceChange(Preference preference, Object newValue)
+				 {
+
+					 MainActivity.displaynotice=(Boolean)newValue;
+					 return true;
+				 }
+			 });
+
              backup.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener()
              {
 				public boolean onPreferenceClick(Preference preference)
@@ -60,7 +70,6 @@ public class Settings extends PreferenceActivity
              
              restore.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener()
 			{
-				
 				public boolean onPreferenceClick(Preference preference)
 				{
 					//futó sessiont leállítani
@@ -76,12 +85,8 @@ public class Settings extends PreferenceActivity
 					{
 						Toast.makeText(getBaseContext(), "There was an error\n during restore!", Toast.LENGTH_SHORT).show();
 					}
-					
 					return false;
 				}
-			
-            
-            	 
              });
              
              stat.setOnPreferenceChangeListener(new CheckBoxPreference.OnPreferenceChangeListener()
@@ -111,7 +116,6 @@ public class Settings extends PreferenceActivity
              });
              
              
-             
              stayAwake.setOnPreferenceChangeListener(new CheckBoxPreference.OnPreferenceChangeListener()
              {
 				
@@ -122,13 +126,8 @@ public class Settings extends PreferenceActivity
 					{
 						MainActivity.setWakelock();
 					}
-					
 					return true;
 				}
 			});
-             
-            
      }
-
-	
 }

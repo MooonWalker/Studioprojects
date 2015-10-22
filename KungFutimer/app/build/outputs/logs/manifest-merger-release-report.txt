@@ -14,7 +14,7 @@ ADDED from AndroidManifest.xml:1:1
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
 	android:installLocation
-		ADDED from AndroidManifest.xml:4:31
+		ADDED from AndroidManifest.xml:4:33
 uses-permission#android.permission.VIBRATE
 ADDED from AndroidManifest.xml:6:5
 	android:name

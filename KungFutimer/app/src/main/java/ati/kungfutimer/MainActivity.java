@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 	
 	public static boolean timerstarted = false, kungfubrewing= false;
 	boolean sendstat, vibrate, stopperstarted=false;
+	public static boolean displaynotice=false;
 	public static boolean[] isSelected;
 	
 	static long brewingtime =0;          //milliseconds
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 	    
 	    vibrate = prefs.getBoolean("vibrate", false);
 	    sendstat = prefs.getBoolean("sendstat", true);
-	    
+	    displaynotice = prefs.getBoolean("displaynotice", false);
 	    brewingtime = settings.getLong("brewingtime", 127000);
 	    kungfubrewing = settings.getBoolean("kungfubrewing", false);
 	    
@@ -1226,7 +1227,7 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)			//Android Men�
 	{
-		 if (item.getItemId() == R.id.item1)
+		 if (item.getItemId() == R.id.item1) //Settings menü
 		{
 			if(mWakeLock!=null)
 			{

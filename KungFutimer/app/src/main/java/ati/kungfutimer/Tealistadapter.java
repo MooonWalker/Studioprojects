@@ -42,24 +42,25 @@ public class Tealistadapter extends ArrayAdapter<Listelements>
 		{
 	        View row = convertView;
 	        Holder holder;
-	       
+
+
 	        if(row == null)
 	        {
 	            LayoutInflater inflater = ((Activity)context).getLayoutInflater();
 	            row = inflater.inflate(layoutResourceId, parent, false);
-	           
+
 	            holder = new Holder();
 	            holder.txtTea = (TextView)row.findViewById(R.id.txtTea);
-	       
+
 	            holder.txtTea.setTextColor(0xFFDC2F0E);
-	       
+
 	            row.setTag(holder);
 	        }
 	        else
 	        {
 	            holder = (Holder)row.getTag();
 	        }
-	       
+
 			Listelements teaListelement = data[position];
 	        holder.txtTea.setText(teaListelement.title);
 	        

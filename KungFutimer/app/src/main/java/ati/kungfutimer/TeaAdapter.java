@@ -75,16 +75,30 @@ public class TeaAdapter extends ArrayAdapter<Listelements>
 		}
 		Listelements teaListelement = data[position];
         holder.txtTitle.setText(teaListelement.title);
-        if(teaListelement.remark.length()>10)
+        if (MainActivity.displaynotice)
         {
-            holder.txtTitle1.setText(teaListelement.remark.substring(0,10)+", "+teaListelement.title1);
+            //display a part of remark in the list
+            if(teaListelement.remark.length()>0)
+            {
+                if (teaListelement.remark.length() > 10)
+                {
+                    holder.txtTitle1.setText(teaListelement.remark.substring(0, 10) + ", " + teaListelement.title1);
+                } else
+                {
+                    holder.txtTitle1.setText(teaListelement.remark + ", " + teaListelement.title1);
+                }
+            }
+        //no remark
+            else
+            {
+                holder.txtTitle1.setText(teaListelement.title1);
+            }
         }
-        else
+        else //no display per preference
         {
-            holder.txtTitle1.setText(teaListelement.remark+", "+teaListelement.title1);
+            holder.txtTitle1.setText(teaListelement.title1);
         }
 
-        
         return row;
     }
    
