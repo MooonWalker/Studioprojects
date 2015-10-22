@@ -703,13 +703,13 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 				  db1=new DatabaseHandler(this);
 				  teasavas = new Tea();
 				  teasavas = db1.getTea(adapter.data[info.position].teaId);
-				  notice.setText(teasavas.get_note2());				  
+				  notice.setText(teasavas.getRemark());
 				  
 				  btnSavenote.setOnClickListener(new View.OnClickListener()
 					{
 						public void onClick(View v)
 						{
-							teasavas.set_note2(notice.getText().toString());
+							teasavas.setRemark(notice.getText().toString());
 							int res=db1.updateTea(teasavas);
 							Toast.makeText(MainActivity.this, ""+res, Toast.LENGTH_SHORT).show();
 							res=0;
@@ -1096,7 +1096,7 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 //	        {
 //        		List<Brewing> brewings = db.getBrewings(teas.get(i).getID());
 //        		
-//        		teak[i]= new Listelements(teas.get(i).getID(), teas.get(i).get_note1().toString()+"�C, Brews: "+brewings.size(),
+//        		teak[i]= new Listelements(teas.get(i).getID(), teas.get(i).getTemperature().toString()+"�C, Brews: "+brewings.size(),
 //        				teas.get(i).getName().toString());
 //	        }
         
@@ -1162,8 +1162,9 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
         {
     		List<Brewing> brewings = db.getBrewings(teas.get(i).getID());
     		teak[i]= new Listelements(teas.get(i).getID()
-					, teas.get(i).get_note1().toString()+"°C, Brews: "+brewings.size()
-					, teas.get(i).getName().toString());
+									, teas.get(i).getTemperature().toString()+"°C, Brews: "+brewings.size()
+									, teas.get(i).getName().toString()
+									, teas.get(i).getRemark().toString()); //10 characters
         }
         adapter = new TeaAdapter(this, R.layout.listview_item_row, teak);
         tealist.setAdapter(adapter);
@@ -1206,8 +1207,10 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
         {
     		List<Brewing> brewings = db.getBrewings(teas.get(i).getID());
     		
-    		teak[i]= new Listelements(teas.get(i).getID(), teas.get(i).get_note1().toString()+"�C, Brews: "+brewings.size(),
-    				teas.get(i).getName().toString());
+    		teak[i]= new Listelements(teas.get(i).getID()
+									 ,teas.get(i).getTemperature().toString()+"�C, Brews: "+brewings.size()
+									 ,teas.get(i).getName().toString()
+									, teas.get(i).getRemark().toString()); // 10 characters
         }
         adapter = new TeaAdapter(this, R.layout.listview_item_row, teak);
         tealist.setAdapter(adapter);

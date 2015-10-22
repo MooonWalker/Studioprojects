@@ -288,8 +288,8 @@ public class DatabaseHandler extends SQLiteOpenHelper
 			 
 		    ContentValues values = new ContentValues();
 		    values.put(KEY_NAME, tea.getName()); 
-		    values.put(KEY_NOTE1, tea.get_note1());
-		    values.put(KEY_NOTE2, tea.get_note2());
+		    values.put(KEY_NOTE1, tea.getTemperature());
+		    values.put(KEY_NOTE2, tea.getRemark());
 		    values.put(KEY_NOTE3, tea.get_note3());
 		 
 		    // Inserting Row
@@ -477,8 +477,8 @@ public class DatabaseHandler extends SQLiteOpenHelper
 	            Tea tea = new Tea();
 	            tea.setID(Integer.parseInt(cursor.getString(0)));
 	            tea.setName(cursor.getString(1));
-	            tea.set_note1(cursor.getString(2));
-	            tea.set_note2(cursor.getString(3));
+	            tea.setTemperature(cursor.getString(2));
+	            tea.setRemark(cursor.getString(3));
 	            tea.set_note3(cursor.getString(4));
 	            // Adding contact to list
 	            teaList.add(tea);
@@ -549,8 +549,8 @@ public class DatabaseHandler extends SQLiteOpenHelper
 		int rows; 
 	    ContentValues values = new ContentValues();
 	    values.put(KEY_NAME, tea.getName());
-	    values.put(KEY_NOTE1, tea.get_note1());
-	    values.put(KEY_NOTE2, tea.get_note2());
+	    values.put(KEY_NOTE1, tea.getTemperature());
+	    values.put(KEY_NOTE2, tea.getRemark());
 	    values.put(KEY_NOTE3, tea.get_note3());
 	 
 	    rows= db.update(TABLE_TEAS, values, KEY_ID + " = ?",

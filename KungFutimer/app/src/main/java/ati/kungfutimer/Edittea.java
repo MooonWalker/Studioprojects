@@ -733,8 +733,8 @@ public class Edittea extends Activity
 
 	protected void saveTea(int teaid2)
 	{
-		tea.set_note1(tdTemp.getText().toString());
-		tea.set_note2(tdNotes.getText().toString());
+		tea.setTemperature(tdTemp.getText().toString());
+		tea.setRemark(tdNotes.getText().toString());
 		int res=db.updateTea(tea);
 		Toast.makeText(this, "Tea updated!", Toast.LENGTH_SHORT).show();
 		res=0;
@@ -749,8 +749,8 @@ public class Edittea extends Activity
 		
 		tdTname.setText(tea.getName());
 		
-		tdTemp.setText(tea.get_note1());
-		tdNotes.setText(tea.get_note2());
+		tdTemp.setText(tea.getTemperature());
+		tdNotes.setText(tea.getRemark());
 		
 	}
 

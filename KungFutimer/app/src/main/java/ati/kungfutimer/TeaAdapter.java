@@ -15,7 +15,7 @@ public class TeaAdapter extends ArrayAdapter<Listelements>
 
     Context context;
     int layoutResourceId;   
-    Listelements data[] = null;
+    Listelements data[] = null; //Tea data
 	private boolean flag=false;
    
     public TeaAdapter(Context context, int layoutResourceId, Listelements[] data) 
@@ -36,7 +36,6 @@ public class TeaAdapter extends ArrayAdapter<Listelements>
         this.flag =flag;
         
     }
-
 
 
 	@Override
@@ -76,7 +75,15 @@ public class TeaAdapter extends ArrayAdapter<Listelements>
 		}
 		Listelements teaListelement = data[position];
         holder.txtTitle.setText(teaListelement.title);
-        holder.txtTitle1.setText(teaListelement.title1);
+        if(teaListelement.remark.length()>10)
+        {
+            holder.txtTitle1.setText(teaListelement.remark.substring(0,10)+", "+teaListelement.title1);
+        }
+        else
+        {
+            holder.txtTitle1.setText(teaListelement.remark+", "+teaListelement.title1);
+        }
+
         
         return row;
     }

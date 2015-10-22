@@ -4,8 +4,8 @@ public  class Tea
 { 
 	private int _id;
 	private String _name="";
-	private String _note1="";
-	private String _note2="";
+	private String temperature ="";
+	private String remark ="";
 	private String _note3="";
 	
 	public Tea()
@@ -15,8 +15,8 @@ public  class Tea
 	public Tea(String name, String note1, String note2, String note3) 
 	{
 		_name = name;
-		_note1 = note1;
-		_note2 = note2;
+		temperature = note1;
+		remark = note2;
 		_note3 = note3;
 	}
 	
@@ -24,8 +24,8 @@ public  class Tea
 	{
 		_id = parseInt;
 		_name = name;
-		_note1 = note1;
-		_note2 = note2;
+		temperature = note1;
+		remark = note2;
 		_note3 = note3;
 		
 	}
@@ -59,20 +59,20 @@ public  class Tea
 	}
 	
 	
-	public String get_note1() {
-		return _note1;
+	public String getTemperature() {
+		return temperature;
 	}
-	public void set_note1(String _note1) 
+	public void setTemperature(String temperature)
 	{
-		this._note1 = _note1;
+		this.temperature = temperature;
 	}
-	public String get_note2() 
+	public String getRemark()
 	{
-		return _note2;
+		return remark;
 	}
-	public void set_note2(String _note2) 
+	public void setRemark(String remark)
 	{
-		this._note2 = _note2;
+		this.remark = remark;
 	}
 	public String get_note3() 
 	{
