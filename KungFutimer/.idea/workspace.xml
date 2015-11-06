@@ -13,133 +13,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="841b4d41-1b9f-46eb-95bf-9c9205976cfb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/I021059.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/DatabaseHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/DatabaseHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Edittea.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Edittea.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Listelements.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Listelements.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$11$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$11$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$14.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$15.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$16.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$17.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$18.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$19$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$19$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$19$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$19$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$19.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$20.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$21$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$21$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$21$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$21$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$21.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$22.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$23$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$23$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$23$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$23$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$23.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$24.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$25$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$25$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$25$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$25$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$25.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$26.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$27.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$5$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$7$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$7$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$9$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$9$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Settings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Settings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Tea.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Tea.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/TeaAdapter$Holder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/TeaAdapter$Holder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/TeaAdapter$Holder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/TeaAdapter$Holder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/TeaAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/TeaAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/TeaAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/TeaAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Tealistadapter$Holder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Tealistadapter$Holder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Tealistadapter$Holder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Tealistadapter$Holder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Tealistadapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Tealistadapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Tealistadapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/ati/kungfutimer/Tealistadapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/BuildConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-release.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-release.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/release/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/ati/kungfutimer/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/ati/kungfutimer/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/Settings.java" afterPath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/TeaAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/TeaAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/Tealistadapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/Tealistadapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/raw/info.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/raw/info.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/ati/kungfutimer/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/ati/kungfutimer/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/raw/info.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/raw/info.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/raw/info.txt" afterPath="$PROJECT_DIR$/app/src/main/res/raw/info.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.html" afterPath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.xml" afterPath="$PROJECT_DIR$/app/build/outputs/lint-results-release-fatal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-release-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-release-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/release/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/release/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/prefs.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/xml/prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/release/xml/prefs.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/release/xml/prefs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/xml/prefs.xml" afterPath="$PROJECT_DIR$/app/src/main/res/xml/prefs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/popup.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/popup.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/popup.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/popup.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Kungfutimer.iws" />
@@ -168,32 +59,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="info.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/info.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1042654">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="listview_item_row.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_row.xml">
-          <provider editor-type-id="android-designer">
+          <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listview_item_pic.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -207,6 +104,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#TeaAdapter#1;class#TeaAdapter#0" expanded="false" />
               </folding>
             </state>
@@ -219,9 +117,68 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="1340" column="5" selection-start-line="1340" selection-start-column="5" selection-end-line="1340" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4277#6136#0" expanded="true" />
-                <element signature="e#6135#6136#0" expanded="true" />
+                <element signature="e#2792#2793#0" expanded="false" />
+                <element signature="e#2817#2818#0" expanded="false" />
+                <element signature="e#2875#2876#0" expanded="false" />
+                <element signature="e#2908#2909#0" expanded="false" />
+                <element signature="e#4277#6136#0" expanded="false" />
+                <element signature="e#6135#6136#0" expanded="false" />
+                <element signature="e#6274#7368#0" expanded="false" />
+                <element signature="e#7367#7368#0" expanded="false" />
+                <element signature="e#7400#8584#0" expanded="false" />
+                <element signature="e#8583#8584#0" expanded="false" />
+                <element signature="e#9020#9030#0" expanded="false" />
+                <element signature="e#9074#9084#0" expanded="false" />
+                <element signature="e#11056#11358#0" expanded="false" />
+                <element signature="e#11357#11358#0" expanded="false" />
+                <element signature="e#12028#12373#0" expanded="false" />
+                <element signature="e#12372#12373#0" expanded="false" />
+                <element signature="e#12412#12719#0" expanded="false" />
+                <element signature="e#12718#12719#0" expanded="false" />
+                <element signature="e#13389#13734#0" expanded="false" />
+                <element signature="e#13733#13734#0" expanded="false" />
+                <element signature="e#13773#14077#0" expanded="false" />
+                <element signature="e#14076#14077#0" expanded="false" />
+                <element signature="e#14747#15091#0" expanded="false" />
+                <element signature="e#15090#15091#0" expanded="false" />
+                <element signature="e#15130#15434#0" expanded="false" />
+                <element signature="e#15433#15434#0" expanded="false" />
+                <element signature="e#16104#16447#0" expanded="false" />
+                <element signature="e#16446#16447#0" expanded="false" />
+                <element signature="e#16488#16837#0" expanded="false" />
+                <element signature="e#16836#16837#0" expanded="false" />
+                <element signature="e#16875#17017#0" expanded="false" />
+                <element signature="e#17016#17017#0" expanded="false" />
+                <element signature="e#19678#19982#0" expanded="false" />
+                <element signature="e#19981#19982#0" expanded="false" />
+                <element signature="e#20028#20180#0" expanded="false" />
+                <element signature="e#20179#20180#0" expanded="false" />
+                <element signature="e#20699#20924#0" expanded="false" />
+                <element signature="e#20923#20924#0" expanded="false" />
+                <element signature="e#20969#21090#0" expanded="false" />
+                <element signature="e#21089#21090#0" expanded="false" />
+                <element signature="e#22166#22510#0" expanded="false" />
+                <element signature="e#22509#22510#0" expanded="false" />
+                <element signature="e#23256#23637#0" expanded="false" />
+                <element signature="e#23636#23637#0" expanded="false" />
+                <element signature="e#23689#24038#0" expanded="false" />
+                <element signature="e#24037#24038#0" expanded="false" />
+                <element signature="e#24784#25165#0" expanded="false" />
+                <element signature="e#25164#25165#0" expanded="false" />
+                <element signature="e#25217#25563#0" expanded="false" />
+                <element signature="e#25562#25563#0" expanded="false" />
+                <element signature="e#26309#26689#0" expanded="false" />
+                <element signature="e#26688#26689#0" expanded="false" />
+                <element signature="e#26742#27088#0" expanded="false" />
+                <element signature="e#27087#27088#0" expanded="false" />
+                <element signature="e#27834#28213#0" expanded="false" />
+                <element signature="e#28212#28213#0" expanded="false" />
+                <element signature="e#28268#28934#0" expanded="false" />
+                <element signature="e#28933#28934#0" expanded="false" />
+                <element signature="e#28976#29109#0" expanded="false" />
+                <element signature="e#29108#29109#0" expanded="false" />
+                <element signature="e#36355#36356#0" expanded="false" />
+                <element signature="e#36375#36376#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -233,8 +190,17 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
               <folding>
-                <element signature="e#3801#4072#0" expanded="true" />
-                <element signature="e#4071#4072#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1552#1780#0" expanded="false" />
+                <element signature="e#1779#1780#0" expanded="false" />
+                <element signature="e#1833#2308#0" expanded="false" />
+                <element signature="e#2307#2308#0" expanded="false" />
+                <element signature="e#2375#2930#0" expanded="false" />
+                <element signature="e#2929#2930#0" expanded="false" />
+                <element signature="e#2995#3345#0" expanded="false" />
+                <element signature="e#3344#3345#0" expanded="false" />
+                <element signature="e#3414#3717#0" expanded="false" />
+                <element signature="e#3716#3717#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1603,8 +1569,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/Tealistadapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/TeaAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/Settings.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/raw/info.txt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/raw/info.txt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/popup.xml" />
       </list>
     </option>
   </component>
@@ -1640,6 +1607,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1675,10 +1644,6 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1693,25 +1658,13 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Kungfutimer" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
@@ -1724,7 +1677,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4100c82244d771a5" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="4_7Api19" />
     <property name="ExportApk.ApkPath" value="C:\DATA\Dropbox\Studioprojects\KungFutimer\app" />
     <property name="ExportApk.Flavors" value="" />
@@ -1943,7 +1896,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445505508377</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tealist adjustement completed (displaynotice)">
+      <created>1445513761948</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1445513761948</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1964,7 +1923,6 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967743" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296371" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1980,11 +1938,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5078014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2004,7 +1963,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="teaupdate" />
     <MESSAGE value="Tealist adjustement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tealist adjustement" />
+    <MESSAGE value="Tealist adjustement completed (displaynotice)" />
+    <MESSAGE value="popup tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="popup tweaks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2048,26 +2009,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4277#6136#0" expanded="true" />
-            <element signature="e#6135#6136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2081,9 +2022,68 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1128" column="41" selection-start-line="1128" selection-start-column="41" selection-end-line="1128" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4277#6136#0" expanded="true" />
-            <element signature="e#6135#6136#0" expanded="true" />
+            <element signature="e#2792#2793#0" expanded="false" />
+            <element signature="e#2817#2818#0" expanded="false" />
+            <element signature="e#2875#2876#0" expanded="false" />
+            <element signature="e#2908#2909#0" expanded="false" />
+            <element signature="e#4277#6136#0" expanded="false" />
+            <element signature="e#6135#6136#0" expanded="false" />
+            <element signature="e#6274#7368#0" expanded="false" />
+            <element signature="e#7367#7368#0" expanded="false" />
+            <element signature="e#7400#8584#0" expanded="false" />
+            <element signature="e#8583#8584#0" expanded="false" />
+            <element signature="e#9020#9030#0" expanded="false" />
+            <element signature="e#9074#9084#0" expanded="false" />
+            <element signature="e#11056#11358#0" expanded="false" />
+            <element signature="e#11357#11358#0" expanded="false" />
+            <element signature="e#12028#12373#0" expanded="false" />
+            <element signature="e#12372#12373#0" expanded="false" />
+            <element signature="e#12412#12719#0" expanded="false" />
+            <element signature="e#12718#12719#0" expanded="false" />
+            <element signature="e#13389#13734#0" expanded="false" />
+            <element signature="e#13733#13734#0" expanded="false" />
+            <element signature="e#13773#14077#0" expanded="false" />
+            <element signature="e#14076#14077#0" expanded="false" />
+            <element signature="e#14747#15091#0" expanded="false" />
+            <element signature="e#15090#15091#0" expanded="false" />
+            <element signature="e#15130#15434#0" expanded="false" />
+            <element signature="e#15433#15434#0" expanded="false" />
+            <element signature="e#16104#16447#0" expanded="false" />
+            <element signature="e#16446#16447#0" expanded="false" />
+            <element signature="e#16488#16837#0" expanded="false" />
+            <element signature="e#16836#16837#0" expanded="false" />
+            <element signature="e#16875#17017#0" expanded="false" />
+            <element signature="e#17016#17017#0" expanded="false" />
+            <element signature="e#19678#19982#0" expanded="false" />
+            <element signature="e#19981#19982#0" expanded="false" />
+            <element signature="e#20028#20180#0" expanded="false" />
+            <element signature="e#20179#20180#0" expanded="false" />
+            <element signature="e#20699#20924#0" expanded="false" />
+            <element signature="e#20923#20924#0" expanded="false" />
+            <element signature="e#20969#21090#0" expanded="false" />
+            <element signature="e#21089#21090#0" expanded="false" />
+            <element signature="e#22166#22510#0" expanded="false" />
+            <element signature="e#22509#22510#0" expanded="false" />
+            <element signature="e#23256#23637#0" expanded="false" />
+            <element signature="e#23636#23637#0" expanded="false" />
+            <element signature="e#23689#24038#0" expanded="false" />
+            <element signature="e#24037#24038#0" expanded="false" />
+            <element signature="e#24784#25165#0" expanded="false" />
+            <element signature="e#25164#25165#0" expanded="false" />
+            <element signature="e#25217#25563#0" expanded="false" />
+            <element signature="e#25562#25563#0" expanded="false" />
+            <element signature="e#26309#26689#0" expanded="false" />
+            <element signature="e#26688#26689#0" expanded="false" />
+            <element signature="e#26742#27088#0" expanded="false" />
+            <element signature="e#27087#27088#0" expanded="false" />
+            <element signature="e#27834#28213#0" expanded="false" />
+            <element signature="e#28212#28213#0" expanded="false" />
+            <element signature="e#28268#28934#0" expanded="false" />
+            <element signature="e#28933#28934#0" expanded="false" />
+            <element signature="e#28976#29109#0" expanded="false" />
+            <element signature="e#29108#29109#0" expanded="false" />
+            <element signature="e#36355#36356#0" expanded="false" />
+            <element signature="e#36375#36376#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2173,9 +2173,68 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4277#6136#0" expanded="true" />
-            <element signature="e#6135#6136#0" expanded="true" />
+            <element signature="e#2792#2793#0" expanded="false" />
+            <element signature="e#2817#2818#0" expanded="false" />
+            <element signature="e#2875#2876#0" expanded="false" />
+            <element signature="e#2908#2909#0" expanded="false" />
+            <element signature="e#4277#6136#0" expanded="false" />
+            <element signature="e#6135#6136#0" expanded="false" />
+            <element signature="e#6274#7368#0" expanded="false" />
+            <element signature="e#7367#7368#0" expanded="false" />
+            <element signature="e#7400#8584#0" expanded="false" />
+            <element signature="e#8583#8584#0" expanded="false" />
+            <element signature="e#9020#9030#0" expanded="false" />
+            <element signature="e#9074#9084#0" expanded="false" />
+            <element signature="e#11056#11358#0" expanded="false" />
+            <element signature="e#11357#11358#0" expanded="false" />
+            <element signature="e#12028#12373#0" expanded="false" />
+            <element signature="e#12372#12373#0" expanded="false" />
+            <element signature="e#12412#12719#0" expanded="false" />
+            <element signature="e#12718#12719#0" expanded="false" />
+            <element signature="e#13389#13734#0" expanded="false" />
+            <element signature="e#13733#13734#0" expanded="false" />
+            <element signature="e#13773#14077#0" expanded="false" />
+            <element signature="e#14076#14077#0" expanded="false" />
+            <element signature="e#14747#15091#0" expanded="false" />
+            <element signature="e#15090#15091#0" expanded="false" />
+            <element signature="e#15130#15434#0" expanded="false" />
+            <element signature="e#15433#15434#0" expanded="false" />
+            <element signature="e#16104#16447#0" expanded="false" />
+            <element signature="e#16446#16447#0" expanded="false" />
+            <element signature="e#16488#16837#0" expanded="false" />
+            <element signature="e#16836#16837#0" expanded="false" />
+            <element signature="e#16875#17017#0" expanded="false" />
+            <element signature="e#17016#17017#0" expanded="false" />
+            <element signature="e#19678#19982#0" expanded="false" />
+            <element signature="e#19981#19982#0" expanded="false" />
+            <element signature="e#20028#20180#0" expanded="false" />
+            <element signature="e#20179#20180#0" expanded="false" />
+            <element signature="e#20699#20924#0" expanded="false" />
+            <element signature="e#20923#20924#0" expanded="false" />
+            <element signature="e#20969#21090#0" expanded="false" />
+            <element signature="e#21089#21090#0" expanded="false" />
+            <element signature="e#22166#22510#0" expanded="false" />
+            <element signature="e#22509#22510#0" expanded="false" />
+            <element signature="e#23256#23637#0" expanded="false" />
+            <element signature="e#23636#23637#0" expanded="false" />
+            <element signature="e#23689#24038#0" expanded="false" />
+            <element signature="e#24037#24038#0" expanded="false" />
+            <element signature="e#24784#25165#0" expanded="false" />
+            <element signature="e#25164#25165#0" expanded="false" />
+            <element signature="e#25217#25563#0" expanded="false" />
+            <element signature="e#25562#25563#0" expanded="false" />
+            <element signature="e#26309#26689#0" expanded="false" />
+            <element signature="e#26688#26689#0" expanded="false" />
+            <element signature="e#26742#27088#0" expanded="false" />
+            <element signature="e#27087#27088#0" expanded="false" />
+            <element signature="e#27834#28213#0" expanded="false" />
+            <element signature="e#28212#28213#0" expanded="false" />
+            <element signature="e#28268#28934#0" expanded="false" />
+            <element signature="e#28933#28934#0" expanded="false" />
+            <element signature="e#28976#29109#0" expanded="false" />
+            <element signature="e#29108#29109#0" expanded="false" />
+            <element signature="e#36355#36356#0" expanded="false" />
+            <element signature="e#36375#36376#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2289,29 +2348,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/legal.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_row.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/Edittea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3649635">
           <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2319,7 +2359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="463" column="0" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2327,7 +2366,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27353463">
           <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2346,7 +2384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.734597">
           <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2354,7 +2391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9541864">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2370,7 +2406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.362878">
           <caret line="114" column="56" selection-start-line="114" selection-start-column="56" selection-end-line="114" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2378,7 +2413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5735141">
           <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2386,7 +2420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1929092">
           <caret line="52" column="44" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2394,7 +2427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3676732">
           <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2402,7 +2434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.86145645">
           <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2411,9 +2442,68 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1340" column="5" selection-start-line="1340" selection-start-column="5" selection-end-line="1340" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4277#6136#0" expanded="true" />
-            <element signature="e#6135#6136#0" expanded="true" />
+            <element signature="e#2792#2793#0" expanded="false" />
+            <element signature="e#2817#2818#0" expanded="false" />
+            <element signature="e#2875#2876#0" expanded="false" />
+            <element signature="e#2908#2909#0" expanded="false" />
+            <element signature="e#4277#6136#0" expanded="false" />
+            <element signature="e#6135#6136#0" expanded="false" />
+            <element signature="e#6274#7368#0" expanded="false" />
+            <element signature="e#7367#7368#0" expanded="false" />
+            <element signature="e#7400#8584#0" expanded="false" />
+            <element signature="e#8583#8584#0" expanded="false" />
+            <element signature="e#9020#9030#0" expanded="false" />
+            <element signature="e#9074#9084#0" expanded="false" />
+            <element signature="e#11056#11358#0" expanded="false" />
+            <element signature="e#11357#11358#0" expanded="false" />
+            <element signature="e#12028#12373#0" expanded="false" />
+            <element signature="e#12372#12373#0" expanded="false" />
+            <element signature="e#12412#12719#0" expanded="false" />
+            <element signature="e#12718#12719#0" expanded="false" />
+            <element signature="e#13389#13734#0" expanded="false" />
+            <element signature="e#13733#13734#0" expanded="false" />
+            <element signature="e#13773#14077#0" expanded="false" />
+            <element signature="e#14076#14077#0" expanded="false" />
+            <element signature="e#14747#15091#0" expanded="false" />
+            <element signature="e#15090#15091#0" expanded="false" />
+            <element signature="e#15130#15434#0" expanded="false" />
+            <element signature="e#15433#15434#0" expanded="false" />
+            <element signature="e#16104#16447#0" expanded="false" />
+            <element signature="e#16446#16447#0" expanded="false" />
+            <element signature="e#16488#16837#0" expanded="false" />
+            <element signature="e#16836#16837#0" expanded="false" />
+            <element signature="e#16875#17017#0" expanded="false" />
+            <element signature="e#17016#17017#0" expanded="false" />
+            <element signature="e#19678#19982#0" expanded="false" />
+            <element signature="e#19981#19982#0" expanded="false" />
+            <element signature="e#20028#20180#0" expanded="false" />
+            <element signature="e#20179#20180#0" expanded="false" />
+            <element signature="e#20699#20924#0" expanded="false" />
+            <element signature="e#20923#20924#0" expanded="false" />
+            <element signature="e#20969#21090#0" expanded="false" />
+            <element signature="e#21089#21090#0" expanded="false" />
+            <element signature="e#22166#22510#0" expanded="false" />
+            <element signature="e#22509#22510#0" expanded="false" />
+            <element signature="e#23256#23637#0" expanded="false" />
+            <element signature="e#23636#23637#0" expanded="false" />
+            <element signature="e#23689#24038#0" expanded="false" />
+            <element signature="e#24037#24038#0" expanded="false" />
+            <element signature="e#24784#25165#0" expanded="false" />
+            <element signature="e#25164#25165#0" expanded="false" />
+            <element signature="e#25217#25563#0" expanded="false" />
+            <element signature="e#25562#25563#0" expanded="false" />
+            <element signature="e#26309#26689#0" expanded="false" />
+            <element signature="e#26688#26689#0" expanded="false" />
+            <element signature="e#26742#27088#0" expanded="false" />
+            <element signature="e#27087#27088#0" expanded="false" />
+            <element signature="e#27834#28213#0" expanded="false" />
+            <element signature="e#28212#28213#0" expanded="false" />
+            <element signature="e#28268#28934#0" expanded="false" />
+            <element signature="e#28933#28934#0" expanded="false" />
+            <element signature="e#28976#29109#0" expanded="false" />
+            <element signature="e#29108#29109#0" expanded="false" />
+            <element signature="e#36355#36356#0" expanded="false" />
+            <element signature="e#36375#36376#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2423,8 +2513,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
           <folding>
-            <element signature="e#3801#4072#0" expanded="true" />
-            <element signature="e#4071#4072#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1552#1780#0" expanded="false" />
+            <element signature="e#1779#1780#0" expanded="false" />
+            <element signature="e#1833#2308#0" expanded="false" />
+            <element signature="e#2307#2308#0" expanded="false" />
+            <element signature="e#2375#2930#0" expanded="false" />
+            <element signature="e#2929#2930#0" expanded="false" />
+            <element signature="e#2995#3345#0" expanded="false" />
+            <element signature="e#3344#3345#0" expanded="false" />
+            <element signature="e#3414#3717#0" expanded="false" />
+            <element signature="e#3716#3717#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2434,6 +2533,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="40" selection-start-line="96" selection-start-column="40" selection-end-line="96" selection-end-column="40" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#TeaAdapter#1;class#TeaAdapter#0" expanded="false" />
           </folding>
         </state>
@@ -2443,22 +2543,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/legal.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/info.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1042654">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_row.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
           <folding />
         </state>
       </provider>

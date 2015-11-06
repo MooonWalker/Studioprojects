@@ -1,8 +1,8 @@
 <h3>Gong Fu Timer</h3>
 
 Version 1.7.1<br>
-Copyright 2012-2014 A. Szasz<br>
+Copyright 2012-2015 A. Szasz<br>
 <b>gongfucha.info</b><br><br>
 You can also send comments<br>
-and bug reports to me at:<br><br>
+and bug reports to me:<br><br>
 moonsurveyor@gmail.com
