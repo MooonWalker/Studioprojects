@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
        android:background="#000091"
-        android:layout_width="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="2dp" >
+            android:padding="1dp" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -56,6 +55,7 @@
                     android:textSize="25dp" />
                 
             </LinearLayout>
+
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -72,6 +72,7 @@
                     android:textSize="50dp" />
                 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
@@ -79,6 +80,7 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:weightSum="600" >
+
             <Button
                     android:id="@+id/btnup2"
                     style="?android:attr/buttonStyleSmall"
@@ -95,8 +97,7 @@
                     android:gravity="center"
                     android:inputType="number"
                     android:text="00"
-                    android:textSize="35dp" />
-
+                    android:textSize="35dp"/>
 
                 <Button
                     android:id="@+id/btndn2"
@@ -108,12 +109,7 @@
                     android:textSize="25dp" />
                 
             </LinearLayout>
-
-            
-            
         </LinearLayout>
-        
-
 
          <LinearLayout
              android:layout_width="match_parent"
@@ -127,9 +123,8 @@
              android:id="@+id/Btn1"
              android:layout_width="fill_parent"
              android:layout_height="wrap_content"
- 			android:gravity="center"
+ 			 android:gravity="center"
              android:text="OK" />
-
 
          <Button
              android:id="@+id/Btn2"
@@ -138,7 +133,6 @@
              android:layout_weight="300"
              android:gravity="center"
              android:text="Cancel" />
-         
 		</LinearLayout>
 </LinearLayout>
 

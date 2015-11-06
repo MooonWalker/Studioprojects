@@ -22,6 +22,7 @@ import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
@@ -235,12 +236,10 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 					
 					counter.start();
 					
-					
 					timerstarted = true;
 
 					if (session != null)
 					{
-						
 						if(session.getBrewidx()==1)
 						{
 							session.start();
@@ -250,10 +249,7 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 						{
 							kannasor.getChildAt(session.getBrewidx()-2).setBackgroundColor(Color.TRANSPARENT);
 						}
-						
-						
 					}
-					
 				}
 				else
 				{
@@ -261,8 +257,6 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 					btn1.setText("Start");
 					timerstarted= false;
 				}
-				
-				
 			}
 		});
 		
@@ -364,6 +358,11 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 		if (v.getId() == R.id.editText1)
 		{
 			mydialog = new Dialog(MainActivity.this);
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            lp.copyFrom(mydialog.getWindow().getAttributes());
+            lp.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, getResources().getDisplayMetrics());
+            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+
 			mydialog.setContentView(R.layout.popup);
 			mydialog.setTitle("Set timer 'min:sec'");
 			mydialog.setCancelable(true);
@@ -380,6 +379,7 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 			_et2.setFocusable(false);
 			_et1.setText(Textformatter.MillisToMin(brewingtime));
 			_et2.setText(Textformatter.MillisToSec(brewingtime));
+
 			btnup1.setOnClickListener(new View.OnClickListener() 
 			{
 				public void onClick(View v) 
@@ -392,13 +392,12 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 					{
 						_et1.setText("00");
 					}
-					
 				}
 			});
 			btnup1.setOnTouchListener(new View.OnTouchListener() 
 			{
 				private Handler mHandler;
-				
+
 				public boolean onTouch(View v, MotionEvent event) 
 				{
 					switch(event.getAction()) {
@@ -609,7 +608,9 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 					mydialog.dismiss();
 				}
 			});
+
 			mydialog.show();
+            mydialog.getWindow().setAttributes(lp);
 		} 
 		else if (v.getId() == R.id.toggleButton1)
 		{
@@ -630,7 +631,6 @@ public class MainActivity extends AppCompatActivity implements MycountFinished, 
 			counter.doFinish();
 			
 		}
-		
 	}
 
 	public void setupKungFuState()
