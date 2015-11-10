@@ -13,35 +13,644 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="841b4d41-1b9f-46eb-95bf-9c9205976cfb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$13.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity$9.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/popup_backup.xml" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\generated\source\buildConfig\release\ati\kungfutimer\BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\generated\source\r\release\android\support\v7\appcompat\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\generated\source\r\release\ati\kungfutimer\R.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\assets\release\Kungfutimer.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\assets\release\structure" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\android\support\v7\appcompat\R.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\AboutDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\AddTblBrewings.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\AddTblTea.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$10.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$4$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$6$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$7.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$8$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$8.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1$9.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addtea.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Addteatab.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Brewing.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\BrewingH.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\DatabaseHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\DbImpExp.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$10$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$10.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$11.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$12$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$12.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$13.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$14$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$14.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$15.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$16.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$17.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$18$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$18.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$19.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$20$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$20.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$21.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$22$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$22.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$23.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$24$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$24.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$25.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$26.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$7.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$8$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$8.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea$9.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Edittea.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\EventNotifier.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\HSessionBrew.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\JSONParser.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\LearnSession$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\LearnSession$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\LearnSession.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\LearningSession.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Listelements.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$10.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$11$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$11.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$12.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$13.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$14.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$15.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$16.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$17.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$18.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$19$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$19.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$20.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$21$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$21.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$22.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$23$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$23.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$24.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$25$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$25.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$26.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$27.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$5$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$6.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$7$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$7.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$8.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$9$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity$9.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Menu.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MyCount.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\MycountFinished.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\NewTeaWithBrewings.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\PHPCom$UploadStatistics.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\PHPCom.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\PotSpawner.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$array.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R$xml.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\R.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\SessionH.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Sessionhandler.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Settings$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Settings$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Settings$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Settings$4.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Settings$5.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Settings.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Splash$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Splash.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Tea.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\TeaAdapter$Holder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\TeaAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Tealistadapter$Holder.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Tealistadapter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Teasession.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\classes\release\ati\kungfutimer\Textformatter.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\dex\debug\classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\dex\release\classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\incremental\aidl\release\dependency.store" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\incremental\mergeAssets\release\merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\incremental\mergeResources\release\merger.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\manifests\full\release\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\classes-231fe5ee4ddbcb268fe3f2522c61a617b292794a.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\classes-4ebbed8734cb2c665afc38f744f2ed20b9b2a9e9.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-0a660b388c672a7470edb384cdec2a008f574625.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-ef05771db036490503dd2f8600a363a29858b833.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\release\classes-231fe5ee4ddbcb268fe3f2522c61a617b292794a.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\release\classes-4ebbed8734cb2c665afc38f744f2ed20b9b2a9e9.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\release\internal_impl-22.2.0-0a660b388c672a7470edb384cdec2a008f574625.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\pre-dexed\release\support-annotations-22.2.0-ef05771db036490503dd2f8600a363a29858b833.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_fade_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_fade_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_grow_fade_in_from_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_popup_enter.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_popup_exit.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_shrink_fade_out_from_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_slide_in_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_slide_in_top.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_slide_out_bottom.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\anim\abc_slide_out_top.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color-v11\abc_background_cache_hint_selector_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color-v11\abc_background_cache_hint_selector_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_background_cache_hint_selector_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_background_cache_hint_selector_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_primary_text_disable_only_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_primary_text_disable_only_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_primary_text_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_primary_text_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_search_url_text.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_secondary_text_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\abc_secondary_text_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\color_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\switch_thumb_material_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\color\switch_thumb_material_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_rating_star_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_rating_star_on_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_text_cursor_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\arrow_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\arrow_right_red.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\arrow_right_redcrop.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\back_ground.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\chakicsi.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\chanagyobb.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\ground.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\ic_action_search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\ic_menu_add.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\ic_menu_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\ic_menu_info_details.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\ic_menu_preferences.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\ic_menu_stop.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\kicsikanna.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\kicsikanna1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\nsl.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-hdpi\right_red.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-hdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-hdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-hdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-hdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-mdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-mdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-mdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-mdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-ldrtl-xxxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_rating_star_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_rating_star_on_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_text_cursor_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\ic_action_search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_rating_star_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_rating_star_on_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_text_cursor_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\ic_action_search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xhdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ab_share_pack_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_rating_star_off_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_rating_star_on_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_cab_background_top_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_commit_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_go_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_list_divider_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_list_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_list_longpressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_list_pressed_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_list_pressed_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_list_selector_disabled_holo_dark.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_list_selector_disabled_holo_light.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_menu_hardkey_panel_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_popup_background_mtrl_mult.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_text_cursor_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_textfield_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_textfield_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_textfield_search_activated_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxhdpi\abc_textfield_search_default_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_btn_check_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_btn_check_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_btn_radio_to_on_mtrl_000.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_btn_radio_to_on_mtrl_015.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_btn_switch_to_on_mtrl_00001.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_btn_switch_to_on_mtrl_00012.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_ab_back_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_clear_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_menu_cut_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_menu_moreoverflow_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_menu_paste_mtrl_am_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_menu_selectall_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_menu_share_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_ic_voice_search_api_mtrl_alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_spinner_mtrl_am_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_switch_track_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable-xxxhdpi\abc_tab_indicator_mtrl_alpha.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_btn_borderless_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_btn_check_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_btn_default_mtrl_shape.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_btn_radio_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_cab_background_internal_bg.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_cab_background_top_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_dialog_material_background_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_dialog_material_background_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_edit_text_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_item_background_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_item_background_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_list_selector_background_transition_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_list_selector_background_transition_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_list_selector_holo_dark.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_list_selector_holo_light.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_ratingbar_full_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_spinner_textfield_background_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_switch_thumb_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_tab_indicator_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\drawable\abc_textfield_search_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_action_bar_title_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_action_bar_up_container.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_action_bar_view_list_nav_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_action_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_action_menu_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_action_mode_bar.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_action_mode_close_item_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_activity_chooser_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_activity_chooser_view_list_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_alert_dialog_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_dialog_title_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_expanded_menu_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_list_menu_item_checkbox.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_list_menu_item_icon.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_list_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_list_menu_item_radio.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_popup_menu_item_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_screen_content_include.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_screen_simple.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_screen_simple_overlay_action_mode.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_screen_toolbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_search_dropdown_item_icons_2line.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_search_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_select_dialog_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\abc_simple_dropdown_hint.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\about.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\activity_learn_session.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\addtea.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\addtea2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\brewingoverview.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\confirmdialog.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\listitemsimple.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\listitmsimpic.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\listview_header_row.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\listview_item_pic.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\listview_item_row.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\litemsimplepic.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_media_action.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_media_cancel_action.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_template_big_media.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_template_big_media_narrow.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_template_lines.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_template_media.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_template_part_chronometer.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\notification_template_part_time.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\popup.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\select_dialog_item_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\select_dialog_multichoice_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\select_dialog_singlechoice_material.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\shownotice.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\splash.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\support_simple_spinner_dropdown_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\teabutton.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\teadetails1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\teadetailsflip.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\layout\teaoverview.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\menu\activity_learn_session.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\menu\activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\bowl.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\ding.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\electra.ogg" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\flute1.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\flute2.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\guzheng.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\info.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\legal.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\medieval.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\raw\sulik.mp3" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-af\values-af.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-am\values-am.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ar\values-ar.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-bg\values-bg.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-bn-rBD\values-bn-rBD.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ca\values-ca.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-cs\values-cs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-da\values-da.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-de\values-de.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-el\values-el.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-en-rGB\values-en-rGB.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-en-rIN\values-en-rIN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-es-rUS\values-es-rUS.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-es\values-es.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-et-rEE\values-et-rEE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-eu-rES\values-eu-rES.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-fa\values-fa.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-fi\values-fi.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-fr-rCA\values-fr-rCA.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-fr\values-fr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-gl-rES\values-gl-rES.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-h720dp\values-h720dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-hdpi\values-hdpi.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-hi\values-hi.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-hr\values-hr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-hu\values-hu.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-hy-rAM\values-hy-rAM.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-in\values-in.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-is-rIS\values-is-rIS.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-it\values-it.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-iw\values-iw.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ja\values-ja.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ka-rGE\values-ka-rGE.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-kk-rKZ\values-kk-rKZ.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-km-rKH\values-km-rKH.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-kn-rIN\values-kn-rIN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ko\values-ko.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ky-rKG\values-ky-rKG.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-land\values-land.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-large\values-large.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-lo-rLA\values-lo-rLA.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-lt\values-lt.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-lv\values-lv.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-mk-rMK\values-mk-rMK.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ml-rIN\values-ml-rIN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-mn-rMN\values-mn-rMN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-mr-rIN\values-mr-rIN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ms-rMY\values-ms-rMY.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-my-rMM\values-my-rMM.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-nb\values-nb.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ne-rNP\values-ne-rNP.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-nl\values-nl.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-pl\values-pl.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-port\values-port.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-pt-rPT\values-pt-rPT.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-pt\values-pt.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ro\values-ro.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ru\values-ru.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-si-rLK\values-si-rLK.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-sk\values-sk.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-sl\values-sl.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-sr\values-sr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-sv\values-sv.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-sw600dp\values-sw600dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-sw\values-sw.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ta-rIN\values-ta-rIN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-te-rIN\values-te-rIN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-th\values-th.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-tl\values-tl.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-tr\values-tr.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-uk\values-uk.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-ur-rPK\values-ur-rPK.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-uz-rUZ\values-uz-rUZ.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-v11\values-v11.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-v12\values-v12.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-v14\values-v14.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-v17\values-v17.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-v18\values-v18.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-v21\values-v21.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-vi\values-vi.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-w360dp\values-w360dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-w480dp\values-w480dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-w500dp\values-w500dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-w600dp\values-w600dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-w720dp\values-w720dp.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-xlarge-land\values-xlarge-land.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-xlarge\values-xlarge.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-zh-rCN\values-zh-rCN.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-zh-rHK\values-zh-rHK.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-zh-rTW\values-zh-rTW.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values-zu\values-zu.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\values\values.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\res\release\xml\prefs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\resources\resources-release.ap_" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\intermediates\symbols\release\R.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\outputs\apk\app-debug-unaligned.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\outputs\apk\app-debug.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\outputs\apk\app-release-unaligned.apk" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\outputs\lint-results-release-fatal.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\outputs\lint-results-release-fatal.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\outputs\lint-results-release-fatal_files\hololike.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\build\outputs\logs\manifest-merger-release-report.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Addtea$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Addtea$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Edittea.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Edittea.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/PotSpawner.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/PotSpawner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Splash.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/ati/kungfutimer/Splash.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/resources/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/listview_item_pic.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/listview_item_pic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/ati/kungfutimer/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/ati/kungfutimer/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResources/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/popup.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/layout/popup.xml" />
@@ -87,19 +696,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup.xml">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="listview_item_pic.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml">
           <provider editor-type-id="text-editor">
@@ -109,6 +705,37 @@
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4040067">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+              <folding>
+                <element signature="e#523#707#0" expanded="false" />
+                <element signature="e#1385#1853#0" expanded="false" />
+                <element signature="e#2228#2413#0" expanded="false" />
+                <element signature="e#3049#3367#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popup_backup.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_backup.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
             <state />
           </provider>
         </entry>
@@ -1491,8 +2118,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/raw/info.txt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/testpopup.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/popup.xml" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
@@ -1528,8 +2163,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1562,16 +2195,32 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Kungfutimer" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kungfutimer" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1583,7 +2232,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="4_7Api19" />
     <property name="ExportApk.ApkPath" value="C:\DATA\Dropbox\Studioprojects\KungFutimer\app" />
     <property name="ExportApk.Flavors" value="" />
@@ -1594,6 +2243,9 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\DATA\Dropbox\Studioprojects\KungFutimer\app\src\main\res\layout" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ati.kungfutimer" />
     </key>
@@ -1814,7 +2466,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446817528500</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="popup tweaks">
+      <created>1446824613449</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1446824613449</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1832,6 +2490,7 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967743" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296371" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1854,7 +2513,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967743" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862905" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5078014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1877,7 +2535,8 @@
     <MESSAGE value="Tealist adjustement" />
     <MESSAGE value="Tealist adjustement completed (displaynotice)" />
     <MESSAGE value="popup tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="popup tweaks" />
+    <MESSAGE value="popup tweaks finished&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="popup tweaks finished&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1921,30 +2580,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1128" column="41" selection-start-line="1128" selection-start-column="41" selection-end-line="1128" selection-end-column="41" />
-          <folding>
-            <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#sendstat#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#hasConnection#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11379#11675#0" expanded="true" />
-            <element signature="e#11674#11675#0" expanded="true" />
-            <element signature="e#12725#13032#0" expanded="true" />
-            <element signature="e#13031#13032#0" expanded="true" />
-            <element signature="e#14086#14390#0" expanded="true" />
-            <element signature="e#14389#14390#0" expanded="true" />
-            <element signature="e#15443#15747#0" expanded="true" />
-            <element signature="e#15746#15747#0" expanded="true" />
-            <element signature="e#17188#17330#0" expanded="true" />
-            <element signature="e#17329#17330#0" expanded="true" />
-            <element signature="method#setupKungFuState#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setupNonKungfuState#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/DatabaseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2033,16 +2668,16 @@
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendstat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hasConnection#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11379#11675#0" expanded="true" />
-            <element signature="e#11674#11675#0" expanded="true" />
-            <element signature="e#12725#13032#0" expanded="true" />
-            <element signature="e#13031#13032#0" expanded="true" />
-            <element signature="e#14086#14390#0" expanded="true" />
-            <element signature="e#14389#14390#0" expanded="true" />
-            <element signature="e#15443#15747#0" expanded="true" />
-            <element signature="e#15746#15747#0" expanded="true" />
-            <element signature="e#17188#17330#0" expanded="true" />
-            <element signature="e#17329#17330#0" expanded="true" />
+            <element signature="e#11379#11675#0" expanded="false" />
+            <element signature="e#11674#11675#0" expanded="false" />
+            <element signature="e#12725#13032#0" expanded="false" />
+            <element signature="e#13031#13032#0" expanded="false" />
+            <element signature="e#14086#14390#0" expanded="false" />
+            <element signature="e#14389#14390#0" expanded="false" />
+            <element signature="e#15443#15747#0" expanded="false" />
+            <element signature="e#15746#15747#0" expanded="false" />
+            <element signature="e#17188#17330#0" expanded="false" />
+            <element signature="e#17329#17330#0" expanded="false" />
             <element signature="method#setupKungFuState#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setupNonKungfuState#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2276,17 +2911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ati/kungfutimer/MyCount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1234176">
@@ -2298,17 +2922,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_row.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -2334,30 +2947,68 @@
             <element signature="method#onCreate#0;class#MainActivity#0" expanded="false" />
             <element signature="method#sendstat#0;class#MainActivity#0" expanded="false" />
             <element signature="method#hasConnection#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11379#11675#0" expanded="true" />
-            <element signature="e#11674#11675#0" expanded="true" />
-            <element signature="e#12725#13032#0" expanded="true" />
-            <element signature="e#13031#13032#0" expanded="true" />
-            <element signature="e#14086#14390#0" expanded="true" />
-            <element signature="e#14389#14390#0" expanded="true" />
-            <element signature="e#15443#15747#0" expanded="true" />
-            <element signature="e#15746#15747#0" expanded="true" />
-            <element signature="e#17188#17330#0" expanded="true" />
-            <element signature="e#17329#17330#0" expanded="true" />
+            <element signature="e#11379#11675#0" expanded="false" />
+            <element signature="e#11674#11675#0" expanded="false" />
+            <element signature="e#12725#13032#0" expanded="false" />
+            <element signature="e#13031#13032#0" expanded="false" />
+            <element signature="e#14086#14390#0" expanded="false" />
+            <element signature="e#14389#14390#0" expanded="false" />
+            <element signature="e#15443#15747#0" expanded="false" />
+            <element signature="e#15746#15747#0" expanded="false" />
+            <element signature="e#17188#17330#0" expanded="false" />
+            <element signature="e#17329#17330#0" expanded="false" />
             <element signature="method#setupKungFuState#0;class#MainActivity#0" expanded="false" />
             <element signature="method#setupNonKungfuState#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_row.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_backup.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listview_item_pic.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4040067">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="e#523#707#0" expanded="false" />
+            <element signature="e#1385#1853#0" expanded="false" />
+            <element signature="e#2228#2413#0" expanded="false" />
+            <element signature="e#3049#3367#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>

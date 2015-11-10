@@ -1,9 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <item android:id="@+id/item3" android:title="Add new tea" android:icon="@drawable/ic_menu_add"></item>
-    <item android:id="@+id/item4" android:title="Edit teas" android:icon="@drawable/ic_menu_edit"></item>
-    <item android:id="@+id/item1" android:title="Preferences" android:icon="@drawable/ic_menu_preferences"></item>
-    <item android:id="@+id/item2" android:title="About" android:icon="@drawable/ic_menu_info_details"></item>
-    
-</menu>
-<!-- From: file:/C:/DATA/Dropbox/Studioprojects/KungFutimer/app/src/main/res/menu/activity_main.xml -->
